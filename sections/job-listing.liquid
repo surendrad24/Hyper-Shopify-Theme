@@ -1,0 +1,219 @@
+<div class="job-listing-container section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="job-listing-header">
+      <h2 class="job-listing-title-main">{{ section.settings.heading_main }}</h2>
+      <h3 class="job-listing-subtitle">{{ section.settings.heading_sub }}</h3>
+    </div>
+
+    <div class="job-listing-content">
+      <h2 class="job-role-title">{{ section.settings.job_title }}</h2>
+      
+      <div class="job-description">
+        {{ section.settings.description }}
+      </div>
+
+      <div class="job-details-grid">
+        <div class="job-column">
+          <p class="column-title">**The role will include:**</p>
+          <ul class="job-list">
+            {{ section.settings.role_list }}
+          </ul>
+        </div>
+
+        <div class="job-column">
+          <p class="column-title">**You are someone with:**</p>
+          <ul class="job-list">
+            {{ section.settings.requirements_list }}
+          </ul>
+        </div>
+      </div>
+      
+      {% if section.settings.button_label != blank %}
+        <div class="job-apply-action">
+          {% render 'button',
+            button_style: section.settings.button_style,
+            button_link: section.settings.button_link,
+            button_label: section.settings.button_label,
+            button_icon: section.settings.button_icon
+          %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% style %}
+.section-{{ section.id }}-padding {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+.job-listing-container {
+  font-family: inherit;
+  color: #333;
+  line-height: 1.6;
+}
+.job-listing-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.job-listing-title-main {
+  color: #0056b3;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+.job-listing-subtitle {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.job-role-title {
+  text-align: center;
+  color: #0056b3;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.job-listing-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.job-description p {
+  margin-bottom: 15px;
+}
+.job-details-grid {
+  margin-top: 30px;
+}
+.column-title {
+  margin-bottom: 10px;
+}
+.job-list {
+  list-style: none;
+  padding-left: 20px;
+}
+.job-list li {
+  position: relative;
+  margin-bottom: 8px;
+}
+.job-list li::before {
+  content: "○";
+  position: absolute;
+  left: -20px;
+  color: #333;
+}
+.job-apply-action {
+  text-align: center;
+  margin-top: 40px;
+}
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Job Listing",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_main",
+      "label": "Main Heading",
+      "default": "JOIN THE TEAM!"
+    },
+    {
+      "type": "text",
+      "id": "heading_sub",
+      "label": "Sub Heading",
+      "default": "WE'RE CURRENTLY LOOKING FOR:"
+    },
+    {
+      "type": "text",
+      "id": "job_title",
+      "label": "Job Title",
+      "default": "Retail Sales Assistant"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Job Description",
+      "default": "<p>Do you have retail experience, want to gain experience or make the jump out of the kitchen, behind the bar or waitressing?</p>"
+    },
+    {
+      "type": "html",
+      "id": "role_list",
+      "label": "Role Points (use <li> tags)",
+      "default": "<li>Customer service and sales</li><li>Stock Management</li>"
+    },
+    {
+      "type": "html",
+      "id": "requirements_list",
+      "label": "Requirement Points (use <li> tags)",
+      "default": "<li>A passion for retail</li><li>Retail sales experience</li>"
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Apply Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button Style",
+      "options": [
+        { "value": "btn--primary", "label": "Primary" },
+        { "value": "btn--secondary", "label": "Secondary" },
+        { "value": "btn--underline", "label": "Underline" },
+        { "value": "btn--plain", "label": "Plain" }
+      ],
+      "default": "btn--primary"
+    },
+    {
+      "type": "select",
+      "id": "button_icon",
+      "label": "Button Icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "caret-right", "label": "Caret Right" },
+        { "value": "arrow-right", "label": "Arrow Right" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Job Listing"
+    }
+  ]
+}
+{% endschema %}

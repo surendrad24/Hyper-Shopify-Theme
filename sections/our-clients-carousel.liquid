@@ -1,0 +1,212 @@
+{%- liquid
+  assign speed = section.settings.speed
+  assign duration = 20.0 | divided_by: speed
+  assign section_schema = section.settings.color_scheme
+-%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --scroll-duration: {{ duration }}s;
+    --item-gap: {{ section.settings.column_gap }}px;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .marquee-core-container {
+    overflow: hidden;
+    user-select: none;
+    display: flex;
+    width: 100%;
+  }
+
+  /* Single animated track */
+  .marquee-core-track {
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--item-gap);
+    align-items: center;
+    animation: scroll-left var(--scroll-duration) linear infinite;
+    will-change: transform;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width:100%;
+  }
+
+  /* STOP SCROLL ON HOVER */
+  .marquee-core-container:hover .marquee-core-track {
+    {% if section.settings.pause_on_hover %}
+      animation-play-state: paused;
+    {% endif %}
+  }
+
+  .marquee-core-asset {
+    height: {{ section.settings.image_height }}px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .marquee-core-placeholder {
+    height: {{ section.settings.image_height }}px;
+    width: auto;
+    fill: #e5e5e5;
+  }
+
+  /* Seamless animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+  /* Mobile Optimisation */
+  @media (max-width: 767px) {
+    #shopify-section-{{ section.id }} {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      --item-gap: 20px;
+    }
+
+    .marquee-core-asset {
+      height: 40px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="marquee-core-container color-{{ section_schema }}">
+  <div class="marquee-core-track">
+    {%- for i in (1..4) -%}
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign image = block.settings.image
+          assign image_link = block.settings.image_link
+        -%}
+
+        {%- if image_link != blank -%}
+          <a href="{{ image_link }}" class="marquee-core-link">
+        {%- endif -%}
+
+        {%- if image != blank -%}
+          {{ image | image_url: height: 400 | image_tag: 
+            class: 'marquee-core-asset', 
+            loading: 'lazy', 
+            alt: image.alt 
+          }}
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'marquee-core-placeholder' }}
+        {%- endif -%}
+
+        {%- if image_link != blank -%}
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image Only Marquee",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "label": "Image Height",
+      "min": 20,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Scroll Speed",
+      "min": 0.1,
+      "max": 3,
+      "step": 0.1,
+      "default": 1
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause on hover",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "Gap between images",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "label": "padding-top"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
+      "label": "padding-bottom"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gallery",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "Link (Optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Only Marquee",
+      "blocks": [
+        { "type": "gallery" },
+        { "type": "gallery" },
+        { "type": "gallery" },
+        { "type": "gallery" },
+        { "type": "gallery" }
+      ]
+    }
+  ]
+}
+{% endschema %}

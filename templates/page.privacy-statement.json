@@ -1,0 +1,312 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_KpJzVt": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_hWyxqE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QX8nmD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Privacy Policy",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_MrhVbz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Your privacy is respected, and Cedar Hospitality is committed to safeguarding your personal information. This privacy notice will explain how we will handle your personal data when you visit our website (independent of where you are accessing it from), as well as your privacy rights and the legal safeguards in place to ensure your ultimate privacy.<br/><br/>The layered nature of this privacy policy enables you to click through to the specific details that are broken down by important topics of discussion.<br/><br/>We have adopted the Australian Privacy Principles (APPs) contained in the Privacy Act 1988 (Cth) (the Privacy Act). The NPPs govern the way in which we collect, use, disclose, store, secure and dispose of your Personal Information.<br/><br/>A copy of the Australian Privacy Principles may be obtained from the website of The Office of the Australian Information Commissioner at www.aoic.gov.au<br/><br/></p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "button_6UN7kC": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "heading_6WpGrb": {
+          "type": "heading",
+          "settings": {
+            "heading": "CEDAR HOSPITALITY SUPPLIES PTY LTD – PRIVACY POLICY",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QX8nmD",
+        "text_MrhVbz",
+        "button_6UN7kC",
+        "heading_6WpGrb"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "left",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "collapsible_tabs_8qt8JU": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "collapsible_item_7q4MCH": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Purpose of this Privacy Policy",
+            "content": "<p>The nature of this privacy policy intends to inform you about how the team at Cedar Hospitality obtains and uses any personal data that you provide through your visit on our website. This goes across all functions that you may use on the website such as making a purchase, subscribing to our newsletter, or taking part in any contests that may ask for any personal information.</p><p>We do not deliberately gather information in regard to children and this website is not designed for the use of children.</p><p>To fully understand and know exactly how we are utilising the data that you provide us through your journey with us, it is crucial that you read this privacy policy or any other policies in regard to your personal information. The purpose of this policy is to supplement the existing notices; it is not meant to replace them.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_BMcdVe": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "What is Personal Information and why do we collect it?",
+            "content": "<p>Personal Information is information or an opinion that identifies an individual. Examples of Personal Information we collect include names, addresses, email addresses, phone and facsimile numbers.</p><p>This Personal Information is obtained in many ways including [interviews, correspondence, by telephone and facsimile, by email, via our website www.cedarhospitality.com from your website, from media and publications, from other publicly available sources, from cookies- delete all that aren’t applicable] and from third parties. We don’t guarantee website links or the policy of authorised third parties.</p><p>We collect your Personal Information for the primary purpose of providing our services to you, providing information to our clients and marketing. We may also use your Personal Information for secondary purposes closely related to the primary purpose, in circumstances where you would reasonably expect such use or disclosure. You may unsubscribe from our mailing/marketing lists at any time by contacting us in writing.</p><p>When we collect Personal Information we will, where appropriate and where possible, explain to you why we are collecting the information and how we plan to use it.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_y3VXB8": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "What types of data are collected?",
+            "content": "<p>Any information that can be used to identify an individual is referred to as personal data or personal information. It excluded information in which the identity has been obscured. We may gather, use, keep, and transfer the following categories of personal information about you that you have provided us with:</p><ul><li>Identity Data: any information in relation to your name, marital status, date of birth, and gender.</li><li>Contact Information: any information in relation to your name, address, contact number and email address.</li><li>Technical Data: compromises of your IP address, login information, browser type and version and information in regards to your operating system.</li><li>Transaction Data: consists of any information regarding payments, made to and received by you as well as other specific about the goods and services that you have purchased through our website.</li><li>Usage Data: is any data that reveals how users may use and interact with our website.</li><li>Profile Data: includes any information that you may use to log in to our website and access any transitions or orders that you have completed in the past, or surveys that you may have partaken in.</li><li>Marketing Data: includes your preferences for obtaining marketing from us as well as your communication preferences.</li></ul><p>At Cedar Hospitality no Special Categories of Personal Data are collected through the use of our website. Examples of special categories details: race, ethnicity, sexual orientation, political opinions, religious beliefs or any data in regards to your health and genetics. Additionally, we do not gather any information in regards to criminal offences or convictions.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_QpemCX": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "How your Personal Data may be collected",
+            "content": "<p>Your personal information may be collected in a variety of different ways. The first one is by having a direct interaction with Cedar. This can be through making a direct purchase of one of our products, creating an account with us, subscribing to our newsletter or any other subscription, providing us with feedback or filling out a survey request.</p><p>We may automatically gather Technical Data about your device, browsing actions or habits that you may use when you engage with our website. Cookies, server logs, and other similar technologies are used by us to gather information. If you visit other websites that use the same cookies as we do, we might also learn technical information about you.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_YQfWFp": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "How your Personal Data may be used",
+            "content": "<p>Your personal information will only be used if it is legal for us to do so. Here are some of the situations that might indicate that your personal information is to be used.</p><ul><li>Any action that requires us to carry out the terms of the agreement that we have with you.</li><li>When your interests and basic rights do not supercede our legitimate interests ( or those of a third party) and it is essential to protect such interests.</li><li>Where Cedar must adhere to a legal or regulatory requirement.</li></ul>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_zKzUkB": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Third Parties",
+            "content": "<p>Where reasonable and practicable to do so, we will collect your Personal Information only from you. However, in some circumstances, we may be provided with information by third parties. In such a case we will take reasonable steps to ensure that you are made aware of the information provided to us by the third party.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_Ud3CJy": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Cookies",
+            "content": "<p>In terms of cookies, you can configure your browser to inform you when websites access or use cookies - you can also reject all or some browser cookies. Please be aware that some portions of our website may become inaccessible or malfunction if you disable or reject cookies.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_3Xex9A": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Disclosure of Personal Information",
+            "content": "<p>Your Personal Information may be disclosed in a number of circumstances including the following:</p><ul><li>Third parties where you consent to the use or disclosure; and</li><li>Where required or authorised by law.</li></ul>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_FLxe3r": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Security of Personal Information",
+            "content": "<p>Your Personal Information is stored in a manner that reasonably protects it from misuse and loss and from unauthorized access, modification or disclosure. Additionally, we only allow employees, agents, contractors, and other third parties businesses need to know to have access to your personal information. They have a confidentiality obligation and will only act in accordance with our instructions while processing your personal information.</p><p>When your Personal Information is no longer needed for the purpose for which it was obtained, we will take reasonable steps to destroy or permanently de-identify your Personal Information. However, most of the Personal Information is or will be stored in client files which will be kept by us for a minimum of 7 years.</p><p>We will ensure that we will notify you and any relevant regulator of a breach and will have procedures in place to deal with any suspected personal data breach.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_aU39jw": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Access to your Personal Information",
+            "content": "<p>You may access the Personal Information we hold about you and update and/or correct it, subject to certain exceptions. If you wish to access your Personal Information, please review your Account’s page(s), here you will find you personal information, orders, details, credits and more. If you require anything outside the information provided on your accounts page, please contact cedar in writing.</p><p>Cedar Hospitality will not charge any fee for your access request but may charge an administrative fee for providing a copy of your Personal Information.</p><p>In order to protect your Personal Information, we may require identification from you before releasing the requested information.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_NbDVgT": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Maintaining the Quality of your Personal Information",
+            "content": "<p>It is important to us that your Personal Information is up to date. We will take reasonable steps to make sure that your Personal Information is accurate, complete and up-to-date. If you find that the information we have is not up to date or is inaccurate, please advise us as soon as practicable so we can update our records and ensure we can continue to provide quality services to you.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_PYyW7H": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Policy Updates",
+            "content": "<p>This Policy may change from time to time as we may make modifications to this document. You can get earlier iterations of this notification by getting in touch with us.</p><p>It is crucial that the personal information that we have on file is accurate and up to date. If your personal information changes throughout your partnership with us, kindly let us know.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_ibqwAc": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Cedar Hospitality Contact Details",
+            "content": "<p>If you have any queries or complaints about our Privacy Policy please contact us at:</p><p>Our contact details for our Melbourne store are:</p><p><strong>Full Business Name: Cedar Hospitality</strong></p><p><strong>Email Address</strong>: <em>Website Enquiries</em>: <a href=\"mailto:cedarsales@cedarhospitality.com\">cedarsales@cedarhospitality.com</a></p><p><em>  Account Customers & Enquires:</em> <a href=\"mailto:cedarsales@cedarhospitality.com\">cedarsales@cedarhospitality.com</a></p><p><strong>Postal Address:</strong> 223-231 Brunswick Rd, Brunswick, Victoria, 3056, Australia.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_item_7q4MCH",
+        "collapsible_item_BMcdVe",
+        "collapsible_item_y3VXB8",
+        "collapsible_item_QpemCX",
+        "collapsible_item_YQfWFp",
+        "collapsible_item_zKzUkB",
+        "collapsible_item_Ud3CJy",
+        "collapsible_item_3Xex9A",
+        "collapsible_item_FLxe3r",
+        "collapsible_item_aU39jw",
+        "collapsible_item_NbDVgT",
+        "collapsible_item_PYyW7H",
+        "collapsible_item_ibqwAc"
+      ],
+      "name": "t:sections.collapsible-tabs.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "header_layout": "vertical",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "item_icon_size": "extra-large",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_KpJzVt",
+    "main",
+    "rich_text_hWyxqE",
+    "collapsible_tabs_8qt8JU"
+  ]
+}

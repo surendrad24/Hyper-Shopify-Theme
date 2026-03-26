@@ -1,0 +1,709 @@
+{{ 'section-favorite-products.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-collection.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign motion_delay = 50
+-%}
+
+<div id="shopify-section-{{ section.id }}" class="section-favorite-products section-{{ section.id }} featured-collection color-{{ section.settings.color_scheme }}">
+  <div class="page-width page-width--{{ section.settings.container }}">
+
+    <div class="pc-header">
+      <div class="pc-header-left">
+        <h2 class="pc-title">{{ section.settings.heading }}</h2>
+        <p class="pc-description">{{ section.settings.description }}</p>
+      </div>
+
+      {%- comment -%} ✅ STABLE TAB ORDER (Figma-style) {%- endcomment -%}
+   {% assign unique_groups = '' %}
+{% for block in section.blocks %}
+  {% assign group = block.settings.group %}
+  {% if group != blank %}
+    {% unless unique_groups contains group %}
+      {% assign unique_groups = unique_groups | append: group | append: ',' %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+{% assign unique_groups = unique_groups | split: ',' %}
+{% assign first_group = unique_groups | first %}
+
+      {% if unique_groups.size > 0 %}
+        <ul class="pc-tabs" role="tablist">
+          {% for group in unique_groups %}
+            {% if group != blank %}
+              <li class="pc-tab {% if forloop.first %}active{% endif %}" data-group="{{ group | escape }}">
+                {{ group }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    <div class="pc-carousel-wrapper">
+      <div class="pc-carousel hide-scrollbar" id="pc-carousel-{{ section.id }}">
+        {% for block in section.blocks %}
+          {% if block.type == 'promo' %}
+            <a href="{{ block.settings.link | default: '#' }}"
+               class="pc-promo-card {% if block.settings.group == first_group %}{% else %}hidden{% endif %}"
+               data-group="{{ block.settings.group | escape }}"
+               style="--overlay-color: {{ block.settings.overlay_color }}; --overlay-opacity: {{ block.settings.overlay_opacity }};"
+               {{ block.shopify_attributes }}>
+              <div class="pc-promo-image-wrapper">
+                {% if block.settings.image %}
+                  {{ block.settings.image | image_url: width: 600 | image_tag: class: 'pc-promo-image', loading: 'lazy' }}
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'pc-promo-image' }}
+                {% endif %}
+                <div class="pc-promo-overlay"></div>
+              </div>
+              <div class="pc-promo-content pc-promo-content--{{ block.settings.content_position }}">
+                <div class="pc-promo-text">
+                  {% if block.settings.label != blank %}
+                    <span class="pc-promo-label">{{ block.settings.label }}</span>
+                  {% endif %}
+                  <h3 class="pc-promo-heading">{{ block.settings.promo_heading }}</h3>
+                  {% if block.settings.promo_subheading != blank %}
+                    <p class="pc-promo-subheading">{{ block.settings.promo_subheading }}</p>
+                  {% endif %}
+                </div>
+                <button class="btn btn--primary">
+    <span class="btn__text">{{ block.settings.button_text }}</span>
+    
+  </button>
+              </div>
+            </a>
+          {% else %}
+            <a href="{{ block.settings.link | default: '#' }}"
+               class="pc-card {% if block.settings.group == first_group %}{% else %}hidden{% endif %}"
+               data-group="{{ block.settings.group | escape }}"
+               {{ block.shopify_attributes }}>
+              <div class="pc-card-image-wrapper">
+                {% if block.settings.image %}
+                  {{ block.settings.image | image_url: width: 600 | image_tag: class: 'pc-card-image', loading: 'lazy' }}
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'pc-card-image' }}
+                {% endif %}
+              </div>
+              
+              <div class="pc-card-text-content">
+                {% if block.settings.link contains '/collections/' %}
+                   {% assign collection_handle = block.settings.link | split: '/collections/' | last | split: '?' | first %}
+                   <span class="pc-collection-label">{{ collections[collection_handle].title }}</span>
+                {% endif %}
+                <h3 class="pc-card-title">{{ block.settings.title }}</h3>
+              </div>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="swiper-controls swiper-controls--grouped swiper-controls--pagination-progressbar mt-8">
+      <button class="swiper-button swiper-button-prev btn pc-prev">
+        <span class="btn__text">{% render 'icon-caret-left' %}</span>
+      </button>
+
+      <div class="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal">
+        <span class="swiper-pagination-progressbar-fill" id="pc-progress-{{ section.id }}"></span>
+      </div>
+
+      <button class="swiper-button swiper-button-next btn pc-next">
+        <span class="btn__text">{% render 'icon-caret-right' %}</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Popular Categories",
+  "settings": [
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container width",
+      "default": "fixed",
+      "options": [
+        { "value": "full", "label": "Full width" },
+        { "value": "fixed", "label": "Fixed width" }
+      ]
+    },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Most Popular Categories" },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "Stock up on everyday essentials." },
+    { "type": "color", "id": "highlight_color", "label": "Highlight Color", "default": "#005bd3" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding Top", "default": 36 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding Bottom", "default": 36 }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Category Name" },
+        { "type": "url", "id": "link", "label": "Link" },
+        { "type": "text", "id": "group", "label": "Group Name", "default": "Everyday Essentials" }
+      ]
+    },
+    {
+      "type": "promo",
+      "name": "Promo Card",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "NEW ARRIVALS" },
+        { "type": "text", "id": "promo_heading", "label": "Heading", "default": "Alina by Steelite" },
+
+        { "type": "text", "id": "button_text", "label": "Button Text", "default": "Shop Now" },
+        { "type": "url", "id": "link", "label": "Link" },
+        { "type": "image_picker", "id": "image", "label": "Background Image" },
+        {
+          "type": "select",
+          "id": "content_position",
+          "label": "Content Position",
+          "default": "top",
+          "options": [
+            { "value": "top", "label": "Top" },
+            { "value": "center", "label": "Center" },
+            { "value": "bottom", "label": "Bottom" }
+          ]
+        },
+        { "type": "color", "id": "overlay_color", "label": "Overlay Color", "default": "#000000" },
+        { 
+          "type": "range", 
+          "id": "overlay_opacity", 
+          "min": 0, 
+          "max": 100, 
+          "step": 5, 
+          "unit": "%", 
+          "label": "Overlay Opacity", 
+          "default": 40 
+        },
+        { "type": "text", "id": "group", "label": "Group Name", "default": "Everyday Essentials" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Popular Categories" }]
+}
+{% endschema %}
+
+{% style %}
+#shopify-section-{{ section.id }} {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+.pc-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:30px; gap:20px }
+.pc-title { font-size:32px; font-weight:700; margin:0 }
+.pc-description { font-size:15px; color:#666; margin-top:10px; max-width:500px }
+.pc-tabs { display:flex; gap:25px; list-style:none; padding:0; margin:0 }
+.pc-tab { font-size:15px; font-weight:700; color:#888; cursor:pointer; padding-bottom:5px; border-bottom:2px solid transparent }
+.pc-tab.active { color:#000; border-bottom-color:{{ section.settings.highlight_color }} }
+.pc-carousel { display:flex; gap:20px; overflow-x:auto; scroll-behavior:smooth }
+.hide-scrollbar::-webkit-scrollbar { display:none }
+
+/* Uniform card size */
+.pc-card { flex:0 0 220px; text-decoration:none; color:inherit; display: flex; flex-direction: column; }
+.pc-card.hidden { display:none }
+
+/* IMAGE HOVER EFFECT (HYPER THEME STYLE) */
+.pc-card-image-wrapper { 
+  height:220px; 
+  border-radius:12px; 
+  overflow:hidden; 
+  background:#f4f4f4; 
+  margin-bottom:12px;
+  position: relative;
+}
+.pc-card-image { 
+  width:100%; 
+  height:100%; 
+  object-fit:cover;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); /* Hyper-smooth zoom */
+}
+.pc-card:hover .pc-card-image {
+  transform: scale(1.08); /* Zoom effect on hover */
+}
+
+/* Same effect for Promo Cards */
+.pc-promo-card:hover .pc-promo-image {
+  transform: scale(1.08);
+}
+.pc-promo-image { 
+  width:100%; 
+  height:100%; 
+  object-fit:cover;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.pc-card-text-content { display: flex; flex-direction: column; align-items: flex-start; }
+.pc-collection-label { 
+  font-size: 11px; 
+  font-weight: 700; 
+  color: #8c8c8c; 
+  text-transform: uppercase; 
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.swiper-pagination-progressbar { height:2px; background:rgba(0,0,0,.1); flex-grow:1; margin:0 20px }
+.swiper-pagination-progressbar-fill { background:#000; transform:scaleX(0); transform-origin:left; transition:.3s }
+
+.pc-card-title {
+  --reversed-link-gap: 1px;
+  --transform-origin-end: right;
+  --transform-origin-start: left;
+  --animation-default: 0.3s ease;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(to var(--transform-origin-end), currentColor, currentColor) 0 100%/0 var(--reversed-link-gap) no-repeat;
+  background-position-x: var(--transform-origin-end);
+  background-position-y: bottom;
+  transition: background-size var(--animation-default), color var(--animation-default);
+}
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .pc-card:not([aria-disabled]):hover .pc-card-title {
+    background-position-x: var(--transform-origin-start);
+    background-size: 100% var(--reversed-link-gap);
+    background-position-y: bottom;
+  }
+}
+
+.pc-promo-card { 
+  flex:0 0 220px; 
+  text-decoration:none; 
+  color:inherit; 
+  border-radius:16px; 
+  overflow:hidden; 
+  position:relative; 
+  min-height:350px;
+  display:flex;
+  flex-direction:column;
+}
+.pc-promo-card.hidden { display:none }
+.pc-promo-image-wrapper { position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; overflow: hidden;}
+.pc-promo-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background:var(--overlay-color); opacity:calc(var(--overlay-opacity) / 100); z-index:2; }
+.pc-promo-content { position:relative; z-index:3; padding:24px; display:flex; flex-direction:column; gap:20px; height:100%; }
+.pc-promo-content--top { justify-content:space-between; }
+.pc-promo-content--center { justify-content:space-between; }
+.pc-promo-content--bottom { justify-content:flex-end; }
+.pc-promo-text { display:flex; flex-direction:column; gap:12px; }
+.pc-promo-label { font-size:11px; font-weight:700; color:#fff; text-transform:uppercase; letter-spacing:1.2px; display:block; margin:0; }
+.pc-promo-heading { font-size:32px; font-weight:700; color:#fff; margin:0; line-height:1.1; }
+.pc-promo-subheading { font-size:14px; color:#fff; margin:0; opacity:0.9; line-height:1.4; }
+
+/* =========================
+   MOBILE RESPONSIVE FIXES
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Header stack */
+  .pc-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .pc-title {
+    font-size: 24px;
+  }
+
+  .pc-description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  /* Tabs wrap nicely */
+  .pc-tabs {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .pc-tab {
+    font-size: 14px;
+    padding-bottom: 3px;
+  }
+
+  /* Carousel behavior */
+  .pc-carousel {
+    gap: 14px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Category cards */
+  .pc-card {
+    flex: 0 0 160px;
+    scroll-snap-align: start;
+  }
+
+  .pc-card-image-wrapper {
+    height: 160px;
+  }
+
+  .pc-card-title {
+    font-size: 15px;
+  }
+
+  /* Promo cards */
+  .pc-promo-card {
+    flex: 0 0 260px;
+    min-height: 280px;
+    scroll-snap-align: start;
+  }
+
+  .pc-promo-heading {
+    font-size: 22px;
+  }
+
+  .pc-promo-subheading {
+    font-size: 13px;
+  }
+
+  /* ❌ Hide navigation on mobile */
+  .swiper-controls {
+    display: none !important;
+  }
+}
+{% endstyle %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const sectionId = "{{ section.id }}";
+  const container = document.querySelector(`#shopify-section-${sectionId}`);
+  const carousel = container.querySelector(`#pc-carousel-${sectionId}`);
+  const cards = Array.from(container.querySelectorAll('.pc-card, .pc-promo-card'));
+  const tabs = container.querySelectorAll('.pc-tab');
+  const progressBarFill = container.querySelector(`#pc-progress-${sectionId}`);
+  const prevBtn = container.querySelector('.pc-prev');
+  const nextBtn = container.querySelector('.pc-next');
+
+  const GAP = 20;
+  let index = 0;
+
+  function visibleCards() {
+    return cards.filter(c => !c.classList.contains('hidden'));
+  }
+
+  function cardStep() {
+    const card = visibleCards()[0];
+    return card ? card.getBoundingClientRect().width + GAP : 0;
+  }
+
+  function canScroll() {
+    return carousel.scrollWidth > carousel.clientWidth + 5;
+  }
+
+  function updateProgress() {
+    const total = visibleCards().length;
+    if (total === 0) {
+      progressBarFill.style.transform = 'scaleX(0)';
+      prevBtn.style.opacity = "0.3";
+      nextBtn.style.opacity = "0.3";
+      return;
+    }
+    if (!canScroll()) {
+      progressBarFill.style.transform = 'scaleX(1)';
+      prevBtn.style.opacity = "0.3";
+      nextBtn.style.opacity = "0.3";
+      return;
+    }
+    const progress = Math.min((index + 1.5) / total, 1);
+    progressBarFill.style.transform = `scaleX(${progress})`;
+    prevBtn.style.opacity = index <= 0 ? "0.3" : "1";
+    nextBtn.style.opacity = index >= total - 1 ? "0.3" : "1";
+  }
+
+  function scrollOne(dir) {
+    if (!canScroll()) return;
+    const step = cardStep();
+    if (!step) return;
+    const total = visibleCards().length;
+    index = Math.max(0, Math.min(index + dir, total - 1));
+    carousel.scrollTo({ left: index * step, behavior: 'smooth' });
+    updateProgress();
+  }
+
+  function syncIndexWithScroll() {
+    if (!canScroll()) return;
+    const step = cardStep();
+    if (!step) return;
+    const total = visibleCards().length;
+    index = Math.round(carousel.scrollLeft / step);
+    index = Math.max(0, Math.min(index, total - 1));
+    updateProgress();
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const group = tab.dataset.group;
+      cards.forEach(card => {
+        card.classList.toggle('hidden', card.dataset.group !== group);
+      });
+      index = 0;
+      carousel.scrollLeft = 0;
+      requestAnimationFrame(updateProgress);
+    });
+  });
+
+  prevBtn.addEventListener('click', () => scrollOne(-1));
+  nextBtn.addEventListener('click', () => scrollOne(1));
+  carousel.addEventListener('scroll', () => requestAnimationFrame(syncIndexWithScroll), { passive: true });
+  updateProgress();
+});
+</script>
+
+
+
+
+
+{% comment %} {{ 'section-favorite-products.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-collection.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign motion_delay = 50
+-%}
+
+<div id="shopify-section-{{ section.id }}" class="section-favorite-products section-{{ section.id }} featured-collection color-{{ section.settings.color_scheme }}">
+  <div class="page-width page-width--{{ section.settings.container }}">
+
+    <div class="pc-header">
+      <div class="pc-header-left">
+        <h2 class="pc-title">{{ section.settings.heading }}</h2>
+        <p class="pc-description">{{ section.settings.description }}</p>
+      </div>
+
+      {%- comment -%} ✅ STABLE TAB ORDER (Figma-style) {%- endcomment -%}
+   {% assign unique_groups = '' %}
+{% for block in section.blocks %}
+  {% assign group = block.settings.group %}
+  {% if group != blank %}
+    {% unless unique_groups contains group %}
+      {% assign unique_groups = unique_groups | append: group | append: ',' %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+{% assign unique_groups = unique_groups | split: ',' %}
+{% assign first_group = unique_groups | first %}
+
+      {% if unique_groups.size > 0 %}
+        <ul class="pc-tabs" role="tablist">
+          {% for group in unique_groups %}
+            {% if group != blank %}
+              <li class="pc-tab {% if forloop.first %}active{% endif %}" data-group="{{ group | escape }}">
+                {{ group }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    <div class="pc-carousel-wrapper">
+      <div class="pc-carousel hide-scrollbar" id="pc-carousel-{{ section.id }}">
+        {% for block in section.blocks %}
+          <a href="{{ block.settings.link | default: '#' }}"
+             class="pc-card {% if block.settings.group == first_group %}{% else %}hidden{% endif %}"
+             data-group="{{ block.settings.group | escape }}"
+             {{ block.shopify_attributes }}>
+            <div class="pc-card-image-wrapper">
+              {% if block.settings.image %}
+                {{ block.settings.image | image_url: width: 600 | image_tag: class: 'pc-card-image', loading: 'lazy' }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'pc-card-image' }}
+              {% endif %}
+            </div>
+            <h3 class="pc-card-title">{{ block.settings.title }}</h3>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="swiper-controls swiper-controls--grouped swiper-controls--pagination-progressbar mt-8">
+      <button class="swiper-button swiper-button-prev btn pc-prev">
+        <span class="btn__text">{% render 'icon-caret-left' %}</span>
+      </button>
+
+      <div class="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal">
+        <span class="swiper-pagination-progressbar-fill" id="pc-progress-{{ section.id }}"></span>
+      </div>
+
+      <button class="swiper-button swiper-button-next btn pc-next">
+        <span class="btn__text">{% render 'icon-caret-right' %}</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Popular Categories",
+  "settings": [
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container width",
+      "default": "fixed",
+      "options": [
+        { "value": "full", "label": "Full width" },
+        { "value": "fixed", "label": "Fixed width" }
+      ]
+    },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Most Popular Categories" },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "Stock up on everyday essentials." },
+    { "type": "color", "id": "highlight_color", "label": "Highlight Color", "default": "#005bd3" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding Top", "default": 36 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding Bottom", "default": 36 }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Category Name" },
+        { "type": "url", "id": "link", "label": "Link" },
+        { "type": "text", "id": "group", "label": "Group Name", "default": "Everyday Essentials" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Popular Categories" }]
+}
+{% endschema %}
+
+{% style %}
+#shopify-section-{{ section.id }} {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+.pc-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:30px; gap:20px }
+.pc-title { font-size:32px; font-weight:700; margin:0 }
+.pc-description { font-size:15px; color:#666; margin-top:10px; max-width:500px }
+.pc-tabs { display:flex; gap:25px; list-style:none; padding:0; margin:0 }
+.pc-tab { font-size:15px; font-weight:700; color:#888; cursor:pointer; padding-bottom:5px; border-bottom:2px solid transparent }
+.pc-tab.active { color:#000; border-bottom-color:{{ section.settings.highlight_color }} }
+.pc-carousel { display:flex; gap:20px; overflow-x:auto; scroll-behavior:smooth }
+.hide-scrollbar::-webkit-scrollbar { display:none }
+.pc-card { flex:0 0 220px; text-decoration:none; color:inherit }
+.pc-card.hidden { display:none }
+.pc-card-image-wrapper { height:220px; border-radius:12px; overflow:hidden; background:#f4f4f4; margin-bottom:12px }
+.pc-card-image { width:100%; height:100%; object-fit:cover }
+.swiper-pagination-progressbar { height:2px; background:rgba(0,0,0,.1); flex-grow:1; margin:0 20px }
+.swiper-pagination-progressbar-fill { background:#000; transform:scaleX(0); transform-origin:left; transition:.3s }
+.pc-card-title{font-size:18px;font-weight:600;}
+
+
+{% endstyle %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const sectionId = "{{ section.id }}";
+  const container = document.querySelector(`#shopify-section-${sectionId}`);
+  const carousel = container.querySelector(`#pc-carousel-${sectionId}`);
+  const cards = Array.from(container.querySelectorAll('.pc-card'));
+  const tabs = container.querySelectorAll('.pc-tab');
+  const progressBarFill = container.querySelector(`#pc-progress-${sectionId}`);
+  const prevBtn = container.querySelector('.pc-prev');
+  const nextBtn = container.querySelector('.pc-next');
+
+  const GAP = 20;
+  let index = 0;
+
+  function visibleCards() {
+    return cards.filter(c => !c.classList.contains('hidden'));
+  }
+
+  function cardStep() {
+    const card = visibleCards()[0];
+    return card ? card.getBoundingClientRect().width + GAP : 0;
+  }
+
+  /* ✅ NEW: detect real overflow */
+  function canScroll() {
+    return carousel.scrollWidth > carousel.clientWidth + 5;
+  }
+
+  function updateProgress() {
+    const total = visibleCards().length;
+
+    /* ✅ NO CARDS → EMPTY BAR */
+    if (total === 0) {
+      progressBarFill.style.transform = 'scaleX(0)';
+      prevBtn.style.opacity = "0.3";
+      nextBtn.style.opacity = "0.3";
+      return;
+    }
+
+    /* ✅ CARDS FIT IN VIEWPORT → FULL BAR, NO SLIDER */
+    if (!canScroll()) {
+      progressBarFill.style.transform = 'scaleX(1)';
+      prevBtn.style.opacity = "0.3";
+      nextBtn.style.opacity = "0.3";
+      return;
+    }
+
+    /* ✅ NORMAL SLIDER CASE */
+    const progress = Math.min((index + 1.5) / total, 1);
+    progressBarFill.style.transform = `scaleX(${progress})`;
+
+    prevBtn.style.opacity = index <= 0 ? "0.3" : "1";
+    nextBtn.style.opacity = index >= total - 1 ? "0.3" : "1";
+  }
+
+  function scrollOne(dir) {
+    if (!canScroll()) return;
+
+    const step = cardStep();
+    if (!step) return;
+
+    const total = visibleCards().length;
+    index = Math.max(0, Math.min(index + dir, total - 1));
+    carousel.scrollTo({ left: index * step, behavior: 'smooth' });
+    updateProgress();
+  }
+
+  function syncIndexWithScroll() {
+    if (!canScroll()) return;
+
+    const step = cardStep();
+    if (!step) return;
+
+    const total = visibleCards().length;
+    index = Math.round(carousel.scrollLeft / step);
+    index = Math.max(0, Math.min(index, total - 1));
+    updateProgress();
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const group = tab.dataset.group;
+      cards.forEach(card => {
+        card.classList.toggle('hidden', card.dataset.group !== group);
+      });
+
+      index = 0;
+      carousel.scrollLeft = 0;
+      requestAnimationFrame(updateProgress);
+    });
+  });
+
+  prevBtn.addEventListener('click', () => scrollOne(-1));
+  nextBtn.addEventListener('click', () => scrollOne(1));
+
+  carousel.addEventListener(
+    'scroll',
+    () => requestAnimationFrame(syncIndexWithScroll),
+    { passive: true }
+  );
+
+  updateProgress();
+});
+</script> {% endcomment %}

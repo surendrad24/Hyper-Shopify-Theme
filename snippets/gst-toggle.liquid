@@ -1,0 +1,131 @@
+
+{{ 'gst-toggle.js' | asset_url | script_tag }}
+
+<div class="gst-toggle-wrapper">
+  <span class="gst-label active" data-gst-type="excl">Excl. GST</span>
+  
+  <label class="gst-switch">
+    <input type="checkbox" id="gstToggle" aria-label="Toggle GST inclusive pricing">
+    <span class="gst-slider"></span>
+  </label>
+  
+  <span class="gst-label" data-gst-type="incl">Incl. GST</span>
+</div>
+
+<style>
+  .gst-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    margin-inline: 10px;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 8px 0;
+  }
+  
+  .gst-label { 
+    font-weight: 500; 
+    opacity: 0.6; 
+    transition: all 0.3s ease;
+    color: #666;
+  }
+  
+  .gst-label.active { 
+    opacity: 1; 
+    font-weight: 700;
+    color: #111;
+  }
+  
+  .gst-switch {
+    position: relative;
+    width: 44px;
+    height: 22px;
+    display: inline-block;
+  }
+  
+  .gst-switch input { 
+    opacity: 0; 
+    width: 0; 
+    height: 0; 
+  }
+  
+  .gst-slider {
+    position: absolute;
+    inset: 0;
+    background: #ddd;
+    border-radius: 22px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+  
+  .gst-slider::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 2px;
+    bottom: 1px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  
+  .gst-switch input:checked + .gst-slider {
+    background: #000;
+  }
+  
+  .gst-switch input:checked + .gst-slider::before {
+    transform: translateX(22px);
+  }
+  @media (max-width: 768px) {
+  .gst-toggle-wrapper {
+    display: none !important;
+  }
+}
+</style>
+
+
+{% comment %} 
+<script>
+// This connects with the main GST manager
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.getElementById('gstToggle');
+  if (!toggle) return;
+  
+  // Load saved state
+  const savedState = localStorage.getItem('gstToggleState');
+  if (savedState === 'true') {
+    toggle.checked = true;
+  }
+  
+  // Update labels
+  function updateLabels(isInclusive) {
+    document.querySelectorAll('.gst-label').forEach(label => {
+      label.classList.remove('active');
+      const type = label.dataset.gstType;
+      if ((isInclusive && type === 'incl') || (!isInclusive && type === 'excl')) {
+        label.classList.add('active');
+      }
+    });
+  }
+  
+  // Initial label update
+  updateLabels(toggle.checked);
+  
+  // On toggle change
+  toggle.addEventListener('change', function() {
+    const isInclusive = this.checked;
+    localStorage.setItem('gstToggleState', isInclusive);
+    updateLabels(isInclusive);
+    
+    // Trigger price update through the manager
+    if (window.gstManager) {
+      window.gstManager.currentState = isInclusive;
+      window.gstManager.updateAllPrices();
+    }
+  });
+});
+</script> {% endcomment %}

@@ -1,0 +1,172 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_PP9Gxx": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_VTwJhx": {
+      "type": "rich-text",
+      "blocks": {
+        "text_JTHhc6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cedar Hospitality endeavors to ensure that all of our customers are satisfied with their purchases. To help us deliver on our customer satisfaction goals and set realistic expectations, we have provided the below-detailed information with regards to our delivery processes and procedures. These terms and conditions apply to all purchases made from Cedar Hospitality Pty Ltd (herein referred to as “Cedar”)</p><p>Confirmed orders placed online before 3pm AEST on Monday to Friday will be picked, packed and dispatched from our Melbourne warehouse within 1 - 5 days. <br/><br/>For any delays or issues regarding your order, check your account online or we will notify you via phone or email.<br/><br/></p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "text_JTHhc6"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-149a0a42-7e4d-4101-b92f-d213f5045165",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 32,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "collapsible_tabs_zjeTef": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "collapsible_item_DHYWXJ": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Your order",
+            "content": "<p>All orders placed through www.cedarhospitality.com are subject to confirmation and acceptance by Cedar. By placing an order online, you are making an offer to us to purchase the products you have selected for the price (including delivery and other charges) based on these Terms and Conditions.</p><p>Cedar reserves the right to accept or reject any offer for any reason, including without limitation, an error in the price of the product description posted on this website, the unavailability of a product, or error in your order. At placement of the order, we will issue you with an order number for reference. We will confirm acceptance of your order when we send you an email confirming shipment of the products you have ordered. If we cannot process or accept your order after payment is made, we will contact you by phone or email.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_LaTmqB": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Dispatch",
+            "content": "<p>Confirmed orders placed online before 3 pm AEST on Monday to Friday will be picked, packed and dispatched from our Melbourne warehouse within 1 - 5 days. For any delays or issues regarding your order, we will notify you via phone or email.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_XzTAfe": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Delivery Information",
+            "content": "<p>Cedar Hospitality will make every effort to deliver your order by the estimated delivery date indicated to you at the time of purchase. Please keep in mind that your delivery may be delayed due to external factors such as weather, natural catastrophes, and so on. The estimated delivery dates do not include public holidays or weekends; only business days (Monday - Friday) are considered.</p><p>If you do not receive your order by the anticipated delivery date, please get in touch with us as soon as possible. You can email us at cedaronline@cedarhospitality.com or call us on 03 8388 6800. Please have your order reference number to hand so that we can help as quickly as possible.</p><p>Cedar Hospitality will assume that anyone accepting the delivery at the specified delivery address is legally authorised to do so. Please ensure that a manager or coordinator is present on-site when your delivery arrives. Please check that all items purchased are present and in excellent condition, once you have received your order, as once you have opened and used your products, they become your responsibility. We do not accept responsibility for missing or damaged goods outside of the product warranty period.</p><p>● If you believe that there are any issues, problems or feel like your received product is not of quality such as being; broken, inaccurate, or damaged - please contact us at cedaronline@cedarhospitality.com or call us on 03 8388 6800 and we will attend to your query as soon as possible.</p><p>● Every delivery lead time is expressed as the number of working business days between receiving an order and making the actual delivery.</p><p>● If a supplementary delivery point or depot is required for remote areas, then the customer (you) is responsible for paying all additional delivery charges from that secondary point to the final delivery site.</p><p>● Long-Distance Freight may occasionally experience delays that are beyond our supplier’s and Cedar’s control. We will try our utmost to notify you as soon as the supplier is informed of the delay.</p><p>● To ensure that its delivery agents stick to deliver estimates, Cedar Hospitality will make a reasonable effort to ensure that you receive your delivery on schedule. However, Cedar Hospitality is not responsible for any delivery delays.</p><p>● All large machinery, example refrigerators, are delivered to the kerbside only. The delivery person/driver may at his/her discretion assist with delivering the Goods to a location within the premises nominated by the Customer, at the Customer's sole risk.</p><p>● Larger items may incur an additional delivery charge. The price is calculated based on the product(s)’ weight and dimensions, and destination.</p><p>● Customers will be liable for all extra costs such as re-delivery fee, storage and insurance charges if:</p><p>(1) the customer does not accept the delivery when the goods are ready and prepared to be delivered</p><p>(2) Cedar or its agent believes that at the time of delivery it would endanger, be against their policies, industry practises or statutory requirements which would prohibit the delivery of goods.</p><p>(3) the customer has not given Cedar Hospitality the necessary instructions, documents, licences, or authorisations to properly, legally and efficiently transport the goods.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_JkJLkb": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Delivery Methods",
+            "content": "<p>Day(s) of delivery are specific depending on the suburb we are delivering to. For Melbourne CBD and metro customers, view our delivery schedule here</p><p><strong>Shipment:</strong>We will ship your order to the address provided by you at checkout. For large, bulk or heavy orders/items an additional delivery cost will be incurred during the checkout stage. You (the customer) will be notified about all additional delivery costs.</p><p><strong>Pickup:</strong><br/>If you would rather pick up your items from our superstore in Brunswick, Melbourne after placing an order, this can be arranged. Have a chat with one of our dedicated staff members today to discuss this in detail.Please note that we only offer kerbside delivery. This does not include in-premise positioning or installation. Drivers are not trained or licensed to take equipment inside customer buildings or install products. Please talk to our customer service team for options for installations and placement.</p><p><strong>Free Delivery Information:</strong><br/>We are dedicated to ensuring that we provide you with the best possible service at all times. That's why all orders above $150 ex gst qualify for free delivery within MelbourneMetro. An extra delivery charge may apply depending on the location for some large, heavy, or bulky items.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_NRY7yi": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Product FAQ",
+            "content": "<p> </p><p>Welcome to Cedar Hospitality Suppliers, where we pride ourselves on providing exceptional service and high-quality products to our customers.</p><p>We are excited to be always launching new products that are fantastic additions to our world class range. The focus has, and always will be, to stock the largest range of the highest quality global and homegrown hospitality brands.</p><p>We are proud partners with global powerhouse brands like Steelite, Unox, Robot Coupe, BioPak, GI Metal and local brands such as Robert Gordon Pottery, Roband and LUUS.</p><p></p><p><a href=\"https://cedarhospitality.com/\">Home</a></p><p>All of our products are sent to you in good condition and are packaged correctly. We cannot guarantee the condition of the product on arrival. If you believe that there are any issues, problems or feel like your received product is not of quality such as being; broken, inaccurate, or damaged - please contact us at cedaronline@cedarhospitality.com or call us on 03 8388 6800 and we will attend to your query as soon as possible.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_item_DHYWXJ",
+        "collapsible_item_LaTmqB",
+        "collapsible_item_XzTAfe",
+        "collapsible_item_JkJLkb",
+        "collapsible_item_NRY7yi"
+      ],
+      "name": "t:sections.collapsible-tabs.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "header_layout": "vertical",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "item_icon_size": "extra-large",
+        "padding_top": 30,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_PP9Gxx",
+    "main",
+    "rich_text_VTwJhx",
+    "collapsible_tabs_zjeTef"
+  ]
+}

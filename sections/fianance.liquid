@@ -1,0 +1,202 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .hover-grid-{{ section.id }} {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr);
+    gap: {{ section.settings.column_gap }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .hover-grid-{{ section.id }} {
+      grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr);
+    }
+  }
+
+  .h-card-{{ section.id }} {
+    position: relative;
+    height: {{ section.settings.card_height }}px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #000; /* Fallback for overlay */
+  }
+
+  .h-card__img {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.8s ease;
+  }
+
+  .h-card-{{ section.id }}:hover .h-card__img {
+    transform: scale(1.1);
+  }
+
+  /* --- FIX: Dynamic Overlay Opacity --- */
+  .h-card__overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 2;
+    transition: background-color 0.4s ease;
+    pointer-events: none;
+  }
+
+  .h-card__content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  /* --- Layout: Heading TOP, Others MIDDLE --- */
+  .h-card__top {
+    margin-bottom: auto; /* Pushes everything else down */
+  }
+
+  .h-card__middle {
+    margin-top: auto;
+    margin-bottom: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+
+  .h-card-{{ section.id }}:hover .h-card__middle {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .h-card__bottom-spacer {
+    margin-top: auto; /* Balances the top margin-bottom */
+    height: 1px;
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding page-width">
+  <div class="hover-grid-{{ section.id }}">
+    {%- for block in section.blocks -%}
+      <div class="h-card-{{ section.id }}" {{ block.shopify_attributes }}>
+        
+        {%- if block.settings.image != blank -%}
+          <img src="{{ block.settings.image | image_url: width: 1200 }}" class="h-card__img" alt="{{ block.settings.heading }}" loading="lazy">
+        {%- else -%}
+          {{ 'collection-1' | placeholder_svg_tag: 'h-card__img' }}
+        {%- endif -%}
+
+        <div class="h-card__overlay" style="background-color: rgba(0,0,0, {{ block.settings.overlay_opacity | divided_by: 100.0 }});"></div>
+
+        <div class="h-card__content">
+          <div class="h-card__top">
+            <h2 style="
+              color: {{ block.settings.h_color }}; 
+              font-size: {{ block.settings.h_size }}px; 
+              font-weight: {{ block.settings.h_weight }};
+              margin: 0;
+            ">
+              {{ block.settings.heading }}
+            </h2>
+          </div>
+
+          <div class="h-card__middle">
+            <div style="
+              color: {{ block.settings.p_color }}; 
+              font-size: {{ block.settings.p_size }}px; 
+              font-weight: {{ block.settings.p_weight }};
+              margin-bottom: 20px;
+            ">
+              {{ block.settings.subheading }}
+            </div>
+            
+            {%- if block.settings.btn_label != blank -%}
+              <a href="{{ block.settings.btn_link }}" class="btn {{ block.settings.button_style }}">
+                <span class="btn__text">{{ block.settings.btn_label }}</span>
+              </a>
+            {%- endif -%}
+          </div>
+
+          <div class="h-card__bottom-spacer"></div>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Hover Cards",
+  "settings": [
+    { "type": "range", "id": "columns_desktop", "min": 2, "max": 4, "step": 1, "label": "Columns Desktop", "default": 3 },
+    { "type": "select", "id": "columns_mobile", "label": "Columns Mobile", "default": "1",
+      "options": [
+        { "value": "1", "label": "1 Column" },
+        { "value": "2", "label": "2 Columns" }
+      ]
+    },
+    { "type": "range", "id": "card_height", "min": 300, "max": 800, "step": 10, "unit": "px", "label": "Card Height", "default": 550 },
+    { "type": "range", "id": "column_gap", "min": 0, "max": 40, "step": 1, "unit": "px", "label": "Column Gap", "default": 20 },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 1, "unit": "px", "label": "Top Padding", "default": 40 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 1, "unit": "px", "label": "Bottom Padding", "default": 40 }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Hover Card",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Background Image" },
+        { "type": "range", "id": "overlay_opacity", "min": 0, "max": 90, "step": 5, "unit": "%", "label": "Overlay Opacity", "default": 40 },
+        { "type": "header", "content": "Top Heading" },
+        { "type": "text", "id": "heading", "label": "Heading", "default": "ZIP PAY" },
+        { "type": "color", "id": "h_color", "label": "Heading Color", "default": "#ffffff" },
+        { "type": "range", "id": "h_size", "min": 14, "max": 80, "step": 1, "unit": "px", "label": "Font Size", "default": 32 },
+        { "type": "select", "id": "h_weight", "label": "Font Weight", "default": "800",
+          "options": [
+            { "value": "400", "label": "Regular" },
+            { "value": "700", "label": "Bold" },
+            { "value": "800", "label": "Extra Bold" }
+          ]
+        },
+        { "type": "header", "content": "Middle Subheading" },
+        { "type": "textarea", "id": "subheading", "label": "Subheading Text", "default": "Subtitle text appears here on hover." },
+        { "type": "color", "id": "p_color", "label": "Subheading Color", "default": "#ffffff" },
+        { "type": "range", "id": "p_size", "min": 12, "max": 30, "step": 1, "unit": "px", "label": "Font Size", "default": 16 },
+        { "type": "select", "id": "p_weight", "label": "Font Weight", "default": "400",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "600", "label": "Semi-bold" }
+          ]
+        },
+        { "type": "header", "content": "Button" },
+        { "type": "text", "id": "btn_label", "label": "Button Label", "default": "Shop Now" },
+        { "type": "url", "id": "btn_link", "label": "Button Link" },
+        { "type": "select", "id": "button_style", "label": "Button Style", "default": "btn--primary",
+          "options": [
+            { "value": "btn--primary", "label": "Primary" },
+            { "value": "btn--secondary", "label": "Secondary" },
+            { "value": "btn--outline", "label": "Outline" }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Hover Cards",
+      "blocks": [ { "type": "card" }, { "type": "card" }, { "type": "card" } ]
+    }
+  ]
+}
+{% endschema %}

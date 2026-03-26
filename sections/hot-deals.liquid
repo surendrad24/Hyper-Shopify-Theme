@@ -1,0 +1,380 @@
+
+
+<style>
+  #shopify-section-{{ section.id }} .hot-deals-section {
+    padding-top: {{ section.settings.section_padding_top }}px;
+    padding-bottom: {{ section.settings.section_padding_bottom }}px;
+    background-color: {{ section.settings.background_color }};
+  }
+
+  /* --- Uniform Layout Logic --- */
+  
+  /* If Full Width: remove default container padding and max-width */
+  #shopify-section-{{ section.id }} .page-width--full {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* If Full Width: Add internal padding so content isn't on edge */
+  #shopify-section-{{ section.id }} .page-width--full .hot-deals-title,
+  #shopify-section-{{ section.id }} .page-width--full .hot-deals-grid {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .hot-deals-title {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: 700;
+    color: {{ section.settings.heading_color }};
+    margin-bottom: 40px;
+    margin-left: 0; /* Fixed: Removed 15px margin so it aligns with grid */
+    font-family:'instrument sans';
+  }
+
+  .hot-deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+  }
+
+  .deal-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 260px;
+    cursor: default; /* Fixed: No pointer unless clicking button */
+    /* Fixed: No hover transforms */
+  }
+
+  .deal-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  /* Dark Overlay Logic */
+  .deal-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dark gradient to ensure white text readability */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+    pointer-events: none; /* Allows click through to button */
+  }
+
+  .deal-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .deal-card-top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .deal-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 8px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .deal-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  /* Button Styles & Hover Animation */
+  .deal-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    align-self: flex-start;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
+  }
+
+  .deal-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+
+  /* Button Hover Effect (Maintained) */
+  .deal-btn:hover::before {
+    left: 0;
+  }
+
+  .deal-btn:hover {
+    color: #000000;
+  }
+
+  @media (max-width: 1024px) {
+    .hot-deals-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .deal-card {
+      height: 280px;
+    }
+
+    .deal-title {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* --- Mobile Uniformity Fix --- */
+    #shopify-section-{{ section.id }} .page-width:not(.page-width--full) {
+       padding-left: 12px;
+       padding-right: 12px;
+    }
+    
+    #shopify-section-{{ section.id }} .page-width--full .hot-deals-title,
+    #shopify-section-{{ section.id }} .page-width--full .hot-deals-grid {
+       padding-left: 12px;
+       padding-right: 12px;
+    }
+
+    .hot-deals-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .hot-deals-title {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .deal-card {
+      height: 250px;
+    }
+
+    .deal-title {
+      font-size: 30px;
+    }
+  }
+</style>
+
+<div class="hot-deals-section">
+  <div class="page-width page-width--{{ section.settings.container }}">
+    {% if section.settings.section_heading != blank %}
+      <h2 class="hot-deals-title">{{ section.settings.section_heading }}</h2>
+    {% endif %}
+    
+    <div class="hot-deals-grid">
+      {% for block in section.blocks %}
+        <div class="deal-card" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+            <img 
+              class="deal-card-image" 
+              src="{{ block.settings.image | img_url: '800x' }}" 
+              alt="{{ block.settings.title }}"
+              loading="lazy"
+            >
+          {% else %}
+            <div class="deal-card-image" style="background-color: #cccccc;"></div>
+          {% endif %}
+          
+          <div class="deal-card-overlay"></div>
+          
+          <div class="deal-card-content">
+            <div class="deal-card-top">
+              {% if block.settings.subtitle != blank %}
+                <p class="deal-subtitle">{{ block.settings.subtitle }}</p>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h3 class="deal-title">{{ block.settings.title }}</h3>
+              {% endif %}
+            </div>
+            
+            {% if block.settings.button_text != blank %}
+              <a href="{{ block.settings.button_link }}" class="deal-btn">
+                {{ block.settings.button_text }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Hot Deals",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container width",
+      "default": "fixed",
+      "options": [
+        {
+          "value": "full",
+          "label": "Full width"
+        },
+        {
+          "value": "fixed",
+          "label": "Fixed width"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Hot Deals"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading Size",
+      "default": 42
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section Padding Top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section Padding Bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "deal_card",
+      "name": "Deal Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Card Image"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Product Category"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Deal Title"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hot Deals",
+      "category": "Promotional",
+      "blocks": [
+        {
+          "type": "deal_card",
+          "settings": {
+            "subtitle": "Robert Gordon Pottery",
+            "title": "Nest Collection",
+            "button_text": "Shop Now"
+          }
+        },
+        {
+          "type": "deal_card",
+          "settings": {
+            "subtitle": "Kitchen Equipment Flash Sale",
+            "title": "Limited Stocks Left!",
+            "button_text": "Shop Now"
+          }
+        },
+        {
+          "type": "deal_card",
+          "settings": {
+            "subtitle": "Instore and Online",
+            "title": "Spring Savers Sale",
+            "button_text": "Shop Now"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,125 @@
+
+        {% assign banner_width = section.settings.banner_width | default: 1920 %}
+        {% assign container_width = section.settings.container_width | default: 1200 %}
+        <div id="qo-wrapper">
+            <script>
+                window.currencyFormats = {{ shop.currency | json }};
+                window.money_format = {{ shop.money_format | json }};
+                window.money_with_currency_format = {{ shop.money_with_currency_format | json }};
+                const wrapper = document.getElementById("qo-wrapper");
+                const QO_GET_SETTINGS = '/apps/customer-portal/api/qo-universal-page/get-settings';
+
+                async function fetchQoSettings(body) {
+                    const res = await fetch(QO_GET_SETTINGS, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(body)
+                    });
+                    return res.json();
+                }
+
+                document.addEventListener("DOMContentLoaded", async () => {
+                    try {
+                        const qoSettings = await fetchQoSettings({
+                            domain: window.Shopify.shop,
+                        });
+                        
+                        if(!qoSettings.settings.is_display_universal_page) {
+                            wrapper.innerHTML = `
+                                <div id="qo-loading" class="qo-loading">
+                                    <div class="qo-spinner"></div>
+                                </div>
+                            `;
+
+                            const GET_QO_FORM_BY_CUSTOMER = '/apps/customer-portal/api/qo-form/get-by-customer';
+                            async function fetchFormDataByCustomer(body) {
+                                const res = await fetch(GET_QO_FORM_BY_CUSTOMER, {
+                                    method: "POST",
+                                    headers: {
+                                        "Content-Type": "application/json"
+                                    },
+                                    body: JSON.stringify(body)
+                                });
+                                return res.json();
+                            }
+
+                            const data = await fetchFormDataByCustomer({
+                                domain: window.Shopify.shop,
+                                customer: window.BSS_BCP_V2.customer,
+                                type: "dtc"
+                            });
+
+                            if (data?.id && wrapper) {
+                                wrapper.innerHTML = `
+                                    <bss-qo
+                                        banner-width="{{ banner_width }}px"
+                                        container-width="{{ container_width }}px"
+                                        form-id="${data.id}"
+                                    ></bss-qo>
+                                `;
+                            }
+                        } else {
+                            wrapper.innerHTML = `
+                                <bss-qo-universal-page></bss-qo-universal-page>
+                            `;
+                        }
+                    } catch (e) {
+                        console.error("Fetch QO settings failed:", e);
+                    }
+                });
+            </script>
+        </div>
+
+        <style>
+            .qo-loading {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 40px 0;
+                font-size: 16px;
+                color: #444;
+            }
+            .qo-spinner {
+                border: 4px solid #f3f3f3; /* nền */
+                border-top: 4px solid black; /* màu xoay */
+                border-radius: 50%;
+                width: 36px;
+                height: 36px;
+                animation: qo-spin 1s linear infinite;
+                margin-bottom: 12px;
+            }
+            @keyframes qo-spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        </style>
+        {% schema %}
+            {
+                "name": "BSS Quick Order",
+                "settings": [
+                    {
+                        "type": "range",
+                        "id": "banner_width",
+                        "label": "Banner width (px)",
+                        "min": 1100,
+                        "max": 1920,
+                        "step": 20,
+                        "default": 1200
+                    },
+                    {
+                        "type": "range",
+                        "id": "container_width",
+                        "label": "Container width (px)",
+                        "min": 1100,
+                        "max": 1920,
+                        "step": 20,
+                        "default": 1200
+                    }
+                ]
+            }
+        {% endschema %}
+    

@@ -1,0 +1,97 @@
+{%- style -%}
+  .section-container-{{ section.id }} {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  .step-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .step-icon {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 768px) {
+    .section-container-{{ section.id }} { grid-template-columns: 1fr; }
+    .step-card { align-items: center; text-align: center; }
+  }
+{%- endstyle -%}
+
+<div class="section-container-{{ section.id }}">
+  {% for block in section.blocks %}
+    <style>
+      .title-{{ block.id }} {
+        font-size: {{ block.settings.title_size }}px;
+        font-weight: {{ block.settings.title_weight }};
+        color: {{ block.settings.title_color }};
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+      .para-{{ block.id }} {
+        font-size: {{ block.settings.para_size }}px;
+        font-weight: {{ block.settings.para_weight }};
+        color: {{ block.settings.para_color }};
+        line-height: 1.5;
+      }
+    </style>
+    
+    <div class="step-card" {{ block.shopify_attributes }}>
+      {% if block.settings.icon != blank %}
+        <img src="{{ block.settings.icon | image_url: width: 150 }}" class="step-icon" alt="Icon">
+      {% endif %}
+      
+      <div class="title-{{ block.id }}">{{ block.settings.title }}</div>
+      <div class="para-{{ block.id }}">{{ block.settings.paragraph }}</div>
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Dynamic Feature Steps",
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step Item",
+      "settings": [
+        { "type": "image_picker", "id": "icon", "label": "Icon Image" },
+        { "type": "header", "content": "Heading Settings" },
+        { "type": "text", "id": "title", "label": "Title Text", "default": "Quotation / Sales Order" },
+        { "type": "color", "id": "title_color", "label": "Title Color", "default": "#000000" },
+        { "type": "range", "id": "title_size", "min": 12, "max": 40, "step": 1, "unit": "px", "label": "Title Font Size", "default": 20 },
+        { "type": "select", "id": "title_weight", "label": "Title Font Weight", "default": "800",
+          "options": [
+            { "value": "400", "label": "Normal" },
+            { "value": "600", "label": "Semi-Bold" },
+            { "value": "800", "label": "Extra Bold" }
+          ]
+        },
+        { "type": "header", "content": "Paragraph Settings" },
+        { "type": "textarea", "id": "paragraph", "label": "Paragraph Text", "default": "Enter description here." },
+        { "type": "color", "id": "para_color", "label": "Paragraph Color", "default": "#333333" },
+        { "type": "range", "id": "para_size", "min": 10, "max": 30, "step": 1, "unit": "px", "label": "Para Font Size", "default": 16 },
+        { "type": "select", "id": "para_weight", "label": "Para Font Weight", "default": "400",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Normal" },
+            { "value": "600", "label": "Semi-Bold" }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dynamic Feature Steps",
+      "blocks": [ { "type": "step" }, { "type": "step" }, { "type": "step" }, { "type": "step" } ]
+    }
+  ]
+}
+{% endschema %}

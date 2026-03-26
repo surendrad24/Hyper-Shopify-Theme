@@ -1,0 +1,124 @@
+{% comment %} <h1>HTML Sitemap</h1>
+
+<h2>Pages</h2>
+<ul>
+  {% for page in pages %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<h2>Collections</h2>
+<ul>
+  {% for collection in collections %}
+    <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<h2>Products</h2>
+<ul>
+  {% for product in collections.all.products %}
+    <li><a href="{{ product.url }}">{{ product.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<h2>Blogs</h2>
+<ul>
+  {% for blog in blogs %}
+    <li><a href="{{ blog.url }}">{{ blog.title }}</a></li>
+  {% endfor %}
+</ul> {% endcomment %}
+
+
+
+<style>
+.custom-sitemap-wrapper {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.custom-sitemap-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.custom-sitemap-heading {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 8px;
+}
+
+.custom-sitemap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px 20px;
+}
+
+.custom-sitemap-item {
+  padding: 4px 0;
+}
+
+.custom-sitemap-link {
+  text-decoration: none;
+  color: #333;
+  transition: 0.2s ease;
+}
+
+.custom-sitemap-link:hover {
+  color: #007bff;
+}
+</style>
+
+
+
+<div class="custom-sitemap-wrapper">
+
+<h1 class="custom-sitemap-title">HTML Sitemap</h1>
+
+<h2 class="custom-sitemap-heading">Pages</h2>
+<ul class="custom-sitemap-list">
+  {% for page in pages %}
+    <li class="custom-sitemap-item">
+      <a class="custom-sitemap-link" href="{{ page.url }}">{{ page.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+<h2 class="custom-sitemap-heading">Collections</h2>
+<ul class="custom-sitemap-list">
+  {% for collection in collections %}
+    <li class="custom-sitemap-item">
+      <a class="custom-sitemap-link" href="{{ collection.url }}">{{ collection.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% comment %} <h2 class="custom-sitemap-heading">Products</h2>
+{% paginate collections.all.products by 100 %}
+<ul class="custom-sitemap-list">
+  {% for product in paginate.items %}
+    <li class="custom-sitemap-item">
+      <a class="custom-sitemap-link" href="{{ product.url }}">{{ product.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endpaginate %} {% endcomment %}
+
+{% assign blog = blogs.All %}
+
+{% if blog %}
+<h2 class="custom-sitemap-heading">Blogs</h2>
+<ul class="custom-sitemap-list">
+  {% for article in blog.articles %}
+    <li class="custom-sitemap-item">
+      <a class="custom-sitemap-link" href="{{ article.url }}">{{ article.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+</div>

@@ -1,0 +1,2349 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_list_slider_6qbNfj": {
+      "type": "collection-list-slider",
+      "blocks": {
+        "featured_collection_GW3kAL": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020573.png",
+            "title": "Tableware"
+          }
+        },
+        "featured_collection_L9N3Tg": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020561.png",
+            "title": "Furniture"
+          }
+        },
+        "featured_collection_gxdACj": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020562.png",
+            "title": "Glassware"
+          }
+        },
+        "featured_collection_jQXtir": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020560.png",
+            "title": "Barware"
+          }
+        },
+        "featured_collection_4H9LzM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020564.png",
+            "title": "Takeaway"
+          }
+        },
+        "featured_collection_jMA9xm": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020570.png",
+            "title": "Storage"
+          }
+        },
+        "featured_collection_J6hxH9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020572.png",
+            "title": "Cookware"
+          }
+        },
+        "featured_collection_HwzPfD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020567.png",
+            "title": "Bakeware"
+          }
+        },
+        "featured_collection_J6V8fx": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020568.png",
+            "title": "Shelves"
+          }
+        },
+        "featured_collection_NkFYeg": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020574.png",
+            "title": "Cleaning"
+          }
+        },
+        "featured_collection_eBphH3": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/carousel-3.webp",
+            "title": "Tables"
+          }
+        },
+        "featured_collection_mFCdUY": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/carousel-2.webp",
+            "title": "Bar Chairs"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_GW3kAL",
+        "featured_collection_L9N3Tg",
+        "featured_collection_gxdACj",
+        "featured_collection_jQXtir",
+        "featured_collection_4H9LzM",
+        "featured_collection_jMA9xm",
+        "featured_collection_J6hxH9",
+        "featured_collection_HwzPfD",
+        "featured_collection_J6V8fx",
+        "featured_collection_NkFYeg",
+        "featured_collection_eBphH3",
+        "featured_collection_mFCdUY"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "card_color_scheme": "",
+        "card_style": "standard",
+        "card_heading_size": "text-base",
+        "card_image_ratio": "1/1",
+        "card_image_width": "medium",
+        "card_image_padding": "none",
+        "rounded_card_image": true,
+        "mobile_layout": "vertical",
+        "carousel_item_size": "auto",
+        "columns_desktop": 6,
+        "carousel_control_color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "slideshow_q3U4Jn": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_JhU8hg": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/NoPath_-_Copy_2_2x_b7a8ab31-db13-47c1-8cf0-877bc2ec2178.png",
+            "image_overlay_opacity": 20,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "CHEFTOP-X™",
+            "title": "THE MOST POWERFUL COMBI OVEN EVER",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "Explore Power",
+            "button_link": "shopify://collections/chef-tech",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": true
+          }
+        },
+        "slide_U9bPyj": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/DSCF4725_1400x_4cd4d435-1285-4d18-b960-789b8631c527.png",
+            "image_overlay_opacity": 30,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "PROFFESIONAL TOOLS",
+            "title": "ENGINEERED FOR PERFORMANCE",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "GI-Metal Explore",
+            "button_link": "shopify://collections/gi-metal",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        },
+        "slide_cQ6eF8": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/3836_1_984ec289-80ea-4f4a-bf52-22e461fb497c.png",
+            "image_overlay_opacity": 30,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "Contemporary Grace",
+            "title": "Dining & Kitchen",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "Shop collection",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "enable_preload_image": false
+          }
+        }
+      },
+      "block_order": [
+        "slide_JhU8hg",
+        "slide_U9bPyj",
+        "slide_cQ6eF8"
+      ],
+      "settings": {
+        "container": "fixed",
+        "slide_height": "medium",
+        "show_controls": true,
+        "autoplay": true,
+        "autoplay_delay": 6,
+        "show_text_below": false,
+        "text_alignment_mobile": "center",
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "most_popular_category_q6jRbR": {
+      "type": "most-popular-category",
+      "blocks": {
+        "promo_TxPBka": {
+          "type": "promo",
+          "settings": {
+            "label": "NEW ARRIVALS",
+            "promo_heading": "Alina by Steelite",
+            "button_text": "Shop Now",
+            "link": "shopify://collections/steelite",
+            "image": "shopify://shop_images/Amalfi_Banner_14_2x_21448161-383d-4f6d-ba41-af229ec8838b.png",
+            "content_position": "top",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "group": "Everyday Essentials"
+          }
+        },
+        "category_4cb4UF": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/Group_11_2x_bc00a576-2d43-40e5-b9ad-c1942dc5f55b.png",
+            "title": "Mixers",
+            "link": "shopify://collections/acme",
+            "group": "Everyday Essentials"
+          }
+        },
+        "category_9XyQHy": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/Group_20_2x_ed9c7f97-f349-4734-b6b8-4f3b163bd162.png",
+            "title": "Napkins",
+            "link": "",
+            "group": "Everyday Essentials"
+          }
+        },
+        "category_Gr7FCQ": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/Group_9.png",
+            "title": "Cleaning",
+            "link": "",
+            "group": "Everyday Essentials"
+          }
+        },
+        "category_yAWPUn": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/Group_8_2x_217190d3-2256-4271-97ce-9e78557802b0.png",
+            "title": "Packaging",
+            "link": "",
+            "group": "Everyday Essentials"
+          }
+        },
+        "category_yHUbhp": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/Group_7.png",
+            "title": "Steam pans",
+            "link": "",
+            "group": "Everyday Essentials"
+          }
+        },
+        "category_7xmTHY": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/Group_6_2x_713099ee-b920-4731-a3dd-de4679507d08.png",
+            "title": "Beer Glasses",
+            "link": "",
+            "group": "Everyday Essentials"
+          }
+        },
+        "category_TDWpyt": {
+          "type": "category",
+          "settings": {
+            "title": "Category Name",
+            "link": "",
+            "group": "Kitchenware"
+          }
+        },
+        "category_pGDtpX": {
+          "type": "category",
+          "settings": {
+            "title": "Category Name",
+            "link": "",
+            "group": "Dinnerware"
+          }
+        },
+        "category_eEQEMx": {
+          "type": "category",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_2213_fb7b2e4f-2b7d-46a0-9654-15f92ab75d32.png",
+            "title": "Category Name",
+            "link": "",
+            "group": "Pizza"
+          }
+        }
+      },
+      "block_order": [
+        "promo_TxPBka",
+        "category_4cb4UF",
+        "category_9XyQHy",
+        "category_Gr7FCQ",
+        "category_yAWPUn",
+        "category_yHUbhp",
+        "category_7xmTHY",
+        "category_TDWpyt",
+        "category_pGDtpX",
+        "category_eEQEMx"
+      ],
+      "name": "Popular Categories",
+      "settings": {
+        "container": "fixed",
+        "heading": "Most Popular Categories",
+        "description": "Stock up on everyday essentials.",
+        "highlight_color": "#000000",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "promotion_banner_VCkmzP": {
+      "type": "promotion-banner",
+      "blocks": {
+        "subheading_xKzbww": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "RED HOT DEALS!",
+            "subheading_icon": "none"
+          }
+        },
+        "timer_6FyFrY": {
+          "type": "timer",
+          "settings": {
+            "type": "evergreen",
+            "number_size": "h1",
+            "duration": "every_month",
+            "time": "2025/06/28 03:45 PM"
+          }
+        },
+        "text_QWap4d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sale on appliances and kitchen equipment now on + More</p>",
+            "text_color": "base-text"
+          }
+        },
+        "code_FWe4HN": {
+          "type": "code",
+          "settings": {
+            "discount_code": "FLASH30",
+            "button_label": "Use Code: FLASH30",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_xKzbww",
+        "timer_6FyFrY",
+        "text_QWap4d",
+        "code_FWe4HN"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-2",
+        "layout": "horizontal",
+        "content_alignment": "center",
+        "content_alignment_mobile": "center",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_bdaamt": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_ydJPzX": {
+          "type": "collection",
+          "settings": {
+            "collection": "aussie-chef",
+            "title": "New Arrivals",
+            "show_banner": true,
+            "color_scheme": "scheme-inverse",
+            "card_link": "shopify://collections/aussie-chef",
+            "image_overlay_opacity": 20,
+            "content_position": "split-bottom-button",
+            "content_alignment": "left",
+            "subheading": "Promotion",
+            "subheading_style": "",
+            "heading": "Soft Stools Design",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "text_size": "text-base",
+            "button_label": "Shop now",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "collection_E83rKg": {
+          "type": "collection",
+          "settings": {
+            "collection": "bakemaster",
+            "title": "Hot Items",
+            "show_banner": true,
+            "color_scheme": "scheme-inverse",
+            "card_link": "shopify://collections/bakemaster",
+            "image_overlay_opacity": 20,
+            "content_position": "split-bottom-button",
+            "content_alignment": "left",
+            "subheading": "Promotion",
+            "subheading_style": "",
+            "heading": "Soft Stools Design",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "",
+            "text_size": "text-base",
+            "button_label": "Shop now",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ydJPzX",
+        "collection_E83rKg"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "New Arrivals",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "<p>Traditional divides between personal and professional space.</p>",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "limit": 7,
+        "columns": 5,
+        "column_gap": "medium",
+        "row_gap": "large",
+        "enable_slider": true,
+        "content_overflow": true,
+        "navigation_position": "bottom",
+        "pcard_image_ratio": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "show_progress_bar": true,
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "hot_deals_WbRhr9": {
+      "type": "hot-deals",
+      "blocks": {
+        "deal_card_hNBkLA": {
+          "type": "deal_card",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020558.png",
+            "subtitle": "Robert Gordon Pottery",
+            "title": "Nest Collection",
+            "button_text": "Shop Now",
+            "button_link": ""
+          }
+        },
+        "deal_card_TDXJYQ": {
+          "type": "deal_card",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020557.png",
+            "subtitle": "Kitchen Equipment Flash Sale",
+            "title": "Limited Stocks",
+            "button_text": "Shop Now",
+            "button_link": ""
+          }
+        },
+        "deal_card_WtQ6ng": {
+          "type": "deal_card",
+          "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_vic0jfvic0jfvic0.jpg",
+            "subtitle": "Instore and Online",
+            "title": "Spring Savers Sale",
+            "button_text": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "deal_card_hNBkLA",
+        "deal_card_TDXJYQ",
+        "deal_card_WtQ6ng"
+      ],
+      "name": "Hot Deals",
+      "settings": {
+        "container": "fixed",
+        "section_heading": "Hot Deals",
+        "heading_size": 42,
+        "heading_color": "#000000",
+        "background_color": "#ffffff",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60
+      }
+    },
+    "custom_content_HPgFTK": {
+      "type": "custom-content",
+      "blocks": {
+        "image_card_with_product_qBJGcT": {
+          "type": "image_card_with_product",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/aurora_lapis_stl18-9-20-50_2x_5a279928-9dc9-4551-b9ef-831397a21a21.png",
+            "image_ratio": "adapt",
+            "subheading": "STEELITE UTOPIA",
+            "heading": "Vesuvius Collection",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "description": "",
+            "button_label": "Shop",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product": "aussie-chef-alex-black-press-stud-chef-jacket-short-sleeve-2xl",
+            "width": "25%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_card_with_product_yKDfea": {
+          "type": "image_card_with_product",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/Screenshot_2026-01-09_at_16-04-42_Instagram_2x_d21172ec-438f-4003-b302-c095bc59ac29.png",
+            "image_ratio": "adapt",
+            "subheading": "HOMER LAUGHLIN",
+            "heading": "American Rose",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "description": "",
+            "button_label": "Shop",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product": "homer-laughlin-american-rose-blue-plate",
+            "width": "25%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_card_with_product_G77z3R": {
+          "type": "image_card_with_product",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/10_24_Zalto_Skin_Contact_Glass_HERO_WE_1920x1280_2x_3db77680-9e9a-40fb-8c49-747363834b63.png",
+            "image_ratio": "adapt",
+            "subheading": "RONA GLASSWARE",
+            "heading": "Edition Collection",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "description": "",
+            "button_label": "Shop",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product": "rona-bar-gin-tonic-glass",
+            "width": "25%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_card_with_product_3khACH": {
+          "type": "image_card_with_product",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/Screenshot_2025-11-10_at_14-13-16_1_Instagram_2x_092327af-64dd-45b7-a664-c550032f8354.png",
+            "image_ratio": "adapt",
+            "subheading": "ROBERT GORDON",
+            "heading": "Sets Collection",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3",
+            "description": "",
+            "button_label": "Shop",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product": "robert-gordon-adelaide-birch-bowl-22-1cm",
+            "width": "25%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_card_with_product_dMnGc4": {
+          "type": "image_card_with_product",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/Screenshot_2025-07-08_at_13-28-03_Instagram_2x_06b0520f-f34b-4f61-bcd9-0accb757e8f3.png",
+            "image_ratio": "adapt",
+            "subheading": "GLOBAL KNIVES",
+            "heading": "Ikasu Collection",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "description": "",
+            "button_label": "Shop",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product": "acme-dolphin-tulip-cup",
+            "width": "25%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_card_with_product_qBJGcT",
+        "image_card_with_product_yKDfea",
+        "image_card_with_product_G77z3R",
+        "image_card_with_product_3khACH",
+        "image_card_with_product_dMnGc4"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "enable_sticky_column": false,
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "column_gap": "2xs",
+        "row_gap": "medium",
+        "swipe_on_mobile": true,
+        "columns_mobile": "1",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "full"
+      }
+    },
+    "collection_list_Azm9te": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_KdFqFq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020560.png",
+            "title": "Barware"
+          }
+        },
+        "featured_collection_d8XGnb": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020510.png",
+            "title": "Kitchenware"
+          }
+        },
+        "featured_collection_FzRWDn": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020562.png",
+            "title": "Glassware"
+          }
+        },
+        "featured_collection_at4gCr": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020512.png",
+            "title": "Drinkware"
+          }
+        },
+        "featured_collection_F69pQy": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020513.png",
+            "title": "Industrial Furniture"
+          }
+        },
+        "featured_collection_JV9tDT": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020574.png",
+            "title": "Cleaning Supplies"
+          }
+        },
+        "featured_collection_WLrpbE": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020521.png",
+            "title": "Packaging Supplies"
+          }
+        },
+        "featured_collection_qdrbEr": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020516_bed72b29-14ad-4de5-af18-fe58985961c9.png",
+            "title": "Crockery"
+          }
+        },
+        "featured_collection_Pa8kFP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020517_50bb86ae-010b-47ac-a1d1-2ed96aaa6ec8.png",
+            "title": "Cutlery"
+          }
+        },
+        "featured_collection_UTWiiY": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020518_06eecf5d-58e2-45cb-a2c6-4e7f80d628e2.png",
+            "title": "Cocktail Glasses"
+          }
+        },
+        "featured_collection_rkynNN": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020519_336f2a05-26b7-4c3a-8423-b0c714611da1.png",
+            "title": "Polycarbonate"
+          }
+        },
+        "featured_collection_8t9tJr": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Group_1000020522_7b31baf9-4e9a-4ed1-b852-5fc747e15795.png",
+            "title": "Health & Supplies"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_KdFqFq",
+        "featured_collection_d8XGnb",
+        "featured_collection_FzRWDn",
+        "featured_collection_at4gCr",
+        "featured_collection_F69pQy",
+        "featured_collection_JV9tDT",
+        "featured_collection_WLrpbE",
+        "featured_collection_qdrbEr",
+        "featured_collection_Pa8kFP",
+        "featured_collection_UTWiiY",
+        "featured_collection_rkynNN",
+        "featured_collection_8t9tJr"
+      ],
+      "custom_css": [],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Shop By Categories",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "Shop All Products",
+        "button_link": "shopify://collections/all",
+        "button_style": "btn--plain",
+        "button_icon": "caret-right",
+        "card_color_scheme": "",
+        "card_style": "standard",
+        "card_heading_size": "text-base",
+        "card_text_line_limit": "none",
+        "card_image_ratio": "adapt",
+        "card_image_width": "large",
+        "card_image_padding": "none",
+        "rounded_card_image": true,
+        "card_show_border": false,
+        "mobile_layout": "vertical",
+        "columns_desktop": 6,
+        "column_gap": "medium",
+        "row_gap": "medium",
+        "grid_bordered": true,
+        "columns_mobile": "3",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "collection_tabs_VexkkR": {
+      "type": "collection-tabs",
+      "blocks": {
+        "collection_kXyTe3": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/RF7.UBF.2.SD-Image_2x_9cc98414-b766-432d-b848-d17e3e155e84.png",
+            "title": "Cooking ware",
+            "text": "<p>With a shape inspired by the bollards used to<br/>secure vessels to a jetty</p>",
+            "button_label": "Shop Collection",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "collection_qxfNFe": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Image_16_2x_9c261757-3115-4a2e-b411-9d35541a20e5.png",
+            "title": "Canning Machine",
+            "text": "<p>Anchored in design, inspired by the sturdy bollards<br/>that secure ships to docks.</p>",
+            "button_label": "Shop Collection",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "collection_j3wCpz": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/image_51_10644bf1-5ff8-4341-b60e-038fed4a59f2.png",
+            "title": "Kitchen Crockery",
+            "text": "<p>Designed with a silhouette inspired by the crossbars <br/>that provide strength and stability.</p>",
+            "button_label": "Shop Collection",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "collection_kXyTe3",
+        "collection_qxfNFe",
+        "collection_j3wCpz"
+      ],
+      "custom_css": [
+        "@media (min-width: 1280px) {collection-tabs {padding-inline: 5rem; }}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "heading": "Featured Collections",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h6",
+        "image_position": "right",
+        "image_ratio": "adapt",
+        "collection_heading_size": "h1",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "favorite_products_6Tg9Pn": {
+      "type": "favorite-products",
+      "blocks": {
+        "product_XrLWzM": {
+          "type": "product",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "product": "homer-laughlin-american-rose-moss-plate",
+            "image": "shopify://shop_images/Screenshot_2026-01-29_at_11-04-11_Instagram_2x_41766850-3fd2-4abe-bd60-7abd4c49bc1f.png",
+            "text": "<p>\"Spanish Chipirones y Almejas - On the Homer Laughlin American Rose Moss Plate\"</p>",
+            "text_size": "h3",
+            "author": "TINTO | TAPAS & WINE BAR",
+            "bio": ""
+          }
+        },
+        "product_wByADN": {
+          "type": "product",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "product": "nude-bargiani-martini-glass-200ml",
+            "image": "shopify://shop_images/nude-giorgio-bargiani-glassware-1_2x_db5f0075-7b86-4bba-96e4-faa8965d9412.png",
+            "text": "<p>\"Spanish Chipirones y Almejas - On the Homer Laughlin American Rose Moss Plate.\"</p>",
+            "text_size": "h3",
+            "author": "TINTO | TAPAS & WINE BAR",
+            "bio": ""
+          }
+        },
+        "product_8UUtBe": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "scheme-6",
+            "product": "1883-mojito-mint-syrup-1l",
+            "text": "<p>“Crafted with care using local materials, each piece reflects the character of its origin.”</p>",
+            "text_size": "h2",
+            "author": "John Doe",
+            "bio": "New York"
+          }
+        }
+      },
+      "block_order": [
+        "product_XrLWzM",
+        "product_wByADN",
+        "product_8UUtBe"
+      ],
+      "custom_css": [
+        ".testimonial__content {max-width: 46rem;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "layout": "content-right",
+        "heading": "PRODUCT FEATURED",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "rgba(0,0,0,0)",
+        "highlight_text_color": "rgba(0,0,0,0)",
+        "slide_height": "small",
+        "pcard_style": "boxed",
+        "pcard_image_ratio": "",
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_aXhRxw": {
+      "type": "image-with-text",
+      "blocks": {
+        "badge_fQjMHW": {
+          "type": "badge",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "text": "",
+            "image": "shopify://shop_images/Cedar-logo-ill.png",
+            "position_mobile": "right"
+          }
+        },
+        "subheading_8kBXjM": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "About Cedar"
+          }
+        },
+        "heading_jnb9cP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Servicing Australia’s hospitality industry for almost 3 decades.",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3"
+          }
+        },
+        "text_4pYVYF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cedar is home to over 18,000 products from 650 brands and counting. Shop online or visit our showroom in Brunswick for all your hospitality supplies in one place.</p><p></p><p> Our extensive catalogue includes top-of-the-range food service equipment, machines, glassware, crockery, barware and kitchenware to keep your back-of-house running smoothly and your front-of-house looking on point.</p>",
+            "subtext_color": true
+          }
+        },
+        "icon_with_text_8qCJiV": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "map-pin",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "Product locally in New York",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "icon_with_text_w4D3R6": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "smiley",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "4,8 Review Score",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "icon_with_text_pcaqTj": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "stool",
+            "icon_width": 24,
+            "color": "#000000",
+            "heading": "Over 50 Products",
+            "heading_size": "h5",
+            "text": "",
+            "vertical_alignment": "start"
+          }
+        },
+        "button_aegkDr": {
+          "type": "button",
+          "settings": {
+            "button_label": "Our Story",
+            "button_link": "shopify://pages/about-us",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "badge_fQjMHW",
+        "subheading_8kBXjM",
+        "heading_jnb9cP",
+        "text_4pYVYF",
+        "icon_with_text_8qCJiV",
+        "icon_with_text_w4D3R6",
+        "icon_with_text_pcaqTj",
+        "button_aegkDr"
+      ],
+      "custom_css": [
+        ".image-with-text__content {max-width: 45rem; --text-margin-top: 2rem;}",
+        "@media (min-width: 1280px) {.image-with-text__media {padding-inline-start: 5rem; }}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/image_53_b9950179-f93d-4782-a95a-848da8fe73d4.png",
+        "image_position": "left",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "shop_by_brand_section_WMJHkH": {
+      "type": "shop-by-brand-section",
+      "blocks": {
+        "brand_WbNMJr": {
+          "type": "brand",
+          "settings": {
+            "brand_collection": "robert-gordon",
+            "brand_image": "shopify://shop_images/Rectangle_2247_da8c7a65-7155-4184-a0d7-2484050a8681.png",
+            "custom_title": "Robert Gordon Pottery"
+          }
+        },
+        "brand_BMXkqN": {
+          "type": "brand",
+          "settings": {
+            "brand_collection": "",
+            "brand_image": "shopify://shop_images/Rectangle_2248_4e641118-18bc-4131-852f-63d37bd86bcd.png",
+            "custom_title": "Rona Glassware"
+          }
+        },
+        "brand_eNPwQq": {
+          "type": "brand",
+          "settings": {
+            "brand_collection": "",
+            "brand_image": "shopify://shop_images/Rectangle_2249_72330c8c-3041-4bc7-a625-ec771a67d4d6.png",
+            "custom_title": "Spidocook"
+          }
+        },
+        "brand_9TxfkG": {
+          "type": "brand",
+          "settings": {
+            "brand_collection": "",
+            "brand_image": "shopify://shop_images/Rectangle_2250_666059d4-8990-4f96-b157-cfba6afdfe0c.png",
+            "custom_title": "1883 Syrups"
+          }
+        },
+        "brand_7Jb6yT": {
+          "type": "brand",
+          "settings": {
+            "brand_collection": "",
+            "brand_image": "shopify://shop_images/Rectangle_2251_3ee4e81d-1d8e-4e52-b728-75324c9acca1.png",
+            "custom_title": "ACME Coffee"
+          }
+        },
+        "brand_TWkPGk": {
+          "type": "brand",
+          "settings": {
+            "brand_collection": "",
+            "custom_title": ""
+          }
+        }
+      },
+      "block_order": [
+        "brand_WbNMJr",
+        "brand_BMXkqN",
+        "brand_eNPwQq",
+        "brand_9TxfkG",
+        "brand_7Jb6yT",
+        "brand_TWkPGk"
+      ],
+      "name": "Shop by Brand Clean",
+      "settings": {
+        "heading_font": "instrument_sans_n4",
+        "heading_size": 32,
+        "heading_color": "#000000",
+        "heading": "Shop by Brand",
+        "view_all_label": "Shop All Brands",
+        "view_all_link": "shopify://pages/shop-by-brand-2",
+        "shop_all_color": "#000000",
+        "shop_all_size": 15,
+        "shop_all_weight": "600",
+        "card_font": "instrument_sans_n4",
+        "card_title_size": 18,
+        "columns_desktop": 5,
+        "show_arrows": false,
+        "background_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "lookbook_slider_9zCdQJ": {
+      "type": "lookbook-slider",
+      "blocks": {
+        "lookbook_card_8cicAx": {
+          "type": "lookbook_card",
+          "settings": {
+            "product_list": [],
+            "width": 59,
+            "width_mobile": 90,
+            "image": "shopify://shop_images/490363578_1534650094589793_3700199781969193733_n_2x_2018c575-20b3-4779-ad94-def05b902f82.png",
+            "heading": "Shop this look",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6"
+          }
+        },
+        "lookbook_card_eUB7yN": {
+          "type": "lookbook_card",
+          "settings": {
+            "product_list": [],
+            "width": 29,
+            "width_mobile": 65,
+            "image": "shopify://shop_images/Screenshot_2025-07-08_at_13-55-17_Instagram_2x_57027425-8f37-40fa-802c-97b04739da25.png",
+            "heading": "Shop this look",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6"
+          }
+        },
+        "lookbook_card_tHgUQt": {
+          "type": "lookbook_card",
+          "settings": {
+            "product_list": [],
+            "width": 59,
+            "width_mobile": 90,
+            "image": "shopify://shop_images/Screenshot_2025-11-27_at_15-13-28_Instagram_2x_eeda6372-6e6c-460f-bd3e-ef9b8f9ee0c6.png",
+            "heading": "Shop this look",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6"
+          }
+        },
+        "lookbook_card_8BaXc6": {
+          "type": "lookbook_card",
+          "settings": {
+            "product_list": [],
+            "width": 29,
+            "width_mobile": 65,
+            "image": "shopify://shop_images/Screenshot_2025-07-08_at_15-05-51_Instagram_2x_5553e50b-f411-41ee-a856-fe2e29838a65.png",
+            "heading": "Shop this look",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6"
+          }
+        }
+      },
+      "block_order": [
+        "lookbook_card_8cicAx",
+        "lookbook_card_eUB7yN",
+        "lookbook_card_tHgUQt",
+        "lookbook_card_8BaXc6"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Get Inspired by Spaces",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "description_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "2xs",
+        "enable_slider": true,
+        "slide_height": "medium",
+        "enable_swiper_mobile": true,
+        "show_progress_bar": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "slider_with_multicolumn_aJwbrc": {
+      "type": "slider-with-multicolumn",
+      "blocks": {
+        "slide_cGYakP": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/NoPath_-_Copy_13_2x_d1221085-40b5-4d3e-9fb4-6b8c32947bd3.png",
+            "image_overlay_opacity": 10,
+            "content_position": "bottom-left",
+            "content_alignment": "left",
+            "subheading": "CAFE & SPECIALITY COFFEE",
+            "heading": "Difference in the details",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "text": "<p>Barista-approved equipment, stylish serveware and everyday back-of-house solutions designed for speed, consistency and standout presentation.</p>",
+            "button_label": "Shop",
+            "button_link": "shopify://collections",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        },
+        "image_card_BXpdq6": {
+          "type": "image-card",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Group_17_2x_f7c140ef-8d43-4529-b9ab-1e65a2a1fca9.png",
+            "content_alignment": "center",
+            "heading": "COOKING MACHINE",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h5",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "text": "<p><strong>Induction Plate</strong></p>",
+            "card_link": ""
+          }
+        },
+        "image_card_yb3htw": {
+          "type": "image-card",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Group_18_2x_19f0a01d-aa23-469a-b259-2195ee33e84a.png",
+            "content_alignment": "center",
+            "heading": "FOOD WRAP",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h5",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "text": "<p><strong>Gingham Paper</strong></p>",
+            "card_link": ""
+          }
+        },
+        "image_card_7KqpyL": {
+          "type": "image-card",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/Group_20_2x_ed9c7f97-f349-4734-b6b8-4f3b163bd162.png",
+            "content_alignment": "center",
+            "heading": "TAKEAWAY",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h5",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "text": "<p><strong>Burger Boxes</strong></p>",
+            "card_link": ""
+          }
+        },
+        "image_card_ag7Eb3": {
+          "type": "image-card",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Group_19_2x_fa4c6afe-2ba0-4c82-bc89-53bbb6897de1.png",
+            "content_alignment": "center",
+            "heading": "FOOD PREP",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h5",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "text": "<p><strong>Squeeze Bottles</strong></p>",
+            "card_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_cGYakP",
+        "image_card_BXpdq6",
+        "image_card_yb3htw",
+        "image_card_7KqpyL",
+        "image_card_ag7Eb3"
+      ],
+      "custom_css": [
+        ".slide__text {max-width: 37rem; --text-margin-top: 2rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "autoplay": true,
+        "autoplay_delay": 6,
+        "columns_desktop": 2,
+        "column_gap": "2xs",
+        "row_gap": "inherit",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "custom_content_JxRy7x": {
+      "type": "custom-content",
+      "blocks": {
+        "image_card_mL7WWJ": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/office-chair.jpg",
+            "image_ratio": "1/1",
+            "image_overlay_opacity": 20,
+            "content_position": "split-bottom-button",
+            "content_alignment": "left",
+            "content_spacing": "small",
+            "content_gap": "fitted",
+            "card_link": "",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "Turn Chairs",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "<p>Elevate your space with 40% off<br/>our timeless designs!</p>",
+            "button_label": "Shop Now",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "show_badge": true,
+            "badge_color_scheme": "scheme-3",
+            "badge_shape": "circle",
+            "badge_position": "top-right",
+            "badge_subtext": "Save",
+            "badge_text": "40%",
+            "color_scheme_mobile": "scheme-1",
+            "show_text_below": false,
+            "content_alignment_mobile": "left",
+            "width": "50%",
+            "alignment": "center",
+            "block_custom_class": "",
+            "enable_preload_image": false
+          }
+        },
+        "image_card_Vj69GM": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "image": "shopify://shop_images/full-shot-man-sitting-chair_c99380b5-669e-4ba5-832f-b8f917a045f5.jpg",
+            "image_ratio": "1/1",
+            "image_overlay_opacity": 20,
+            "content_position": "split-bottom-button",
+            "content_alignment": "left",
+            "content_spacing": "small",
+            "content_gap": "fitted",
+            "card_link": "",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "Cross Chairs",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "<p>Get 30% off elegant, timeless <br/>seating—don’t miss out!</p>",
+            "button_label": "Shop Now",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "show_badge": true,
+            "badge_color_scheme": "scheme-8",
+            "badge_shape": "circle",
+            "badge_position": "top-right",
+            "badge_subtext": "Save",
+            "badge_text": "30%",
+            "color_scheme_mobile": "scheme-1",
+            "show_text_below": false,
+            "content_alignment_mobile": "left",
+            "width": "50%",
+            "alignment": "center",
+            "block_custom_class": "",
+            "enable_preload_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_card_mL7WWJ",
+        "image_card_Vj69GM"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "enable_sticky_column": false,
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "column_gap": "2xs",
+        "row_gap": "inherit",
+        "swipe_on_mobile": false,
+        "columns_mobile": "1",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "buttons_with_icon_7zH9F3": {
+      "type": "buttons-with-icon",
+      "blocks": {
+        "button_item_VQE7f9": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Detergent",
+            "button_link": "",
+            "icon": "none",
+            "icon_img": "shopify://shop_images/Mask_group_652dfb85-44f2-443b-a08b-e25e230a636b.png"
+          }
+        },
+        "button_item_A8ctbq": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Stock Pot",
+            "button_link": "",
+            "icon": "none",
+            "icon_img": "shopify://shop_images/crafting-refreshing-cocktails-with-stylish-copper-shaker-strainer-chic-bar-white-png-transparent-background_2_85bdb337-6914-4431-b657-1aaffd7d8785.png"
+          }
+        },
+        "button_item_gp6wzj": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Plates",
+            "button_link": "",
+            "icon": "check",
+            "icon_img": "shopify://shop_images/crafting-refreshing-cocktails-with-stylish-copper-shaker-strainer-chic-bar-white-png-transparent-background_2_4.png"
+          }
+        },
+        "button_item_KjqtJi": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Pizza Oven",
+            "button_link": "",
+            "icon": "check",
+            "icon_img": "shopify://shop_images/crafting-refreshing-cocktails-with-stylish-copper-shaker-strainer-chic-bar-white-png-transparent-background_2_2_94f71857-71bc-4261-b37c-526fb34bedef.png"
+          }
+        },
+        "button_item_Q3cegW": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Lined Glass Wine",
+            "button_link": "",
+            "icon": "check",
+            "icon_img": "shopify://shop_images/crafting-refreshing-cocktails-with-stylish-copper-shaker-strainer-chic-bar-white-png-transparent-background_2_3.png"
+          }
+        },
+        "button_item_pqRX7H": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Dinner Napkins",
+            "button_link": "",
+            "icon": "check",
+            "icon_img": "shopify://shop_images/crafting-refreshing-cocktails-with-stylish-copper-shaker-strainer-chic-bar-white-png-transparent-background_2_4_c6572393-fde8-4bc3-982f-17a2f81bd7ae.png"
+          }
+        },
+        "button_item_en8WtA": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Ray Table Lamp",
+            "button_link": "",
+            "icon": "check",
+            "icon_img": "shopify://shop_images/crafting-refreshing-cocktails-with-stylish-copper-shaker-strainer-chic-bar-white-png-transparent-background_2_85bdb337-6914-4431-b657-1aaffd7d8785.png"
+          }
+        },
+        "button_item_JnFWN8": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Chairs",
+            "button_link": "",
+            "icon": "check",
+            "icon_img": "shopify://shop_images/208857_1_d1c6d2d8-9ebd-41f9-8cfd-16115ff4c2c8.png"
+          }
+        },
+        "button_item_FrFqff": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Living Room",
+            "button_link": "",
+            "icon": "check",
+            "icon_img": "shopify://shop_images/images_2.jpg"
+          }
+        },
+        "button_item_mKVJW4": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Planters",
+            "button_link": "",
+            "icon": "check",
+            "icon_img": "shopify://shop_images/crafting-refreshing-cocktails-with-stylish-copper-shaker-strainer-chic-bar-white-png-transparent-background_2_4_c6572393-fde8-4bc3-982f-17a2f81bd7ae.png"
+          }
+        }
+      },
+      "block_order": [
+        "button_item_VQE7f9",
+        "button_item_A8ctbq",
+        "button_item_gp6wzj",
+        "button_item_KjqtJi",
+        "button_item_Q3cegW",
+        "button_item_pqRX7H",
+        "button_item_en8WtA",
+        "button_item_JnFWN8",
+        "button_item_FrFqff",
+        "button_item_mKVJW4"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "item_alignment": "left",
+        "item_button_style": "btn--icon",
+        "item_button_font": "button",
+        "enable_slider": true,
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "cedar_highlights_section_98MM3C": {
+      "type": "cedar-highlights-section",
+      "blocks": {
+        "highlight_card_FGpPkC": {
+          "type": "highlight_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Instagram_Post_1.png",
+            "card_title": "Finance Options",
+            "card_description": "We understand that every business has unique financial needs, and that's why we offer a range of trusted and convenient financing solutions. Take control of your budget, unlock opportunities, and elevate your business with the financial freedom you deserve.",
+            "button_text": "Read More",
+            "button_link": ""
+          }
+        },
+        "highlight_card_hL6pK6": {
+          "type": "highlight_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Instagram_Post_2_2x_35930c4b-efca-4ddc-b5fc-8f8b77606a35.png",
+            "card_title": "Custom Made Services",
+            "card_description": "We work closely with chefs to develop unique, bespoke pieces catered to their particular needs. \n<br><br>\nPersonal branding like custom stamping makes your dining experience more impactful.",
+            "button_text": "Enquire Now",
+            "button_link": ""
+          }
+        },
+        "highlight_card_QwypiA": {
+          "type": "highlight_card",
+          "settings": {
+            "card_image": "shopify://shop_images/RAT_Keynote_WA45-11-2_2x_e73a1c8f-df94-4e78-9333-f1080ba9f146.png",
+            "card_title": "Catalog Library",
+            "card_description": "Take a look at the current dealer and supplier catalogues where you'll find a great range of products for the kitchen, restaurant or day-to day upkeep.",
+            "button_text": "Explore",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "highlight_card_FGpPkC",
+        "highlight_card_hL6pK6",
+        "highlight_card_QwypiA"
+      ],
+      "name": "Cedar Hospitality Highlights",
+      "settings": {
+        "container": "fixed",
+        "section_title": "RESOURCE HUB",
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "background_color": "#ffffff",
+        "title_font_size": 40,
+        "title_font_weight": "700",
+        "title_color": "#000000",
+        "title_margin_bottom": 20,
+        "grid_gap": 30,
+        "card_background": "#ffffff",
+        "card_border_radius": 10,
+        "card_title_font_size": 22,
+        "card_title_font_weight": "700",
+        "card_title_color": "#000000",
+        "card_description_font_size": 15,
+        "card_description_color": "#666666",
+        "button_font_size": 15,
+        "button_font_weight": "600",
+        "button_padding_y": 15,
+        "button_padding_x": 30,
+        "button_border_radius": 5,
+        "button_border_width": 2,
+        "button_text_color": "#000000",
+        "button_background": "#ffffff",
+        "button_border_color": "#e5e5e5"
+      }
+    },
+    "industry_category_section_bETnXq": {
+      "type": "industry-category-section",
+      "blocks": {
+        "category_card_J86Wdk": {
+          "type": "category_card",
+          "settings": {
+            "card_image": "shopify://shop_images/626511940_1321859149975835_706426026121161831_n_2x_8d23960a-53e9-4be3-9c14-2dc1b5d9f019.png",
+            "card_title": "FOOD HALLS & EDUCATION",
+            "card_link": ""
+          }
+        },
+        "category_card_jizRKQ": {
+          "type": "category_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Screenshot_2025-11-14_at_14-56-40_Instagram_2x_a8b7995c-6ef0-448e-a7de-5e922546d90c.png",
+            "card_title": "CAFE",
+            "card_link": ""
+          }
+        },
+        "category_card_FVzYAK": {
+          "type": "category_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Screenshot_2025-10-24_at_14-57-22_Instagram_2x_4c8b1b26-cafb-427f-8043-2f48d763cd5f.png",
+            "card_title": "BUFFET",
+            "card_link": ""
+          }
+        },
+        "category_card_gacHYU": {
+          "type": "category_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Screenshot_2025-08-27_at_13-59-53_Instagram_2x_8071833d-3795-435e-987e-bfdf9a1b5f3d.png",
+            "card_title": "BARS, CLUBS & PUBS",
+            "card_link": ""
+          }
+        },
+        "category_card_xLnVrE": {
+          "type": "category_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Screenshot_2025-08-27_at_13-59-53_Instagram_39a41d4f-33b6-4817-ba74-32a7b3d55780.png",
+            "card_title": "HEALTHCARE",
+            "card_link": ""
+          }
+        },
+        "category_card_wwCiQt": {
+          "type": "category_card",
+          "settings": {
+            "card_image": "shopify://shop_images/626511940_1321859149975835_706426026121161831_n_2x_d7a0b00d-6e3a-42c3-ae4b-3c76cada1eae.png",
+            "card_title": "DELI, BUTCHER & SEAFOOD",
+            "card_link": ""
+          }
+        },
+        "category_card_EHELmg": {
+          "type": "category_card",
+          "settings": {
+            "card_image": "shopify://shop_images/560449908_17866403925460838_3960812258427775611_n_2x_7cfd424a-d741-47a7-8fef-cf261402f169.png",
+            "card_title": "STREETFOOD & TRUCKS",
+            "card_link": ""
+          }
+        },
+        "category_card_heUPQJ": {
+          "type": "category_card",
+          "settings": {
+            "card_image": "shopify://shop_images/18.png",
+            "card_title": "PIZZA",
+            "card_link": ""
+          }
+        },
+        "category_card_pLqyQE": {
+          "type": "category_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Screenshot_2025-08-27_at_13-59-53_Instagram_2x_15fbb7ae-be86-4069-9364-82e570ac809a.png",
+            "card_title": "BAKERY & CHOCOLATIERS",
+            "card_link": ""
+          }
+        },
+        "category_card_TYCQGt": {
+          "type": "category_card",
+          "settings": {
+            "card_image": "shopify://shop_images/Maison-Bat_2x_76ff79f3-5f39-4305-9df7-6b90727f0a5d.png",
+            "card_title": "RESTAURANTS",
+            "card_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_card_J86Wdk",
+        "category_card_jizRKQ",
+        "category_card_FVzYAK",
+        "category_card_gacHYU",
+        "category_card_xLnVrE",
+        "category_card_wwCiQt",
+        "category_card_EHELmg",
+        "category_card_heUPQJ",
+        "category_card_pLqyQE",
+        "category_card_TYCQGt"
+      ],
+      "name": "Industry Categories",
+      "settings": {
+        "container": "fixed",
+        "section_title": "Industry",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "testimonials_mLThk7": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_EtxFFg": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "heading": "Testimonials",
+            "text": "<p>“The products are artful, fun, have a story just as unique as the designers who made it.”</p>",
+            "author": "Jenny Wilson",
+            "bio": "New Mexico",
+            "product": ""
+          }
+        },
+        "testimonial_QPUyLy": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "heading": "Testimonials",
+            "text": "<p>“The best coat I have found.Great colors and materials for life style.”</p>",
+            "author": "Samantha Taylor",
+            "bio": "Portland, Oregon",
+            "product": ""
+          }
+        },
+        "testimonial_iTzQDb": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "heading": "Testimonials",
+            "text": "<p>“Every item feels like a masterpiece, blending creativity and authenticity beautifully.”</p>",
+            "author": "David Martinez",
+            "bio": "Austin, Texas",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_EtxFFg",
+        "testimonial_QPUyLy",
+        "testimonial_iTzQDb"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".testimonial__inner {max-width: 64rem; margin-left: auto; margin-right: auto;}"
+      ],
+      "settings": {
+        "container": "full",
+        "color_scheme": "scheme-3",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "What Clients Talk About Us",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h6",
+        "description": "",
+        "text_size": "text-base",
+        "layout": "focused",
+        "card_color_scheme": "scheme-3",
+        "card_content_color_scheme": "",
+        "card_image_ratio": "adapt",
+        "card_heading_size": "h4",
+        "card_text_size": "h2",
+        "author_info_layout": "vertical",
+        "card_trigger_behavior": "click",
+        "show_image": false,
+        "show_author_image": false,
+        "columns_desktop": 2,
+        "column_gap": "medium",
+        "row_gap": "medium",
+        "enable_slider": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_progress_bar": true,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "scrolling_promotion_9Hng8m": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "text_m9JnRY": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Lounge Chairs",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_pmGhNr": {
+          "type": "image",
+          "settings": {
+            "image_height": 72,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 60
+          }
+        },
+        "text_gENJV7": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Bow Chairs",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_KBetgG": {
+          "type": "image",
+          "settings": {
+            "image_height": 72,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 60
+          }
+        },
+        "text_ETiRz6": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Cross Chair",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_ypAQyf": {
+          "type": "image",
+          "settings": {
+            "image_height": 72,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 60
+          }
+        }
+      },
+      "block_order": [
+        "text_m9JnRY",
+        "image_pmGhNr",
+        "text_gENJV7",
+        "image_KBetgG",
+        "text_ETiRz6",
+        "image_ypAQyf"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.3,
+        "h_spacing": 16,
+        "show_section_divider": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "buttons_with_icon_c8CzHV": {
+      "type": "buttons-with-icon",
+      "blocks": {
+        "button_item_TXLwjF": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Wholistic",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_tpCdia": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Inspired",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_wKgxpM": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Trusted",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_Ngk44m": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Responsive",
+            "button_link": "",
+            "icon": "check"
+          }
+        }
+      },
+      "block_order": [
+        "button_item_TXLwjF",
+        "button_item_tpCdia",
+        "button_item_wKgxpM",
+        "button_item_Ngk44m"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".section__header {--header-padding-bottom: 2.4rem;}",
+        ".section__heading {max-width: 45rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-9",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "The creative minds behind Victoria's Best",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "item_alignment": "center",
+        "item_button_style": "btn--primary",
+        "item_button_font": "button",
+        "enable_slider": true,
+        "swipe_on_mobile": true,
+        "show_section_divider": true,
+        "divider_width": "full",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_Ff4Wbj": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_YWTLnF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Yakimono-dining-supplied.png",
+            "image_link": "",
+            "subheading": "",
+            "title": "Lucas Group's Yakimono",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h5",
+            "text": "<p>High energy Japanese-inspired eating house. A celebration of food cooked over fire—meticulously conceived, inventively executed, riotously enjoyed. Set on the first floor of the landmark 80 Collins Street in the heart of Melbourne's fashion quarter, look up for the neon sign marking the entrance.</p>",
+            "text_size": "text-sm",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_AwmLJY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/RLRLaunch_July2023_SSchultz_11.png",
+            "image_link": "",
+            "subheading": "",
+            "title": "Nomad Group’s Reine & La Rue",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h5",
+            "text": "<p>The 150-seat venue will host a main dining space, bar, and the eight-seat speakeasy La Rue which will also serve the main dining menu. The food offering has been curated by Executive chef Jacqui Challinor and Head Chef Brendan Katich and is inspired by classic French dishes.</p>",
+            "text_size": "text-sm",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_j3Pdbn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Marlo-July14415Threefold_2x_a749c4de-13b7-4940-bee1-c9aeb582a3be.png",
+            "image_link": "",
+            "subheading": "",
+            "title": "Hotel Sorrento",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h5",
+            "text": "<p>Established in 1872, Hotel Sorrento is an iconic establishment that has been welcoming locals and visitors for decades. Where coastal luxury meets considered living. Boutique stays, local dining, and timeless moments by the sea. Local produce, fresh flavours, and dishes are made to share. Long seaside lunches flow into golden-hour cocktails, and dinners linger into the night. Each space has its charm</p>",
+            "text_size": "text-sm",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_MikwAx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/494527120_1252127503586610_3764677287268538073_n.png",
+            "image_link": "",
+            "subheading": "",
+            "title": "Re’em Yarra Valley - Helen & Joey Estate",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h5",
+            "text": "<p>Led by Culinary Consultant Mark Ebbels, the menu draws on Helen and Joey’s Chinese Australian heritage, pairing refined Asian influenced flavours with premium local produce and estate grown wines. \u000b A focus on seasonal ingredients and wood fired cooking creates dishes that are expressive, balanced and deeply connected to place.</p>",
+            "text_size": "text-sm",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "column_YWTLnF",
+        "column_AwmLJY",
+        "column_j3Pdbn",
+        "column_MikwAx"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "content_alignment": "left",
+        "show_col_count": false,
+        "show_image": true,
+        "columns_desktop": 4,
+        "column_gap": "medium",
+        "row_gap": "inherit",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
+    },
+    "scrolling_gallery_image_wJyLJr": {
+      "type": "scrolling-gallery-image",
+      "blocks": {
+        "gallery_zMzedj": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Rectangle_2290_c26b841b-ac8f-4464-9612-bf14de7ae36d.png",
+            "image_avatar": "shopify://shop_images/Pic_4.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "thisisaaccount"
+          }
+        },
+        "gallery_PALf8b": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Rectangle_2284_0729b5ac-d254-4099-8bf5-11b34dacf672.png",
+            "image_avatar": "shopify://shop_images/Pic_6.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "furniturelover"
+          }
+        },
+        "gallery_t8EfbE": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Rectangle_2278_532a23f1-b710-40a4-aae3-b9298cbdc64d.png",
+            "image_avatar": "shopify://shop_images/Pic.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "thisisaaccount"
+          }
+        },
+        "gallery_HjXBVX": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Rectangle_2286_b3556f40-761c-4ac8-ab76-839bdfc8f2bf.png",
+            "image_avatar": "shopify://shop_images/Pic_2.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "baddyjam"
+          }
+        },
+        "gallery_Hdq7y7": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/Rectangle_2288_b5135f4b-d0cc-437b-a001-69f67a612414.png",
+            "image_avatar": "shopify://shop_images/Pic_3.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "liamwealthy"
+          }
+        },
+        "gallery_xaTeHP": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/Rectangle_2290_c26b841b-ac8f-4464-9612-bf14de7ae36d.png",
+            "image_avatar": "shopify://shop_images/Pic_5.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "baddyjam"
+          }
+        },
+        "gallery_gf99Q7": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/Rectangle_2284_0729b5ac-d254-4099-8bf5-11b34dacf672.png",
+            "image_avatar": "shopify://shop_images/Pic.png",
+            "image_link": "",
+            "social_media": "instagram",
+            "heading": "liamwealthy"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_zMzedj",
+        "gallery_PALf8b",
+        "gallery_t8EfbE",
+        "gallery_HjXBVX",
+        "gallery_Hdq7y7",
+        "gallery_xaTeHP",
+        "gallery_gf99Q7"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Tag@Cedarhospitality",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "show_button_on_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "direction": "left",
+        "speed": 0.1,
+        "pause_on_hover": true,
+        "column_gap": "medium",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "collection_list_slider_6qbNfj",
+    "slideshow_q3U4Jn",
+    "most_popular_category_q6jRbR",
+    "promotion_banner_VCkmzP",
+    "featured_collection_bdaamt",
+    "hot_deals_WbRhr9",
+    "custom_content_HPgFTK",
+    "collection_list_Azm9te",
+    "collection_tabs_VexkkR",
+    "favorite_products_6Tg9Pn",
+    "image_with_text_aXhRxw",
+    "shop_by_brand_section_WMJHkH",
+    "lookbook_slider_9zCdQJ",
+    "slider_with_multicolumn_aJwbrc",
+    "custom_content_JxRy7x",
+    "buttons_with_icon_7zH9F3",
+    "cedar_highlights_section_98MM3C",
+    "industry_category_section_bETnXq",
+    "testimonials_mLThk7",
+    "scrolling_promotion_9Hng8m",
+    "buttons_with_icon_c8CzHV",
+    "multicolumn_Ff4Wbj",
+    "scrolling_gallery_image_wJyLJr"
+  ]
+}

@@ -1,0 +1,130 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "breadcrumbs_zM7NRd": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "scrolling_banner_iKBTtx": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "slide_9x4Nhr": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "background": "shopify://shop_images/Rumbe_2190_Vispenn1.jpg",
+            "image_overlay_opacity": 0,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "",
+            "title": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product_color_scheme": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_9x4Nhr"
+      ],
+      "name": "t:sections.scrolling-banner.name",
+      "settings": {
+        "container": "full",
+        "slide_height": "medium",
+        "content_position_mobile": "top-center",
+        "text_alignment_mobile": "center",
+        "enable_zoom": true,
+        "enable_parallax": false
+      }
+    },
+    "rich_text_qWztDq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LhLXar": {
+          "type": "heading",
+          "settings": {
+            "heading": "Rombe's Rooftop Revolution",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2"
+          }
+        },
+        "subheading_6rhrGD": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CATEGORIES: RESTAURANT"
+          }
+        },
+        "text_JNrCVJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Rombe's Rooftop Revolution: Cedar Hospitality's Culinary Partnership</strong></p><p>Step into Rombe, Burwood East’s newest rooftop gem, where an urban farm meets culinary excellence! Nestled atop a shopping centre, this 2500-square-metre marvel at Burwood Brickworks is more than just a place to dine – it's an experience.</p><p><strong>Key Highlights:</strong></p><ul><li><strong>Breathtaking Ambiance:</strong> Enjoy a light-filled dining area with a barn-style A-frame and floor-to-ceiling windows that offer stunning garden views.</li><li><strong>Flexible Space:</strong> Perfect for any occasion with seating for 120 and standing room for up to 350 in The Glass House for larger events.</li><li><strong>Seasonal Delights:</strong> Head Chef Jerry Yi, with his rich culinary background (ex Shihuishi and Red Spice Road), curates an all-day menu showcasing the best local, seasonal produce.</li><li><strong>Impressive Drinks List:</strong> Savor expertly crafted cocktails that elevate your dining experience.</li></ul><p><strong>Why Rombe is Special:</strong> From breakfast and lunch to soon-to-be-launched dinner services starting late April, Rombe promises a seamless transition from day to night. This venue captures Melbourne’s essence with its focus on fresh, local ingredients and modern Australian cooking techniques.</p><p>We at Cedar Hospitality are thrilled to support Rombe’s journey! Our Account Manager, Jerry, has transformed their kitchen with top-notch Electrolux ovens and a bespoke Scheer Proline Charcoal Rotisserie & Grill. Witness the magic that comes from a well-fitted kitchen and passionate chefs!</p><p>📍 <strong>Visit Rombe:</strong> Experience the magic at Burwood Brickworks, Burwood East.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LhLXar",
+        "subheading_6rhrGD",
+        "text_JNrCVJ"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-149a0a42-7e4d-4101-b92f-d213f5045165",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 26,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "breadcrumbs_zM7NRd",
+    "scrolling_banner_iKBTtx",
+    "rich_text_qWztDq"
+  ]
+}

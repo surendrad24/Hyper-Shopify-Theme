@@ -1,0 +1,370 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_YakLpk": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_AnbznA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mpAkda": {
+          "type": "heading",
+          "settings": {
+            "heading": "Terms & Conditions E-Commerce",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_Fjjgkq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to Cedar Hospitality. The website https://cedarhospitality.com/ (inclusive of subdomains) and its associated features and mobile applications (“Site\") is owned and operated by Cedar Hospitality Supplies Pty Ltd (ACN 007 264 968 ABN 53 255 172 770) (“Cedar Hospitality ”, \"we\", \"our\", \"us\").</p><p>These Terms and Conditions (“Terms”), which incorporate our Privacy Policy and other documents referred to within these Terms, govern the supply of any products ordered by you on the Site and your use of the Site. By browsing, accessing, using the Site or ordering a product (“Order”), you agree to be legally bound by these Terms. We may change these Terms at any time, and the revised Terms will be made available on our Site. By continuing to use the Site you agree to be bound by such revised Terms.<br/><br/></p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "button_fjk8G8": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mpAkda",
+        "text_Fjjgkq",
+        "button_fjk8G8"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-149a0a42-7e4d-4101-b92f-d213f5045165",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "left",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "collapsible_tabs_mdAtY9": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "collapsible_item_hPUGrc": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "1. ACCESS AND USE OF THE SITE",
+            "content": "<p>1.1 You must only use the Site in accordance with these Terms and any applicable law.</p><p>1.2 You must not (or attempt to):</p><p>(a) interfere with or disrupt the Site or the servers or networks that host the Site;</p><p>(b) use data mining, robots, screen scraping or similar data gathering and extraction tools on the Site; or</p><p>(c) interfere with security-related or other features of the Site.</p><p>1.3 To access some features of the Site, such as creating wishlists, you must register an Account with us.  To register for an Account, you must provide us with accurate and current personal information including your name, address, and a valid email address.  You must not register more than one Account. You should not create an Account if you are under 13 years old.</p><p>1.4 To place Orders using an Account you must be at least 18 years old, and have the capacity to enter into a legally binding agreement with us.  If you are under 18, you may only place an Order with the involvement of a parent or guardian - we do not sell products for purchase by children.</p><p>1.5 To the extent permitted by applicable law, you are solely responsible for the activity that occurs on your Account (including Orders placed using your Account), and you must keep your Account password secure. We are not responsible for any unauthorised activity on your Account, including if you fail to keep your Account login information secure. We may refer fraudulent or abusive or illegal activity to the relevant authorities.</p><p>1.6 You must not use another person’s Account without our, and/or the other person’s express permission. If you suspect or become aware of any unauthorised use of your Account or that your password is no longer secure, please <a href=\"http://www.theiconic.com.au/contact/\">contact Customer Service</a> immediately and take immediate steps to re-secure your Account (including by changing your password).</p><p>1.7 We do not warrant that the Site will be available at all times and without disruption and we provide no warranties in relation to the content of any other website linked to or from our Site.</p><p>1.8 You must not link to our Site or any part of our Site in a way that damages or takes advantage of our reputation, including but not limited to:</p><p>(a)  in a way to suggest or imply that you have any kind of association and affiliation with us, or approval and endorsement from us when there is none; or</p><p>(b) in a way that is illegal or unfair.</p><p>1.9   If you are a chef, blogger, or influencer -- we kindly ask that you utilize our services via our exclusive PR forum. Please email <a href=\"mailto:cedaronline@cedarhospitality.com.au\">cedaronline@cedarhospitality.com.au</a>, for collaboration opportunities or stock loans via our showroom.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_9K9q8M": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "2. INFORMATION ON THIS SITE",
+            "content": "<p>2.1 The Site and the content on the Site are subject to copyright, trademarks and other intellectual property rights. These rights are owned by or licensed to Cedar Hospitality .</p><p>2.2 You must not reproduce, transmit, communicate, adapt, distribute, sell, modify or publish or otherwise use any of the material on the Site, including audio and video excerpts, except as permitted by statute or with our prior written consent.</p><p>2.3 Information about goods on the Site is based on material provided by third party merchants, suppliers and/or product manufacturers. Except as required by law (including the Australian Consumer Law) we cannot be held responsible for inaccuracies or errors caused by incorrect information supplied to us or by these third parties.</p><p>2.4 Due to photographic and screen limitations associated with the representation of products, some actual products (including, in particular, clothing, apparel and shoes) may differ to a small extent in visual appearance (for example in colour) from the way they appear on the Site.  In addition, where it is suitable to do so, some depictions of products are created or chosen by us for promotional purposes, and may not be an exact representation of the products received.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_PatwhW": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "3. ORDER AND FORMATION OF CONTRACT",
+            "content": "<p>3.1 When making an Order, you must follow the instructions on the Site as to how to make your Order and for making changes to your Order before you submit it.</p><p>3.2 Once you select a product that you wish to Order, irrespective of any previous price you have seen or heard, you will then be shown or told (on the Site) the price you must pay including Goods and Services Tax (“<strong>GST</strong>”) and any other charges, including any charges you are liable to have the products delivered to the address provided by you (“<strong>Delivery Fees</strong>”). Unless otherwise stated all charges are in Australian dollars.</p><p>3.3 You must pay for the Order in full at the time of ordering by one of the payment methods we accept on the Site. You must be fully entitled to use the payment method used for purchases. The payment method must have sufficient funds, credit or other payment facilities to cover the purchase. We are not responsible for the decisions of payment providers to allow you to use their service, or provide any warranties or assurances about them. If a particular service is not available to you, you should use another valid payment method.</p><p>3.4 By making an Order, you expressly authorise us, before accepting your Order, to perform credit and security checks and, where we feel necessary, to transmit or to obtain information (including any updated information) about you to or from third parties from time to time, including but not limited to your credit card number, to validate your credit card, to obtain an initial credit card authorisation, to conduct loss minimisation and anti-fraud measures and to authorise individual purchase transactions.</p><p>3.5 If you discover that you have made a mistake with your Order after you have submitted it to the Site, please contact Customer Service immediately, although please note we cannot guarantee that we will be able to amend your Order in accordance with your instructions and that fees may be applicable to process a change.</p><p>3.6 When you place an Order, you will receive from us an Order confirmation by email.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_Q6eNTH": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "4. DELIVERY",
+            "content": "<p>4.1 We aim to deliver products to you at the place of delivery (“<strong>Delivery</strong>”) requested by you within the time indicated by us at the time of your Order, but we can’t absolutely guarantee firm Delivery dates or times.  Delivery options are set out <a href=\"https://www.theiconic.com.au/shipping-policy/\">here</a> and <a href=\"https://outlet.theiconic.com.au/shipping-policy/\">here</a> although such information is indicative only.</p><p>4.2 We will try to let you know if we expect to be unable to meet our estimated Delivery date or time, but, to the extent permitted by law, we will not be liable to you for any losses, liabilities, costs, damages, charges or expenses arising out of late or delayed Delivery.</p><p>4.3 We will aim to leave the Order at the address advised by you at the time of purchase.  We only offer cerbside delivery unless other arrangements have been confirmed by us prior to delivery. You must ensure that you are able to take Delivery of the product without undue delay and at any time reasonably specified by us. Our drivers will require a signature before delivery can be completed. It is your responsibility to ensure the delivery contact person is available for signature and contact at time of delivery.</p><p>Our delivery partners may contact you via SMS prior to delivery to provide you with different delivery options, including giving ‘authority to leave’ the item at the address, or have delivery re-routed to a collection point.  Alternatively, the courier may leave a card requesting your instructions on either re-delivery or collection from the carrier or a collection point.<br/>4.4 By default, you provide authority to leave items at the address specified in your Order.  If the delivery driver deems the area unsafe in their discretion, your Order will be redirected to a collection point, redelivered in the next Delivery run (where available) or returned back to our Showroom and Warehouse.  If Delivery or collection is delayed through your unreasonable refusal to accept Delivery or if you do not (within two weeks of our first attempt to deliver the product to you) accept Delivery or collect the product from the carrier, then we may (without affecting any other right or remedy available to us) do either or both of the following:<br/>(a) charge you for our reasonable storage fees and other costs reasonably incurred by us; or<br/>(b) no longer make the product available for Delivery or collection and notify you that we are cancelling the applicable Contract, in which case we will refund to you any money paid to us in accordance with our returns policy, less our reasonable administration charges and or re-stocking fee(including for attempting to deliver and then returning the product, and any storage fees and other costs provided for above).</p><p>4.5 Please note that it might not be possible for us to deliver to some locations, nor are we able to offer equivalent delivery options to locations that we do service.  If we are unable to deliver to your location, we will inform you on the relevant product page, or alternatively use the contact details that you provide to us when you make your Order and arrange for cancellation of the Order or delivery to an alternative delivery address.</p><p>4.6 Unless otherwise specified by you, all risk in the product shall pass to you upon Delivery.  If Delivery is delayed, risk shall pass at the date when delivery would have occurred.  From the time when risk passes to you, we will not be liable for loss or destruction of the product.</p><p>4.7 You must take care when opening the product so as not to damage it, particularly when using any sharp instruments.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_a9HPeJ": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "5. CANCELLATION",
+            "content": "<p>5.1 We may terminate a Contract if the product is not available for any reason.  We will notify you if this is the case and return any payment that you have made.  We will refund any money received from you using the same method originally used by you to pay for the product.  If the refund transaction fails we will advise you of this and make arrangements to process the refund via a different method.</p><p>5.2 If you wish to cancel your Order, please <a href=\"/pages/contact\" title=\"Contact Us\">contact our Customer Service Team</a>.  Once an Order has been processed, it cannot be cancelled and the item must instead be returned to us in accordance with the returns policy.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_DDDXCG": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "6. DAMAGE, DEFECT & FAULTY PRODUCT RETURNS",
+            "content": "<p>6.1 We aim to provide you with products of the highest standard and quality.  If you have received a product with a defect, please <a href=\"/pages/contact\" target=\"_blank\" title=\"Contact Us\">contact our Customer Service</a> within seven (7) days of delivery, so we can guide you through the returns process and help resolve the problem as swiftly as possible. In order to assist the return process, you may be required to send us images of the damage, defect or fault for preliminary assessment.  You may be asked to provide further information to support your claim to assist us with our assessment of the goods.<br/>+Returns form on your accounts page. Only Account holders are able to place a returns request.</p><p>6.2 If the product is confirmed to have a defect, we will replace or repair the product (if repair is reasonably possible) or refund the price of the product to your original payment method, as appropriate.  If the product is confirmed to have a major defect, you are entitled to elect whether you want us to replace or repair (if repair is reasonably possible) the product or refund the price of the product to your original payment method.  If the product is found not to have a defect, deemed out of warranty, or you otherwise do not have a remedy for a failure to comply with the consumer guarantees under the Australian Consumer Law, we will contact you to determine whether you want us to dispose of the product or return the product to you at your expense.</p><p>6.3 It does not constitute as a defect if in our reasonable opinion a product has become of unacceptable quality following the sale to you due to fair wear and tear, misuse, failure to use in accordance with manufacturers’ instructions, using it in an abnormal way or failure to take reasonable care.</p><p> 6.4 If Delivery or collection is required for returning stock to Cedar Hospitality Warehouse & Showroom, this will be done so at your expense. We will only refund this amount after the we inspection the product(s) and confirm the damage, defect or fault. If no defect, damage or fault is found with the product(s) return delivery will be at your expense.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_wTTchB": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "7. CHANGE OF MIND RETURNS",
+            "content": "<p>7.1 In addition to your rights in relation to faulty products in clause 6, and subject to the restrictions set out in 7.2, you can return any product:</p><p>(a) as long as the return is initiated in your Account within seven (7) days from time of Delivery;</p><p>(b) unworn and unused and in a saleable condition with the original tags still attached;</p><p>(c) in the original packaging, which must be in the original condition, including sealed boxes, branded dust bags, shoe boxes and authentication certificates if applicable (you don’t need the clear plastic packaging, except for products sealed for hygiene reasons - see below); and</p><p>(d) it has not been specifically excluded from the change of mind returns policy, such as ‘Final Sale’ items, stated products labelled with Dead stock, Last Stock, whilst stock last, Obsolete Ranges and items excluded for hygiene reasons.  The exclusion will be noted on the relevant product page on our Site and / or at checkout.</p><p>7.2 Please note that products sealed for hygiene reasons can only be returned under change of mind returns policy if the seal is intact or if you otherwise have a remedy under the Australian Consumer Law). Syrups and other food products cannot be returned if they are opened and/ or used (unless faulty).</p><p>7.3 To ensure these returns are assessed and processed swiftly, please follow the instructions set out under ‘Credits & Returns' on your Accounts Page.</p><p>7.4 Upon receiving and inspection of your return, we will contact you about next steps.  Once determined the return is in compliance with clause 7.1, we will either:</p><p>(a) refund the price of the product returned to your original payment method; or</p><p>(b) exchange the product for another size, subject to availability. Please note that items can only be exchanged with items that are shipped from the same location i.e. only items shipped from Cedar Hospitality Showroom and Warehouse can be exchanged with other items from Cedar Hospitality Showroom and Warehouse location.</p><p>7.5 We will not refund any Delivery Fees that you have paid at purchase to have the product shipped to you, or the cost of any packaging you provide to send the items back to us.  If the return, in our reasonable opinion, is not in compliance with clause 7.1, we will contact you to ship the product back to you and you will be liable for the shipping costs both to and from us.</p><p>7.6 We offer a flexible change of mind returns policy to streamline your shopping experience.   We monitor return rate frequency and value for fraud, abuse and general security purposes. In the event of elevated return frequency and values, we are entitled to close or block access to your Account or deny you from making future orders.</p><p>7.7 Nothing in this clause is intended to exclude any rights in clause 6 or any of your statutory rights as a consumer under the Australian Consumer Law.</p><p>7.8 While we understand that on occasion incorrect items, including items from other companies and/or your personal items, may be returned to us by mistake, we are not responsible for these items and accept no Liability if we’re unable to locate them. If we are able to locate them and you want the items returned to you, we reserve the right to return them to you at your cost.</p><p>7.9 Re-stocking Fee of twenty percent (20%) of the value of the returned Goods plus any freight costs. ***Conditions Apply***</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_PCVgxG": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "8. PRICE MATCHING",
+            "content": "<p>8.1 We strive to match our prices with other online retailers who stock the same items.  If you see the same item online cheaper (including the full price for the goods, applicable taxes, and any other additional charges, including delivery charges for the item to be shipped individually to the same customer address), let us know by contacting<a href=\"/pages/contact\" target=\"_blank\" title=\"Contact Us\"> our Customer Service Team</a>, and we will do our best to match the price by offering a voucher for such difference in price (for one item only, per customer, per competitor, per day). We reserve the right to determine who is a comparable online retailer when making a determination on the eligibility for a price match voucher.  Simply send us a link or image of the item from our Site, and the other online retailer for us to review, and we will make a determination on the eligibility for a price match voucher. A few guidelines include:<br/>The item must be identical</p><ul><li>The item must be available in stock (same colour, size, features) and available online in the territory in which you are located</li><li>Prices must be shown on a website marketed to consumers located in Australia or NZ that is operated by a company, whose details appear on the web page, with an active ABN, ACN or NZBN</li><li>Prices must be quoted in the same currency (without the need for currency converter)</li><li>We will not price match against VIP offers / stackable offers / loyalty only offers</li><li>We will not price match against discounted, flash, group buying or marketplace sites</li><li>We will not price match against clear pricing errors made on other sites</li></ul><p>8.2 We do not offer ‘price matching’ or ‘price protection’ in respect of items appearing on our own Site.  For example, if you buy an item that later goes on sale, we do not offer refunds to your original purchase price to discount it to the sale price. This includes where there may be different prices for different sizes for the same item on our site due to items being fulfilled both from CEDAR HOSPITALITY Showroom and Warehouse and one of our CEDAR HOSPITALITY Partners.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_rjpWFE": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "9. SPECIFIC PROMOTIONS",
+            "content": "<p>9.1 From time to time we may run promotions on our Site which are subject to both these Terms and any additional promotion-specific terms which are incorporated into these Terms by reference.  Promotion-specific terms may include conditions in respect of selected styles, brands, colours, collections, purchase periods, purchase methods, minimum spend requirements, bundle discounts, partner promotions, games of chance or games of skill.  These promotion-specific terms will be presented below.</p><p>9.2  You should ensure that you read the specific conditions that apply to each promotion.  By proceeding to purchase you agree and accept the terms of the applicable promotion(s).</p><p>9.3 We also undertake joint promotions with third party partners from time to time.  You should consult the terms of those programs for full details of such specific joint promotions.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_pWj4CJ": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "10. USER GENERATED CONTENT",
+            "content": "<p>10.1 From time to time we may reach out to our customers via social media to encourage you to share your own content (“<strong>Content</strong>”) using specific hashtags (#) alongside your Content in line with a campaign we might be running at that time.</p><p>10.2 By responding to our post and using the required hashtag, you acknowledge and agree that:</p><p>(a) You comply with the terms and conditions of the platform you are using to create that Content;</p><p>(b) You own all rights in respect of your Content and/or have obtained appropriate rights and consents from any other persons featured in your Content;</p><p>(c) Your Content and social media handle may be featured across our social media platforms as well as our Site;</p><p>(d) CEDAR HOSPITALITY may enhance, adapt, crop or otherwise modify your Content. Any such modifications would only occur to the extent deemed reasonably appropriate by us; and</p><p>(e) You are solely responsible for your Content and will not seek to hold Cedar Hospitality liable for any demands by a third party related to our use of your Content.</p><p>10.3 You may revoke your permission for us to use your Content at any time by sending a request to <span style=\"text-decoration:underline\">cedarsales@cedarhospitality.com</span> Upon receiving such a request, we agree to remove your Content from our online platforms as soon as reasonably practicable, and removed to the extent technically practicable.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_eYkVPt": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "11. DISCLAIMER AND LIABILITY",
+            "content": "<p>11.1 This clause prevails over all other clauses, and, to the extent permitted by law (including the Australian Consumer Law), states our entire Liability, and your sole and exclusive remedies, for:</p><p>(a) the performance, non-performance, purported performance or delay in performance of these Terms or a Contract or the Site (or any part of it or them); or</p><p>(b) otherwise in relation to these Terms or the entering into or performance of these Terms.</p><p>11.2 Nothing in these Terms excludes or limits your statutory rights as a consumer or our Liability for:</p><p>(a) fraud;</p><p>(b) death or personal injury caused by our Breach of Duty;</p><p>(c) any breach of the obligations implied or guaranteed by law (including the consumer guarantees under the Australian Consumer Law); or</p><p>(d) any other Liability which cannot be excluded or limited by applicable law.</p><p>11.3 In performing any obligation under these Terms, our only duty is to exercise reasonable care and skill.</p><p>11.4 Subject to clause 13.3:</p><p>(a) To the extent permitted by law (including the Australian Consumer Law), we do not warrant and we exclude all Liability in respect of the accuracy, completeness, fitness for purpose or legality of any information accessed using the Site.</p><p>(b) We exclude all Liability of any kind for the transmission or the reception of or the failure to transmit or to receive any material of whatever nature.</p><p>(c) You should not rely on any information accessed using the Site to make a purchasing decision – you should make your own enquiries before forming your own opinion and taking any action based on any such information.</p><p>(d) It is your responsibility to ensure that the products are sufficient and suitable for your purposes and meet your individual requirements.  We do not warrant that the products will meet your individual requirements.  You acknowledge that the products are standard and not made bespoke to fit any particular requirements that you may have.</p><p>(e) All products should be used strictly in accordance with any instructions, noting that in some instances instructions should not be considered a substitute for professional medical advice or treatment. You should always check product ingredients or materials, particularly where allergies or sensitivities are known. In the event of any adverse reaction, please discontinue use and seek medical assistance.</p><p>(f) We do not accept and hereby exclude any Liability for Breach of Duty other than any such Liability arising pursuant to the provisions of these Terms.</p><p>(g) Despite any other provision of these Terms to the contrary and to the extent permitted by law (including the Australian Consumer Law), in no event shall we, our affiliates and related entities, our employees, directors or agents, or our suppliers be liable for lost profits or anticipated profits or any punitive, exemplary, special, incidental or consequential loss or damages or the like arising out of or in connection with the Site, the supply of goods or services or these Terms (however arising, including negligence).  You agree to accept sole responsibility for the legality of your actions under the laws that apply to you.  You agree that we, our affiliates and related entities or our suppliers have no responsibility for the legality of your actions.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_VbxkMG": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "12. INDEMNITY",
+            "content": "<p>You indemnify and hold us and our related entities, affiliates, and our and their respective officers, agents, and employees, harmless from and against any and all claims, demands, proceedings, losses and damages (actual, special and consequential) of every kind and nature, known and unknown, including reasonable legal fees, made by any third party due to or arising out of your breach of these Terms or your breach of any law or the rights of a third party.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_eawqmM": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "13. PRIVACY POLICY AND COMMUNICATIONS",
+            "content": "<p>Please see our <a href=\"/pages/privacy-statement\" target=\"_blank\" title=\"Privacy Statement\">privacy policy</a>.<br/>When you provide us with your email address or mobile phone number, you may opt in to electronic communications in respect of news, promotions, wishlist reminders, bag reminders and updates on the status of returns and refunds.  We may also communicate with you electronically in as set out in the Privacy Policy.  Your consent to receipt of certain communications may be implied from the use of certain functional aspects of our service.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_6mikzc": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "14. DISPUTE RESOLUTION",
+            "content": "<p>In the event of any dispute under these Terms the parties agree to negotiate in good faith to resolve the dispute. Disputes should be lodged with the Customer Service team at first instance.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_X9XmhF": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "15. GENERAL",
+            "content": "<p>15.1<strong> Entire agreement</strong>: These Terms contain all the terms agreed between you and us and supersedes and excludes any prior Terms published on this Site.</p><p>15.2<strong> Assignment: </strong>You may not assign or delegate or otherwise deal with all or any of your rights or obligations under these Terms. We shall have the right to assign or otherwise delegate all or any of our rights or obligations under these Terms to any person.</p><p>15.3<strong> Force majeure:</strong> We shall not be liable for any breach of our obligations under these Terms where we are hindered or prevented from carrying out our obligations by any cause outside our reasonable control, including by pandemic, lightning, fire, flood, extremely severe weather, strike, lock-out, labour dispute, act of God, war, riot, civil commotion, malicious damage, failure of any telecommunications or computer system, compliance with any law, accident (or by any damage caused by any of such events).</p><p>15.4<strong> No waiver:</strong> No waiver by us of any default of yours under these Terms shall operate or be construed as a waiver by us of any future defaults, whether of a like or different character.  No granting of time or other forbearance or indulgence by us to you shall in any way release, discharge or otherwise affect your liability under these Terms.</p><p>15.5<strong> Notices</strong>: Unless otherwise stated within these Terms, notices to be given to either party shall be in writing and shall be delivered by email supplied by you to us, or to us at our registered office.</p><p>15.6 <strong>Third party rights:</strong> All provisions of these Terms apply equally to and are for the benefit of CEDAR HOSPITALITY , its subsidiaries, any holding companies of CEDAR HOSPITALITY , its (or their) affiliates and its (or their) third party content providers and licensors and each shall have the right to assert and enforce such provisions directly or on its own behalf (save that these Terms may be varied or rescinded without the consent of those parties).</p><p>15.7<strong> Survival</strong>: The provisions of clauses that either are expressed to survive its expiry or termination or from their nature or context it is contemplated that they are to survive such.</p><p>15.8<strong> Severability</strong>: If any provision of these Terms is held to be unlawful, invalid or unenforceable, that provision shall be deemed severed and where capable the validity and enforceability of the remaining provisions of these Terms shall not be affected.</p><p>15.9<strong> Governing law</strong>: These Terms (and all non-contractual relationships between you and us) shall be governed by and construed in accordance with the laws of Victoria and both parties hereby submit to the exclusive jurisdiction of the courts of Victoria.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_N3JQgF": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "16. DEFINITIONS AND INTERPRETATION",
+            "content": "<p>16.1<strong> Definitions<br/></strong>In this document, terms are defined either (i) in the body of this document above, or (ii) defined as set out below, unless the contrary intention appears:</p><p><strong>Australian Consumer Law</strong> means Schedule 2 of the <em>Competition and Consumer Act 2010</em> (Cth) or equivalent State or Territory laws;</p><p><strong>Breach of Duty</strong> means the breach of any:</p><p>(a) obligation arising from the express or implied terms of a contract to take reasonable care or exercise reasonable skill in the performance of the contract; or</p><p>(b) common law duty to take reasonable care or exercise reasonable skill (but not any stricter duty);</p><p><strong>Liability </strong>means liability in or for Breach of Duty, misrepresentation, restitution or any other cause of action whatsoever relating to or arising under or in connection with these Terms, including, without limitation, liability expressly provided for under these Terms or arising by reason of the invalidity or unenforceability of any term of these Terms (and for the purposes of this definition, all references to these Terms shall be deemed to include any collateral contract); and “<strong>CEDAR HOSPITALITY”</strong>, \"<strong>we</strong>\", \"<strong>our</strong>\", \"<strong>us</strong>\" means <strong>Cedar Hospitality Supplies Pty Ltd </strong>(ACN 007 264 968 ABN 53 255 172 770) and its representatives, subsidiaries, affiliates, related parties, officers, directors, employees, agents, partners, and independent contractors.</p><p>16.2<strong> Interpretation</strong></p><p>(a) Headings are for ease of reference only and shall not affect the interpretation or construction of these Terms.</p><p>(b) Words imparting the singular shall include the plural and vice versa.  Words imparting a gender shall include every gender and references to persons shall include an individual, company, corporation, firm or partnership.</p><p>(c) Words denoting persons includes natural persons, partnerships, limited liability partnerships, bodies corporate and unincorporated associations of persons.</p><p>(d) References to includes or including or like words or expressions shall mean without limitation.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_item_hPUGrc",
+        "collapsible_item_9K9q8M",
+        "collapsible_item_PatwhW",
+        "collapsible_item_Q6eNTH",
+        "collapsible_item_a9HPeJ",
+        "collapsible_item_DDDXCG",
+        "collapsible_item_wTTchB",
+        "collapsible_item_PCVgxG",
+        "collapsible_item_rjpWFE",
+        "collapsible_item_pWj4CJ",
+        "collapsible_item_eYkVPt",
+        "collapsible_item_VbxkMG",
+        "collapsible_item_eawqmM",
+        "collapsible_item_6mikzc",
+        "collapsible_item_X9XmhF",
+        "collapsible_item_N3JQgF"
+      ],
+      "name": "t:sections.collapsible-tabs.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "header_layout": "vertical",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "CEDAR HOSPITALITY SUPPLIES PTY LTD – TERMS & CONDITIONS OF E-COMMERCE",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h3",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "item_icon_size": "extra-large",
+        "padding_top": 50,
+        "padding_bottom": 30,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "rich_text_kQpGrL": {
+      "type": "rich-text",
+      "blocks": {
+        "text_gfdLyn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>These Terms were last updated on<strong>25th November 2022</strong></p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "text_gfdLyn"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-149a0a42-7e4d-4101-b92f-d213f5045165",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_YakLpk",
+    "main",
+    "rich_text_AnbznA",
+    "collapsible_tabs_mdAtY9",
+    "rich_text_kQpGrL"
+  ]
+}

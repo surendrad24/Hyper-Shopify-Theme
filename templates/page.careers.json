@@ -1,0 +1,310 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_zrJVC6": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "scrolling_banner_mxQ7fg": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "slide_wWhWRE": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/Cedar_Careers.jpg",
+            "image_overlay_opacity": 40,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "",
+            "title": "Careers",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "<p>At Cedar, we're always on the lookout for passionate and talented individuals to join our team. As a leading retail supplier of commercial-grade kitchen and restaurant supplies, we value excellence and are committed to delivering exceptional customer service.<br/><br/>If you're looking to take your career to the next level, visit our careers page to see our current job openings and apply today!</p>",
+            "description_size": "text-base",
+            "button_label": "Send Email",
+            "button_link": "mailto:cedarsales@cedarhospitality.com",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product_color_scheme": "",
+            "product": ""
+          }
+        },
+        "slide_T7RJeP": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "",
+            "title": "Image slide",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-base",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product_color_scheme": "",
+            "product": ""
+          }
+        },
+        "slide_8qGPBm": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "",
+            "title": "Image slide",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-base",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product_color_scheme": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_wWhWRE",
+        "slide_T7RJeP",
+        "slide_8qGPBm"
+      ],
+      "name": "t:sections.scrolling-banner.name",
+      "settings": {
+        "container": "full",
+        "slide_height": "large",
+        "content_position_mobile": "top-center",
+        "text_alignment_mobile": "center",
+        "enable_zoom": false,
+        "enable_parallax": false
+      }
+    },
+    "job_listing_PULqa6": {
+      "type": "job-listing",
+      "name": "Job Listing",
+      "settings": {
+        "heading_main": "JOIN THE TEAM!",
+        "heading_sub": "WE'RE CURRENTLY LOOKING FOR:",
+        "job_title": "Retail Sales Assistant",
+        "description": "<p>Do you have retail experience, want to gain experience or make the jump out of the kitchen, behind the bar or waitressing?</p><p>We are looking for you to join our diverse staff in our retail showroom, located in the heart of Brunswick.</p>",
+        "role_list": "<li>Customer service and sales</li><li>Stock Management</li>\n<li>Running day-to-day store needs</li>",
+        "requirements_list": "<li>A passion for retail</li><li>Retail sales experience</li>\n<li>A passion for retail</li><li>Retail sales experience</li>\n<li>A passion for retail</li>\n<li>Retail sales experience</li>\n<li>Love of food/ cooking and have a flair and enthusiasm to assist clients</li>\n<li>Ability to work autonomously and as part of a team</li>\n<li>Be motivated and driven</li>\n<li>Customer Focused</li>\n<li>Available Saturday, Monday - Friday</li>",
+        "button_label": "Apply Now",
+        "button_link": "#",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_3fLNUn": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YtJ4Lm": {
+          "type": "heading",
+          "settings": {
+            "heading": "WAREHOUSE & STORE PERSON",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2"
+          }
+        },
+        "text_jpBmHP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>WE SERVICE MANY INDUSTRIES SEE OUR PROCESS OF A SET UP</p><p><strong>Description:</strong></p><p>If you are an experienced heavy vehicle truck driver let us help you secure your next role.</p><p>+ Australian Drivers Licence</p><p>+ Unrestricted Australian work rights</p><p>+ Clean driving record</p><p>+ Physical fitness and strength</p><p>+ Working Knowledge of Victorian Suburbs</p><p><strong>Bonus but not required:</strong></p><p>+ Current truck driver's licence ( HR )</p><p>+ HR Truck Driver or Delivery Driver experience</p><p><strong>Type</strong>: Full-Time</p><p><strong>Start</strong>: As soon as Possible</p><p><strong>Department</strong>: Warehouse</p>",
+            "subtext_color": true
+          }
+        },
+        "button_6UDiRj": {
+          "type": "button",
+          "settings": {
+            "button_label": "APPLY NOW",
+            "button_link": "#",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YtJ4Lm",
+        "text_jpBmHP",
+        "button_6UDiRj"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/Group-405-1.png",
+        "image_position": "right",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "image_with_text_nJTiPr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_bkanqq": {
+          "type": "heading",
+          "settings": {
+            "heading": "SHELF FILLER",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2"
+          }
+        },
+        "text_BRpNME": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>You will...<br/></strong></p><ul><li>Pick and pack a variety of ingredients in a cold environment</li><li>Manual Handling</li><li>Labelling boxes</li><li>Replenishing stock</li><li>Using both manual and electrical pallet riders (selected staff only)</li><li>Use of a computer system i.e. Pick to light</li><li>Moving dollies and crates around</li><li>General housekeeping</li><li>Adhere to OH&S regulations</li></ul><p><strong>You have/are…<br/></strong></p><ul><li>Previous experience in the food industry would be highly regarded but not necessary</li><li>Have previous pick packing/warehouse experience would be good</li><li>Be able to work in a fast paced enviroment</li><li>Be available for full time and part time permanent roles</li><li>Have experience in using manual/electrical pallet riders</li><li>Be available to start at various times e.g.  8am, 830am & 9am</li><li>Saturday availability will be required</li><li>Have great attention to detail</li><li>Written and spoken English</li><li>Punctual, reliable and highly motivated</li><li>Able to work autonomously and in a team environment</li><li>Proactive, with a can-do attitude</li></ul><p><span style=\"text-decoration:underline\"><strong>What You’ll Get In Return…<br/></strong></span></p><ul><li>Permanent Part Time role</li><li>Pay rate in line with the storage services award Victoria</li><li>Working with a fun, energetic and supportive team</li><li>Opportunity to grow and progress within the company</li></ul><p><strong>Start Date: </strong>Not actively looking</p>",
+            "subtext_color": true
+          }
+        },
+        "button_j7gaDz": {
+          "type": "button",
+          "settings": {
+            "button_label": "APPLY NOW",
+            "button_link": "#",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bkanqq",
+        "text_BRpNME",
+        "button_j7gaDz"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/Cedar_OCT2022-257.png",
+        "image_position": "left",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "rich_text_EMNRex": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wPkbYt": {
+          "type": "heading",
+          "settings": {
+            "heading": "HAVE SOMETHING ELSE TO OFFER?",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_9qQQXD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>EMAIL US NOW TO LODGE YOUR RESUME FOR FUTURE PROMOTIONS</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "button_RxbR97": {
+          "type": "button",
+          "settings": {
+            "button_label": "Send Email",
+            "button_link": "mailto:cedarsales@cedarhospitality.com",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wPkbYt",
+        "text_9qQQXD",
+        "button_RxbR97"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-inverse",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_zrJVC6",
+    "main",
+    "scrolling_banner_mxQ7fg",
+    "job_listing_PULqa6",
+    "image_with_text_3fLNUn",
+    "image_with_text_nJTiPr",
+    "rich_text_EMNRex"
+  ]
+}

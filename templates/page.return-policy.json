@@ -1,0 +1,193 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_J3jGxw": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "collapsible_tabs_VYEmgD": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "collapsible_item_g9ptNx": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "7.1 In addition to your rights in relation to faulty products in clause 6, and subject to the restrictions set out in 7.2, you can return any product:",
+            "content": "<p>7.1 In addition to your rights in relation to faulty products in clause 6, and subject to the restrictions set out in 7.2, you can return any product:</p><p>(a) as long as the return is initiated in your Account within seven (7) days from time of Delivery;</p><p>(b) unworn and unused and in a saleable condition with the original tags still attached;</p><p>(c) in the original packaging, which must be in the original condition, including sealed boxes, branded dust bags, shoe boxes and authentication certificates if applicable (you don’t need the clear plastic packaging, except for products sealed for hygiene reasons - see below); and</p><p>(d) it has not been specifically excluded from the change of mind returns policy, such as ‘Final Sale’ items, stated products labelled with Dead stock, Last Stock, whilst stock last, Obsolete Ranges and items excluded for hygiene reasons.  The exclusion will be noted on the relevant product page on our Site and / or at checkout.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_rzQGcV": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "7.2 Please note that products sealed for hygiene reasons can only be returned under change of mind returns policy if the seal is intact or if you otherwise have a remedy under the Australian Consumer Law). Syrups and other food products cannot be returned if they are opened and/ or used (unless faulty).",
+            "content": "",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_dLAMpM": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "7.3 To ensure these returns are assessed and processed swiftly, please follow the instructions set out under ‘Credits & Returns' on your Accounts Page.",
+            "content": "",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_MwhyU7": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "7.4 Upon receiving and inspection of your return, we will contact you about next steps.  Once determined the return is in compliance with clause 7.1, we will either:",
+            "content": "<p>(a) refund the price of the product returned to your original payment method; or</p><p>(b) exchange the product for another size, subject to availability. Please note that items can only be exchanged with items that are shipped from the same location i.e. only items shipped from Cedar Hospitality Showroom and Warehouse can be exchanged with other items from Cedar Hospitality Showroom and Warehouse location.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_B8LCer": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "7.5 We will not refund any Delivery Fees that you have paid at purchase to have the product shipped to you, or the cost of any packaging you provide to send the items back to us.  If the return, in our reasonable opinion, is not in compliance with clause 7.1, we will contact you to ship the product back to you and you will be liable for the shipping costs both to and from us.",
+            "content": "",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_WERVqR": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "7.6 We offer a flexible change of mind returns policy to streamline your shopping experience.   We monitor return rate frequency and value for fraud, abuse and general security purposes. In the event of elevated return frequency and values, we are entitled to close or block access to your Account or deny you from making future orders.",
+            "content": "",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_WmzfcC": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "7.7 Nothing in this clause is intended to exclude any rights in clause 6 or any of your statutory rights as a consumer under the Australian Consumer Law.",
+            "content": "",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_E8Rp9R": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "7.8 While we understand that on occasion incorrect items, including items from other companies and/or your personal items, may be returned to us by mistake, we are not responsible for these items and accept no Liability if we’re unable to locate them. If we are able to locate them and you want the items returned to you, we reserve the right to return them to you at your cost.",
+            "content": "",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_yEC6nm": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "7.9 Re-stocking Fee of twenty percent (20%) of the value of the returned Goods plus any freight costs. ***Conditions Apply***",
+            "content": "",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_item_g9ptNx",
+        "collapsible_item_rzQGcV",
+        "collapsible_item_dLAMpM",
+        "collapsible_item_MwhyU7",
+        "collapsible_item_B8LCer",
+        "collapsible_item_WERVqR",
+        "collapsible_item_WmzfcC",
+        "collapsible_item_E8Rp9R",
+        "collapsible_item_yEC6nm"
+      ],
+      "name": "t:sections.collapsible-tabs.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "header_layout": "vertical",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h3",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "item_icon_size": "extra-large",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_J3jGxw",
+    "main",
+    "collapsible_tabs_VYEmgD"
+  ]
+}

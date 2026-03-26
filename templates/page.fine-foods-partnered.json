@@ -1,0 +1,717 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_McPFjC": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "scrolling_banner_bpHfe7": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "slide_JDWRaJ": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/Artboard-_-1-2048x630.png",
+            "image_overlay_opacity": 0,
+            "content_position": "middle-left",
+            "text_alignment": "center",
+            "subheading": "",
+            "title": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product_color_scheme": "",
+            "product": ""
+          }
+        },
+        "slide_fzi6iP": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "",
+            "title": "Image slide",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-base",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product_color_scheme": "",
+            "product": ""
+          }
+        },
+        "slide_XrfaFk": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "",
+            "image_overlay_opacity": 0,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "",
+            "title": "Image slide",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-base",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product_color_scheme": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_JDWRaJ",
+        "slide_fzi6iP",
+        "slide_XrfaFk"
+      ],
+      "name": "t:sections.scrolling-banner.name",
+      "settings": {
+        "container": "full",
+        "slide_height": "adapt",
+        "content_position_mobile": "top-center",
+        "text_alignment_mobile": "center",
+        "enable_zoom": false,
+        "enable_parallax": false
+      }
+    },
+    "rich_text_wtUaK7": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_teRMVL": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Partnered for Success</strong>",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_D6hcmn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In collaboration with<a href=\"/collections/robert-gordon\" target=\"_blank\" title=\"Robert Gordon\"><strong>Robert Gordon</strong></a>and<a href=\"https://store.cedarhospitality.com/680-steelite\"><strong>Steelite International</strong></a>, we proudly present a catalogue of the finest quality and industry-leading crockery, cutlery, glassware, and front-of-house equipment. Committed to our local Hospitality Industry, dive into the rich portfolio of brands and ranges available in the Australian food and hospitality scene.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "button_FpDqUR": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_teRMVL",
+        "text_D6hcmn",
+        "button_FpDqUR"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "multicolumn_icon_YRnPVP": {
+      "type": "multicolumn-icon",
+      "blocks": {
+        "column_LcbRxz": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "Column",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6",
+            "heading_font": "heading",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_pqFhnC": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "Column",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6",
+            "heading_font": "heading",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_T8hAx3": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "icon": "paperplane",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "Column",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6",
+            "heading_font": "heading",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_hbJqn6": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "icon": "map-pin",
+            "max_width": 28,
+            "max_width_mb": 28,
+            "title": "Column",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h6",
+            "heading_font": "heading",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "column_LcbRxz",
+        "column_pqFhnC",
+        "column_T8hAx3",
+        "column_hbJqn6"
+      ],
+      "disabled": true,
+      "name": "t:sections.multicolumn-with-icon.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "header_layout": "vertical",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Multicolumn with icon",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "enable_sticky": false,
+        "card_color_scheme": "",
+        "content_alignment": "left",
+        "image_position": "left",
+        "icon_color": "#7a34d6",
+        "columns_desktop": 2,
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "show_divider_col": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "multicolumn_yakeKb": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_kUFQjN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Instagram-Post-_-39_7fcc6c62-06be-4bf9-a011-88aff33eb24e.png",
+            "image_link": "",
+            "subheading": "",
+            "title": "<strong>Speak with the experts</strong>",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Engage with our  knowledgeable team and suppliers to discuss your specific needs and get expert advice and solutions for your business.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_PeiwHK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Instagram-Post-_-11_95b63afb-435a-46f4-87f1-d123d0846c96.png",
+            "image_link": "",
+            "subheading": "",
+            "title": "Discover new products",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Explore a curated range of  exclusive and new season products designed to support and enhance your business operations.<br/></p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_J8bqpj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Instagram-Post-_-37_7c6c5f04-964c-4034-9804-db93037405ed.png",
+            "image_link": "",
+            "subheading": "",
+            "title": "Exclusive insights",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Stop by for a coffee and explore a world of opportunity. With LIVE demonstrations daily on the Thrill Chill Machine and drinks mixed up by 1883 mixologists!</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "column_kUFQjN",
+        "column_PeiwHK",
+        "column_J8bqpj"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "content_alignment": "left",
+        "show_col_count": false,
+        "show_image": true,
+        "columns_desktop": 3,
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "rich_text_WBTTWJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_x94Bar": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Celebrating 40 Years of Fine Food</strong>",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "subheading_x3ADBH": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "<strong>Complete your free registration to attend!</strong>"
+          }
+        },
+        "text_LxgEXf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Fine Food Australia is the leading trade event for the food industry. Running for 40 years, the event has welcomed hundreds of food industry professionals from Australasia and beyond, through the show doors.Sounds good? Registration for Fine Food Australia is free. All visitors must pre-register online before arriving.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "button_rynfyC": {
+          "type": "button",
+          "settings": {
+            "button_label": "Register Now",
+            "button_link": "https://finefoodaustralia.com.au/register/",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_x94Bar",
+        "subheading_x3ADBH",
+        "text_LxgEXf",
+        "button_rynfyC"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_K6Fhp8": {
+      "type": "image-with-text",
+      "blocks": {
+        "badge_VMyqkV": {
+          "type": "badge",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "",
+            "text": "image with text - spinning text -",
+            "position_mobile": "right"
+          }
+        },
+        "heading_TRyUxi": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>A Match Made in Restaurant Heaven</strong>",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "subheading_C7tGGw": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "<strong>Find Us at Stand P14!</strong>"
+          }
+        },
+        "text_4mQLar": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cedar Hospitality Supplies combines forces with globally renowned Steelite International and local powerhouse Robert Gordon to present to you a canvas of table top solutions.The success of this long standing partnership has been grounded in common values, in our, uncompromising approach to Quality, Design, Innovation, Customer Service and an unparalleled knowledge of the Commercial, Food Service industry.Come in and explore the best and trend setting crockery, inspired by and designed for the Australian food scene.</p>",
+            "subtext_color": true
+          }
+        },
+        "button_XnVyY8": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "badge_VMyqkV",
+        "heading_TRyUxi",
+        "subheading_C7tGGw",
+        "text_4mQLar",
+        "button_XnVyY8"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image_position": "left",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "custom_content_iHzLfC": {
+      "type": "custom-content",
+      "blocks": {
+        "image_baB9Ft": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Robert-Gordon.jpg",
+            "width": "20%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_HzpgyU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Web-logo-Steelite.png",
+            "width": "20%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_rPinnM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LCient-Profile-_-26-1.png",
+            "width": "20%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_NdgAEy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Web-logo-rona.png",
+            "width": "20%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_8MWJWj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/website-banner-1-_-1-1.png",
+            "width": "20%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_benrFz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Web-logo-1883.png",
+            "width": "20%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_ATxLBH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Gi-Metal-Logo.png",
+            "width": "20%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        },
+        "image_EGCnXX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/abert.png",
+            "width": "20%",
+            "alignment": "center",
+            "block_custom_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_baB9Ft",
+        "image_HzpgyU",
+        "image_rPinnM",
+        "image_NdgAEy",
+        "image_8MWJWj",
+        "image_benrFz",
+        "image_ATxLBH",
+        "image_EGCnXX"
+      ],
+      "name": "t:sections.custom-content.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "enable_sticky_column": false,
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "<strong>Featured on Our Stand</strong>",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "column_gap": "medium",
+        "row_gap": "large",
+        "swipe_on_mobile": false,
+        "columns_mobile": "1",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_RcHwHD": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_3Qw3Fi": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Open a World of Opportunity</strong>",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "subheading_Fwq4jd": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Elevating presentation to an art."
+          }
+        },
+        "text_ccgXgg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Partnering to create an unmatched range of inspired tabletop experiences where shape, colour, texture, light and weight combine to feed the senses. Helping our customers set the stage for their menus and their brands.</p>",
+            "subtext_color": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_3Qw3Fi",
+        "subheading_Fwq4jd",
+        "text_ccgXgg"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/Screenshot-2024-06-24-at-15-09-20-Cedar-Hospitality-_cedarhospitalitymelb-_-Instagram-photos-and-videos.png",
+        "image_position": "left",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_McPFjC",
+    "main",
+    "scrolling_banner_bpHfe7",
+    "rich_text_wtUaK7",
+    "multicolumn_icon_YRnPVP",
+    "multicolumn_yakeKb",
+    "rich_text_WBTTWJ",
+    "image_with_text_K6Fhp8",
+    "custom_content_iHzLfC",
+    "image_with_text_RcHwHD"
+  ]
+}

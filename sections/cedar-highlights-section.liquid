@@ -1,0 +1,564 @@
+{% schema %}
+{
+  "name": "Cedar Highlights",
+  "tag": "section",
+  "class": "cedar-hospitality-section-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container width",
+      "default": "fixed",
+      "options": [
+        {
+          "value": "full",
+          "label": "Full width"
+        },
+        {
+          "value": "fixed",
+          "label": "Fixed width"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Cedar Hospitality highlights"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Top Padding",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Bottom Padding",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Title Settings"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "label": "Title Font Size",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "select",
+      "id": "title_font_weight",
+      "label": "Title Font Weight",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "title_margin_bottom",
+      "label": "Title Bottom Margin",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Grid Settings"
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Gap Between Cards",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Card Settings"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "label": "Card Border Radius",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Card Title Settings"
+    },
+    {
+      "type": "range",
+      "id": "card_title_font_size",
+      "label": "Card Title Font Size",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 22
+    },
+    {
+      "type": "select",
+      "id": "card_title_font_weight",
+      "label": "Card Title Font Weight",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card Title Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Card Description Settings"
+    },
+    {
+      "type": "range",
+      "id": "card_description_font_size",
+      "label": "Description Font Size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "color",
+      "id": "card_description_color",
+      "label": "Description Color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "label": "Button Font Size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "select",
+      "id": "button_font_weight",
+      "label": "Button Font Weight",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi Bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "button_padding_y",
+      "label": "Button Vertical Padding",
+      "min": 8,
+      "max": 25,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "button_padding_x",
+      "label": "Button Horizontal Padding",
+      "min": 15,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Button Border Radius",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "label": "Button Border Width",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Button Border Color",
+      "default": "#e5e5e5"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "highlight_card",
+      "name": "Highlight Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card Image"
+        },
+        {
+          "type": "text",
+          "id": "card_title",
+          "label": "Card Title",
+          "default": "Card Title"
+        },
+        {
+          "type": "textarea",
+          "id": "card_description",
+          "label": "Card Description",
+          "default": "Add your card description here."
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cedar Hospitality Highlights",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "highlight_card",
+          "settings": {
+            "card_title": "Finance Options",
+            "card_description": "We understand that every business has unique financial needs, and that's why we offer a range of trusted and convenient financing solutions.",
+            "button_text": "Read More"
+          }
+        },
+        {
+          "type": "highlight_card",
+          "settings": {
+            "card_title": "Custom Made Services",
+            "card_description": "We work closely with chefs to develop unique, bespoke pieces catered to their particular needs. Personal branding like custom stamping makes your dining experience more impactful.",
+            "button_text": "Enquire Now"
+          }
+        },
+        {
+          "type": "highlight_card",
+          "settings": {
+            "card_title": "Catalog Library",
+            "card_description": "Take a look at the current dealer and supplier catalogues where you'll find a great range of products for the kitchen, restaurant or day to day upkeep.",
+            "button_text": "Explore"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+
+  #shopify-section-{{ section.id }} .cedar-hospitality-section {
+    padding-top: {{ section.settings.section_padding_top }}px;
+    padding-bottom: {{ section.settings.section_padding_bottom }}px;
+    background-color: {{ section.settings.background_color }};
+    font-family: 'instrument sans';
+  }
+
+  /* --- Uniform Layout Logic --- */
+  
+  #shopify-section-{{ section.id }} .page-width--full {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #shopify-section-{{ section.id }} .page-width--full .cedar-hospitality-title,
+  #shopify-section-{{ section.id }} .page-width--full .cedar-hospitality-grid {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .cedar-hospitality-title {
+    text-align: center;
+    font-size: {{ section.settings.title_font_size }}px;
+    font-weight: {{ section.settings.title_font_weight }};
+    color: {{ section.settings.title_color }};
+    margin-bottom: {{ section.settings.title_margin_bottom }}px;
+    line-height: 1.3;
+    margin-top: 0;
+  }
+
+  .cedar-hospitality-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: {{ section.settings.grid_gap }}px;
+    margin-top: 40px;
+  }
+
+  .cedar-hospitality-card {
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .cedar-hospitality-card-image-wrapper {
+    width: 100%;
+    border-radius: {{ section.settings.card_border_radius }}px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .cedar-hospitality-card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .cedar-hospitality-card:hover .cedar-hospitality-card-image {
+    transform: scale(1.05);
+  }
+
+  .cedar-hospitality-card-content {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .cedar-hospitality-card-title {
+    font-size: {{ section.settings.card_title_font_size }}px;
+    font-weight: {{ section.settings.card_title_font_weight }};
+    color: {{ section.settings.card_title_color }};
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .cedar-hospitality-card-description {
+    font-size: {{ section.settings.card_description_font_size }}px;
+    color: {{ section.settings.card_description_color }};
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+  }
+
+  /* --- Button Style with Slide Animation --- */
+  .cedar-hospitality-card-button {
+    display: block;
+    width: 100%;
+    padding: {{ section.settings.button_padding_y }}px {{ section.settings.button_padding_x }}px;
+    text-align: center;
+    font-size: {{ section.settings.button_font_size }}px;
+    font-weight: {{ section.settings.button_font_weight }};
+    color: {{ section.settings.button_text_color }};
+    background-color: {{ section.settings.button_background }};
+    border: {{ section.settings.button_border_width }}px solid {{ section.settings.button_border_color }};
+    border-radius: {{ section.settings.button_border_radius }}px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: auto;
+    position: relative;
+    overflow: hidden; /* Essential for the slide */
+    z-index: 1;
+    transition: color 0.4s ease;
+  }
+
+  .cedar-hospitality-card-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start outside */
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Black background slide */
+    transition: left 0.4s ease;
+    z-index: -1;
+  }
+
+  .cedar-hospitality-card-button:hover {
+    color: #ffffff; /* Text turns white */
+  }
+
+  .cedar-hospitality-card-button:hover::before {
+    left: 0; /* Slide to cover */
+  }
+
+  /* --- Mobile Layout --- */
+  @media (max-width: 990px) {
+      .cedar-hospitality-grid {
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
+
+  @media (max-width: 768px) {
+    /* --- Mobile Uniformity Fix --- */
+    #shopify-section-{{ section.id }} .page-width:not(.page-width--full) {
+       padding-left: 12px;
+       padding-right: 12px;
+    }
+    
+    #shopify-section-{{ section.id }} .page-width--full .cedar-hospitality-title,
+    #shopify-section-{{ section.id }} .page-width--full .cedar-hospitality-grid {
+       padding-left: 12px;
+       padding-right: 12px;
+    }
+
+    .cedar-hospitality-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .cedar-hospitality-title {
+      font-size: 30px;
+    }
+
+    .cedar-hospitality-card-image {
+      height: 200px;
+    }
+  }
+</style>
+
+<section class="cedar-hospitality-section">
+  <div class="page-width page-width--{{ section.settings.container }}">
+    {% if section.settings.section_title != blank %}
+      <h2 class="cedar-hospitality-title">{{ section.settings.section_title }}</h2>
+    {% endif %}
+
+    <div class="cedar-hospitality-grid">
+      {% for block in section.blocks %}
+        <div class="cedar-hospitality-card" {{ block.shopify_attributes }}>
+          {% if block.settings.card_image != blank %}
+            <div class="cedar-hospitality-card-image-wrapper">
+              <img 
+                src="{{ block.settings.card_image | img_url: '600x' }}" 
+                alt="{{ block.settings.card_title }}"
+                class="cedar-hospitality-card-image"
+                loading="lazy"
+              >
+            </div>
+          {% else %}
+            <div class="cedar-hospitality-card-image-wrapper">
+              <div class="cedar-hospitality-card-image" style="background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">
+                <span>{{ block.settings.card_title }}</span>
+              </div>
+            </div>
+          {% endif %}
+
+          <div class="cedar-hospitality-card-content">
+            {% if block.settings.card_title != blank %}
+              <h3 class="cedar-hospitality-card-title">{{ block.settings.card_title }}</h3>
+            {% endif %}
+
+            {% if block.settings.card_description != blank %}
+              <p class="cedar-hospitality-card-description">{{ block.settings.card_description }}</p>
+            {% endif %}
+
+            {% if block.settings.button_text != blank %}
+              <a 
+                href="{{ block.settings.button_link }}" 
+                class="cedar-hospitality-card-button"
+                {% if block.settings.button_link == blank %}onclick="return false;"{% endif %}
+              >
+                {{ block.settings.button_text }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,765 @@
+{% comment %} <div class="hyper-collection-section" style="background-color: {{ section.settings.bg_color }};">
+  <div class="brand-page-width">
+    
+    <div class="hyper-section-header">
+      {% if section.settings.title != blank %}
+        <h2 class="hyper-section-title">{{ section.settings.title }}</h2>
+      {% endif %}
+
+      <div class="hyper-controls-group">
+        <div class="hyper-sort-wrapper">
+          <label for="SortBy-{{ section.id }}">Sort by:</label>
+          <div class="hyper-select-custom">
+            <select id="SortBy-{{ section.id }}" class="hyper-sort-select">
+              <option value="featured">Featured</option>
+              <option value="alphabet-asc">Alphabetically, A-Z</option>
+              <option value="alphabet-desc">Alphabetically, Z-A</option>
+              <option value="price-asc">Price, low to high</option>
+              <option value="price-desc">Price, high to low</option>
+              <option value="count-asc">Inventory: Low to High</option>
+              <option value="count-desc">Inventory: High to Low</option>
+              <option value="date-desc">Date, new to old</option>
+              <option value="date-asc">Date, old to new</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="hyper-search-wrapper">
+          <input 
+            type="text" 
+            id="CollectionSearch-{{ section.id }}" 
+            class="hyper-search-input" 
+            placeholder="{{ section.settings.search_placeholder }}"
+            aria-label="{{ section.settings.search_placeholder }}"
+          >
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="hyper-collection-grid" id="CollectionGrid-{{ section.id }}">
+      {% for collection in collections %}
+        {% unless collection.handle == 'all' or collection.all_products_count == 0 %}
+          <div class="hyper-collection-card" 
+               data-title="{{ collection.title | downcase }}" 
+               data-index="{{ forloop.index }}"
+               data-price="{{ collection.products.first.price | default: 0 }}"
+               data-date="{{ collection.published_at | default: collection.created_at | date: '%s' }}"
+               data-count="{{ collection.all_products_count | default: 0 }}">
+            <a href="{{ collection.url }}" class="hyper-card-link">
+              
+              <div class="hyper-image-wrapper">
+                {% if collection.featured_image %}
+                  <img src="{{ collection.featured_image | img_url: '600x600', crop: 'center' }}" 
+                       alt="{{ collection.title | escape }}" 
+                       loading="lazy"
+                       class="hyper-img">
+                {% else %}
+                   {{ 'collection-1' | placeholder_svg_tag: 'hyper-placeholder' }}
+                {% endif %}
+              </div>
+
+              <div class="hyper-info-wrapper">
+                <h3 class="hyper-card-name">{{ collection.title }}</h3>
+                
+                <div class="hyper-card-footer">
+                  {% if section.settings.show_product_count %}
+                    <span class="hyper-product-count">{{ collection.all_products_count }} Products</span>
+                  {% endif %}
+                  
+                  {% if section.settings.show_view_all %}
+                    <span class="hyper-view-btn">{{ section.settings.view_all_text }} &rarr;</span>
+                  {% endif %}
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endunless %}
+      {% endfor %}
+    </div>
+
+    <div id="NoResults-{{ section.id }}" class="hyper-no-results" style="display: none;">
+      <p>{{ section.settings.no_results_text | default: 'No brands match your search.' }}</p>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+  
+  .hyper-collection-section,
+  .hyper-collection-section * {
+    font-family: 'Instrument Sans';
+  }
+  
+/* Section Container */
+.hyper-collection-section {
+  padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+}
+
+.brand-page-width {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hyper-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 20px;
+  border-bottom: none; 
+  padding-bottom: 20px;
+}
+
+.hyper-collection-card {
+  background: #ffffff;
+  border: 1px solid lightgray;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
+  transition: none; 
+}
+
+.hyper-collection-card:hover {
+  border: 2px solid lightgray; 
+}
+
+.hyper-image-wrapper {
+  aspect-ratio: 1 / 1;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fdfdfd; 
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.hyper-controls-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hyper-section-title {
+  font-size: {{ section.settings.heading_size }}px;
+  font-weight: {{ section.settings.heading_weight }};
+  color: {{ section.settings.heading_color }};
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.hyper-sort-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hyper-sort-wrapper label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hyper-select-custom {
+  position: relative;
+}
+
+.hyper-sort-select {
+  {% comment %} padding: 10px 40px 10px 20px; {% endcomment %}
+     padding: 15px 36px 15px 20px;
+  min-width: 220px;
+  border: 1px solid lightgray; 
+  border-radius: 50px;         
+  font-size: 16px;             
+  color: #666;
+  background-color: #fff;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.hyper-search-wrapper {
+  position: relative;
+  width: 280px;
+}
+
+.hyper-search-input {
+  border: 1px solid lightgray;
+  width: 100%;
+  {% comment %} padding: 10px 20px 10px 45px;  {% endcomment %}
+  padding: 15px 36px 15px 20px;
+  border-radius: 50px;          
+  font-size: 16px;               
+  color: #000;
+  background-color: #fff;
+  outline: none;
+
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.hyper-collection-grid {
+  display: grid;
+  grid-template-columns: repeat({{ section.settings.grid_desktop }}, 1fr);
+  gap: 25px;
+}
+
+.hyper-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.hyper-collection-card:hover .hyper-img {
+  transform: scale(1.08) translateY(-5px);
+}
+
+.hyper-info-wrapper {
+  padding: 20px;
+  text-align: center;
+}
+
+.hyper-card-name {
+  font-size: {{ section.settings.card_title_size }}px;
+  font-weight: {{ section.settings.card_title_weight }};
+  color: {{ section.settings.card_title_color }};
+  margin: 0 0 8px;
+}
+
+.hyper-product-count {
+  font-size: 13px;
+  color: #888;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.hyper-view-btn {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2px;
+}
+
+.hyper-no-results p {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  padding: 40px 0;
+}
+
+@media (max-width: 990px) {
+  .hyper-section-header { flex-direction: column; align-items: flex-start; }
+  .hyper-controls-group { width: 100%; flex-direction: column; align-items: stretch; gap: 15px; }
+  .hyper-search-wrapper { width: 100%; }
+  .hyper-collection-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+}
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const grid = document.getElementById('CollectionGrid-{{ section.id }}');
+  const searchInput = document.getElementById('CollectionSearch-{{ section.id }}');
+  const sortSelect = document.getElementById('SortBy-{{ section.id }}');
+  const noResults = document.getElementById('NoResults-{{ section.id }}');
+
+  function updateGallery() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const sortValue = sortSelect.value;
+    const cards = Array.from(grid.querySelectorAll('.hyper-collection-card'));
+    let hasResults = false;
+
+    cards.forEach(card => {
+      const title = card.getAttribute('data-title');
+      if (title.includes(searchTerm)) {
+        card.style.display = 'flex';
+        hasResults = true;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    noResults.style.display = hasResults ? 'none' : 'block';
+
+    cards.sort((a, b) => {
+      const titleA = a.getAttribute('data-title');
+      const titleB = b.getAttribute('data-title');
+      const priceA = parseFloat(a.getAttribute('data-price')) || 0;
+      const priceB = parseFloat(b.getAttribute('data-price')) || 0;
+      const dateA = parseInt(a.getAttribute('data-date')) || 0;
+      const dateB = parseInt(b.getAttribute('data-date')) || 0;
+      const countA = parseInt(a.getAttribute('data-count')) || 0;
+      const countB = parseInt(b.getAttribute('data-count')) || 0;
+      const indexA = parseInt(a.getAttribute('data-index'));
+      const indexB = parseInt(b.getAttribute('data-index'));
+      
+      switch(sortValue) {
+case 'alphabet-asc': 
+  return (function(a, b) {
+    const aIsNum = /^\d/.test(a);
+    const bIsNum = /^\d/.test(b);
+    if (aIsNum && !bIsNum) return 1;  // Push a (number) to bottom
+    if (!aIsNum && bIsNum) return -1; // Keep b (number) at bottom
+    return a.localeCompare(b);        // If both same type, use standard sort
+  })(titleA, titleB);
+
+case 'alphabet-desc': 
+  return (function(a, b) {
+    const aIsNum = /^\d/.test(a);
+    const bIsNum = /^\d/.test(b);
+    if (aIsNum && !bIsNum) return 1;  // Numbers still go to the bottom
+    if (!aIsNum && bIsNum) return -1;
+    return b.localeCompare(a);        // Reverse sort for letters
+  })(titleA, titleB);
+        case 'price-asc': return priceA - priceB;
+        case 'price-desc': return priceB - priceA;
+        case 'date-asc': return dateA - dateB;
+        case 'date-desc': return dateB - dateA;
+        case 'count-asc': return countA - countB;
+        case 'count-desc': return countB - countA;
+        case 'featured': return indexA - indexB;
+        default: return indexA - indexB;
+      }
+    });
+
+    cards.forEach(card => grid.appendChild(card));
+  }
+
+  if(searchInput) searchInput.addEventListener('input', updateGallery);
+  if(sortSelect) sortSelect.addEventListener('change', updateGallery);
+});
+</script>
+
+
+
+{% schema %}
+{
+  "name": "Hyper Custom Grid",
+  "settings": [
+    { "type": "header", "content": "Section Title" },
+    { "type": "text", "id": "title", "label": "Heading Text", "default": "Shop by Brand" },
+    { "type": "range", "id": "heading_size", "min": 16, "max": 60, "step": 1, "unit": "px", "label": "Heading Size", "default": 32 },
+    { "type": "select", "id": "heading_weight", "label": "Weight", "options": [{"value":"400","label":"Regular"},{"value":"700","label":"Bold"}], "default": "700" },
+    { "type": "color", "id": "heading_color", "label": "Color", "default": "#000000" },
+    { "type": "header", "content": "Search Settings" },
+    { "type": "text", "id": "search_placeholder", "label": "Placeholder", "default": "Search brands..." },
+    { "type": "text", "id": "no_results_text", "label": "No Results Message", "default": "No brands found matching your search." },
+    { "type": "header", "content": "Card Style" },
+    { "type": "range", "id": "grid_desktop", "min": 2, "max": 6, "step": 1, "label": "Cards per row", "default": 4 },
+    { "type": "range", "id": "card_corner_radius", "min": 0, "max": 40, "step": 1, "unit": "px", "label": "Corner Radius", "default": 16 },
+    { "type": "range", "id": "card_border_thickness", "min": 0, "max": 5, "step": 1, "label": "Border Thickness", "default": 1 },
+    { "type": "color", "id": "card_border_color", "label": "Border Color", "default": "#eeeeee" },
+    { "type": "color", "id": "card_border_color_hover", "label": "Border Hover", "default": "#000000" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "card_title_size", "min": 14, "max": 30, "step": 1, "label": "Title Size", "default": 18 },
+    { "type": "select", "id": "card_title_weight", "label": "Title Weight", "options": [{"value":"400","label":"Regular"},{"value":"700","label":"Bold"}], "default": "700" },
+    { "type": "color", "id": "card_title_color", "label": "Title Color", "default": "#1a1a1a" },
+    { "type": "checkbox", "id": "show_product_count", "label": "Show Product Count", "default": true },
+    { "type": "checkbox", "id": "show_view_all", "label": "Show View All", "default": true },
+    { "type": "text", "id": "view_all_text", "label": "Button Text", "default": "VIEW ALL" },
+    { "type": "header", "content": "Spacing" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#ffffff" },
+{ "type": "range", "id": "padding_top","label":"padding", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 60 },
+    { "type": "range", "id": "padding_bottom","label":"padding", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 60 }
+  ],
+  "presets": [{ "name": "Hyper Custom Grid" }]
+}
+{% endschema %} {% endcomment %}
+
+
+ <div class="hyper-collection-section" style="background-color: {{ section.settings.bg_color }};">
+  <div class="brand-page-width">
+    
+    <div class="hyper-section-header">
+      {% if section.settings.title != blank %}
+        <h2 class="hyper-section-title">{{ section.settings.title }}</h2>
+      {% endif %}
+
+      <div class="hyper-controls-group">
+        <div class="hyper-sort-wrapper">
+          <label for="SortBy-{{ section.id }}">SORT BY:</label>
+          <div class="hyper-select-custom">
+            <select id="SortBy-{{ section.id }}" class="hyper-sort-select">
+              <option value="featured">Featured</option>
+              <option value="alphabet-asc">Alphabetically, A-Z</option>
+              <option value="alphabet-desc">Alphabetically, Z-A</option>
+              <option value="price-asc">Price, low to high</option>
+              <option value="price-desc">Price, high to low</option>
+              <option value="count-asc">Inventory: Low to High</option>
+              <option value="count-desc">Inventory: High to Low</option>
+              <option value="date-desc">Date, new to old</option>
+              <option value="date-asc">Date, old to new</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="hyper-search-wrapper">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input 
+            type="text" 
+            id="CollectionSearch-{{ section.id }}" 
+            class="hyper-search-input" 
+            placeholder="{{ section.settings.search_placeholder }}"
+            aria-label="{{ section.settings.search_placeholder }}"
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="hyper-collection-grid" id="CollectionGrid-{{ section.id }}">
+      {% for collection in collections %}
+        {% unless collection.handle == 'all' or collection.all_products_count == 0 %}
+          <div class="hyper-collection-card" 
+               data-title="{{ collection.title | downcase }}" 
+               data-index="{{ forloop.index }}"
+               data-price="{{ collection.products.first.price | default: 0 }}"
+               data-date="{{ collection.published_at | default: collection.created_at | date: '%s' }}"
+               data-count="{{ collection.all_products_count | default: 0 }}">
+            <a href="{{ collection.url }}" class="hyper-card-link">
+              
+              <div class="hyper-image-wrapper">
+                {% if collection.featured_image %}
+                  <img src="{{ collection.featured_image | img_url: '600x600', crop: 'center' }}" 
+                       alt="{{ collection.title | escape }}" 
+                       loading="lazy"
+                       class="hyper-img">
+                {% else %}
+                   {{ 'collection-1' | placeholder_svg_tag: 'hyper-placeholder' }}
+                {% endif %}
+              </div>
+
+              <div class="hyper-info-wrapper">
+                <h3 class="hyper-card-name">{{ collection.title }}</h3>
+                
+                <div class="hyper-card-footer">
+                  {% if section.settings.show_product_count %}
+                    <span class="hyper-product-count">{{ collection.all_products_count }} Products</span>
+                  {% endif %}
+                  
+                  {% if section.settings.show_view_all %}
+                    <span class="hyper-view-btn">{{ section.settings.view_all_text }} &rarr;</span>
+                  {% endif %}
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endunless %}
+      {% endfor %}
+    </div>
+
+    <div id="NoResults-{{ section.id }}" class="hyper-no-results" style="display: none;">
+      <p>{{ section.settings.no_results_text | default: 'No brands match your search.' }}</p>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+  
+  .hyper-collection-section,
+  .hyper-collection-section * {
+    font-family: 'Instrument Sans', sans-serif;
+  }
+  
+/* Section Container */
+.hyper-collection-section {
+  padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+}
+
+.brand-page-width {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hyper-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.hyper-collection-card {
+  background: #ffffff;
+  border: 1px solid lightgray;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
+  transition: border 0.2s ease; 
+}
+
+.hyper-collection-card:hover {
+  border: 1px solid #000; 
+}
+
+.hyper-image-wrapper {
+  aspect-ratio: 1 / 1;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fdfdfd; 
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.hyper-controls-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hyper-section-title {
+  font-size: {{ section.settings.heading_size }}px;
+  font-weight: {{ section.settings.heading_weight }};
+  color: {{ section.settings.heading_color }};
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.hyper-sort-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hyper-sort-wrapper label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.hyper-select-custom {
+  position: relative;
+}
+
+.hyper-sort-select {
+  padding: 12px 40px 12px 20px;
+  min-width: 220px;
+  border: 1px solid #e5e5e5; 
+  border-radius: 50px;         
+  font-size: 16px;             
+  color: #666;
+  background-color: #fff;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  outline: none;
+}
+
+/* SEARCH INPUT FIXES */
+.hyper-search-wrapper {
+  position: relative;
+  width: 280px;
+  display: flex;
+  align-items: center;
+}
+
+.hyper-search-input {
+  border: 1px solid #e5e5e5;
+  width: 100%;
+  padding: 12px 20px 12px 48px; /* Increased left padding to clear icon */
+  border-radius: 50px;          
+  font-size: 16px;               
+  color: #000;
+  background-color: #fff;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.hyper-search-input:focus {
+  border-color: #999;
+}
+
+.search-icon {
+  position: absolute;
+  left: 20px; /* Positioned inside the input padding */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hyper-collection-grid {
+  display: grid;
+  grid-template-columns: repeat({{ section.settings.grid_desktop }}, 1fr);
+  gap: 25px;
+}
+
+.hyper-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.hyper-collection-card:hover .hyper-img {
+  transform: scale(1.08);
+}
+
+.hyper-info-wrapper {
+  padding: 20px;
+  text-align: left; /* Aligned with Screenshot 1 */
+}
+
+.hyper-card-name {
+  font-size: {{ section.settings.card_title_size }}px;
+  font-weight: {{ section.settings.card_title_weight }};
+  color: {{ section.settings.card_title_color }};
+  margin: 0 0 4px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Hyper Theme Hover Underline Style */
+.hyper-collection-card:hover .hyper-card-name {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+}
+
+.hyper-product-count {
+  font-size: 13px;
+  color: #888;
+  display: block;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media (max-width: 990px) {
+  .hyper-section-header { flex-direction: column; align-items: flex-start; }
+  .hyper-controls-group { width: 100%; flex-direction: column; align-items: stretch; gap: 15px; }
+  .hyper-search-wrapper { width: 100%; }
+  .hyper-collection-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const grid = document.getElementById('CollectionGrid-{{ section.id }}');
+  const searchInput = document.getElementById('CollectionSearch-{{ section.id }}');
+  const sortSelect = document.getElementById('SortBy-{{ section.id }}');
+  const noResults = document.getElementById('NoResults-{{ section.id }}');
+
+  function updateGallery() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const sortValue = sortSelect.value;
+    const cards = Array.from(grid.querySelectorAll('.hyper-collection-card'));
+    let hasResults = false;
+
+    cards.forEach(card => {
+      const title = card.getAttribute('data-title');
+      if (title.includes(searchTerm)) {
+        card.style.display = 'flex';
+        hasResults = true;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    noResults.style.display = hasResults ? 'none' : 'block';
+
+    cards.sort((a, b) => {
+      const titleA = a.getAttribute('data-title');
+      const titleB = b.getAttribute('data-title');
+      const priceA = parseFloat(a.getAttribute('data-price')) || 0;
+      const priceB = parseFloat(b.getAttribute('data-price')) || 0;
+      const dateA = parseInt(a.getAttribute('data-date')) || 0;
+      const dateB = parseInt(b.getAttribute('data-date')) || 0;
+      const countA = parseInt(a.getAttribute('data-count')) || 0;
+      const countB = parseInt(b.getAttribute('data-count')) || 0;
+      const indexA = parseInt(a.getAttribute('data-index'));
+      const indexB = parseInt(b.getAttribute('data-index'));
+      
+      switch(sortValue) {
+        case 'alphabet-asc': return titleA.localeCompare(titleB);
+        case 'alphabet-desc': return titleB.localeCompare(titleA);
+        case 'price-asc': return priceA - priceB;
+        case 'price-desc': return priceB - priceA;
+        case 'date-asc': return dateA - dateB;
+        case 'date-desc': return dateB - dateA;
+        case 'count-asc': return countA - countB;
+        case 'count-desc': return countB - countA;
+        case 'featured': return indexA - indexB;
+        default: return indexA - indexB;
+      }
+    });
+
+    cards.forEach(card => grid.appendChild(card));
+  }
+
+  if(searchInput) searchInput.addEventListener('input', updateGallery);
+  if(sortSelect) sortSelect.addEventListener('change', updateGallery);
+});
+</script>
+
+{% schema %}
+{
+  "name": "Hyper Custom Grid",
+  "settings": [
+    { "type": "header", "content": "Section Title" },
+    { "type": "text", "id": "title", "label": "Heading Text", "default": "Shop by Brand" },
+    { "type": "range", "id": "heading_size", "min": 16, "max": 60, "step": 1, "unit": "px", "label": "Heading Size", "default": 32 },
+    { "type": "select", "id": "heading_weight", "label": "Weight", "options": [{"value":"400","label":"Regular"},{"value":"700","label":"Bold"}], "default": "700" },
+    { "type": "color", "id": "heading_color", "label": "Color", "default": "#000000" },
+    { "type": "header", "content": "Search Settings" },
+    { "type": "text", "id": "search_placeholder", "label": "Placeholder", "default": "Search brands..." },
+    { "type": "text", "id": "no_results_text", "label": "No Results Message", "default": "No brands found matching your search." },
+    { "type": "header", "content": "Card Style" },
+    { "type": "range", "id": "grid_desktop", "min": 2, "max": 6, "step": 1, "label": "Cards per row", "default": 4 },
+    { "type": "range", "id": "card_corner_radius", "min": 0, "max": 40, "step": 1, "unit": "px", "label": "Corner Radius", "default": 16 },
+    { "type": "range", "id": "card_border_thickness", "min": 0, "max": 5, "step": 1, "label": "Border Thickness", "default": 1 },
+    { "type": "color", "id": "card_border_color", "label": "Border Color", "default": "#eeeeee" },
+    { "type": "color", "id": "card_border_color_hover", "label": "Border Hover", "default": "#000000" },
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "card_title_size", "min": 14, "max": 30, "step": 1, "label": "Title Size", "default": 18 },
+    { "type": "select", "id": "card_title_weight", "label": "Title Weight", "options": [{"value":"400","label":"Regular"},{"value":"700","label":"Bold"}], "default": "700" },
+    { "type": "color", "id": "card_title_color", "label": "Title Color", "default": "#1a1a1a" },
+    { "type": "checkbox", "id": "show_product_count", "label": "Show Product Count", "default": true },
+    { "type": "checkbox", "id": "show_view_all", "label": "Show View All", "default": true },
+    { "type": "text", "id": "view_all_text", "label": "Button Text", "default": "VIEW ALL" },
+    { "type": "header", "content": "Spacing" },
+    { "type": "color", "id": "bg_color", "label": "Background", "default": "#ffffff" },
+    { "type": "range", "id": "padding_top","label":"padding top", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 60 },
+    { "type": "range", "id": "padding_bottom","label":"padding bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 60 }
+  ],
+  "presets": [{ "name": "Hyper Custom Grid" }]
+}
+{% endschema %} 
+
+

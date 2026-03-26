@@ -1,0 +1,141 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "breadcrumbs_zKadmA": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "scrolling_banner_m4BpWG": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "slide_mbLpx7": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "background": "shopify://shop_images/worldchefs-story_1586-x-652_story-tile.png",
+            "image_overlay_opacity": 0,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "",
+            "title": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product_color_scheme": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_mbLpx7"
+      ],
+      "name": "t:sections.scrolling-banner.name",
+      "settings": {
+        "container": "full",
+        "slide_height": "large",
+        "content_position_mobile": "top-center",
+        "text_alignment_mobile": "center",
+        "enable_zoom": true,
+        "enable_parallax": false
+      }
+    },
+    "rich_text_LNBHER": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WXEwyG": {
+          "type": "heading",
+          "settings": {
+            "heading": "WILLIAM ANGLISS - SUPPORTING THE FUTURE",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "subheading_34km7g": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Categories: CAFE, FEATURED"
+          }
+        },
+        "text_a7bYGa": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>“Cedar Hospitality is a long-term supplier of quality kitchen equipment for our training kitchens and restaurants at William Angliss Institute. We value the Cedar team as a responsive and reliable supplier who provides competitive prices on all quotes and deliver within a timely manner. We look forward to our ongoing partnership.”</em></p><p>- Sandi Homer - Manager Vocational Education Training at William Angliss Institute</p><p> Cedar Hospitality proudly sponsors the Special Achievement Award (Professional Cookery) at William Angliss Institute. We provide a $500 certificate to recognize and support the outstanding accomplishments of talented individuals in the culinary field. As a company committed to nurturing the next generation of chefs and hospitality industry leaders, we continue to support the values and learnings instilled by this prestigious TAFE school.</p><p> Cedar Hospitality is delighted to extend its sponsorship to the William Angliss Institute, particularly the Special Achievement Award (Professional Cookery). As a company deeply rooted in the culinary world, we recognize the importance of nurturing and empowering aspiring chefs and hospitality industry leaders.</p><p>As a supplier of leading global hospitality products and cooking equipment, we understand the importance of a sturdy foundation when entering one of the world's best cooking scenes in Melbourne.</p><p>We believe in fostering a culture of excellence, innovation, and creativity in the culinary field. We understand that the journey of food is not just about creating delectable dishes but also about appreciating the rich tapestry of flavours, cultures, and traditions that food represents. It is a journey of exploration, experimentation, and constant learning.</p><p>We firmly believe that the culinary arts hold the potential to bring people together, transcend cultural boundaries, and create memorable experiences. Just as William Angliss Institute instills in its students a passion for culinary craftsmanship, we, too, are committed to promoting the joy of food and the artistry that goes into its creation. Through our sponsorship, we aim to inspire and motivate the next generation of chefs to embrace their passion, hone their skills, and strive for excellence.</p><p>Cedar Hospitality's sponsorship of the Special Achievement Award at William Angliss Institute goes beyond a financial gesture. It signifies our commitment to the values and learnings imparted by this esteemed TAFE school and our shared belief in the transformative power of the culinary arts. We look forward to witnessing the remarkable achievements of the award recipients and contributing to the development of the future leaders in the culinary and hospitality sectors.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "button_h6MyaJ": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WXEwyG",
+        "subheading_34km7g",
+        "text_a7bYGa",
+        "button_h6MyaJ"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-149a0a42-7e4d-4101-b92f-d213f5045165",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "breadcrumbs_zKadmA",
+    "scrolling_banner_m4BpWG",
+    "rich_text_LNBHER"
+  ]
+}

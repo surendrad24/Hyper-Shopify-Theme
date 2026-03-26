@@ -1,0 +1,113 @@
+<div class="wishlist-button-wrapper" style="margin: 20px 0; width: 100%; clear: both;">
+   {% comment %} {%- render 'icons', icon: block.settings.icon, size: 'custom' -%} {% endcomment %}
+    
+  <button 
+    type="button" 
+    class="btn btn--primary wishlist-toggle-btn" 
+    data-product-handle="{{ product.handle }}"
+    onclick="toggleWishlist('{{ product.handle }}', this)"
+    style="
+      position: relative !important; 
+      top: auto !important; 
+      right: auto !important; 
+      width: 100%; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      min-height: 44px;
+    "
+  >
+    {% comment %} <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="wishlist-icon">
+    <path d="M10 17.5C10 17.5 1.875 13.125 1.875 7.96875C1.875 6.84987 2.31947 5.77681 3.11064 4.98564C3.90181 4.19447 4.97487 3.75 6.09375 3.75C7.85859 3.75 9.37031 4.71172 10 6.25C10.6297 4.71172 12.1414 3.75 13.9062 3.75C15.0251 3.75 16.0982 4.19447 16.8894 4.98564C17.6805 5.77681 18.125 6.84987 18.125 7.96875C18.125 13.125 10 17.5 10 17.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg> {% endcomment %}
+    <span class="btn__text">Add to Wishlist</span>
+  </button>
+</div>
+
+ <style>
+  /* Use your theme's primary button colors, but change text/bg when active */
+  .wishlist-toggle-btn.is-active {
+    background-color: #000000 !important;
+    border: 1px solid #000;
+  }
+  
+  .wishlist-toggle-btn.is-active .btn__text::before {
+    content: "✕ "; /* Visual cue for removal */
+    margin-right: 8px;
+     color: #000 !important; 
+  }
+</style> 
+{% comment %} <style>
+    /* 1. Aligns the items side-by-side */
+    .variant-wishlist-container {
+      display: flex;
+      align-items: flex-end; /* Aligns button with the variant pills, not the label */
+      justify-content: space-between;
+      gap: 0px; /* Space between variants and wishlist button */
+      flex-wrap: wrap;
+    }
+
+    /* 2. Ensures the variant picker takes up available space but allows room for the button */
+    .variant-wishlist-container > div:first-child {
+      flex: 1;
+    }
+
+    /* 3. OPTIONAL: Adjusts the wishlist button width so it fits beside the variants */
+    /* You might need to adjust your existing .wishlist-toggle-btn class if it is set to width: 100% */
+    .wishlist-button-wrapper .wishlist-toggle-btn {
+      width: auto !important; 
+      min-width: 120px; /* Optional: prevents it from getting too squashed */
+      margin-top: 0;
+      margin-bottom: 0; /* Removing default margins often found on buttons */
+    }
+
+    /* User's original styles */
+    .wishlist-toggle-btn.is-active {
+      background-color: #000000 !important;
+      border: 1px solid #000;
+    }
+  
+    .wishlist-toggle-btn.is-active .btn__text::before {
+      content: "✕ "; 
+      margin-right: 8px;
+      color: #fff !important; /* Changed to white so it's visible on black bg */
+    }
+  </style> {% endcomment %}
+<script>
+function toggleWishlist(handle, btn) {
+  let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+  const btnText = btn.querySelector('.btn__text');
+  const index = wishlist.indexOf(handle);
+
+  if (index === -1) {
+    wishlist.push(handle);
+    btn.classList.add('is-active');
+    if (btnText) btnText.innerText = 'Remove from Wishlist';
+  } else {
+    wishlist.splice(index, 1);
+    btn.classList.remove('is-active');
+    if (btnText) btnText.innerText = 'Add to Wishlist';
+  }
+
+  localStorage.setItem('wishlist', JSON.stringify(wishlist));
+  
+  // This triggers the 'wishlistUpdated' event your main page code listens for
+  window.dispatchEvent(new Event('wishlistUpdated'));
+}
+
+// Check status on page load
+function initProductWishlistButtons() {
+  const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+  document.querySelectorAll('.wishlist-toggle-btn').forEach(btn => {
+    const handle = btn.getAttribute('data-product-handle');
+    const btnText = btn.querySelector('.btn__text');
+    
+    if (wishlist.includes(handle)) {
+      btn.classList.add('is-active');
+      if (btnText) btnText.innerText = 'Remove from Wishlist';
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initProductWishlistButtons);
+</script>

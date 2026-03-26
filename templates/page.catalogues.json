@@ -1,0 +1,94 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_DYpAFd": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "catalogues_8q9cmn": {
+      "type": "catalogues",
+      "blocks": {
+        "column_3ngDwQ": {
+          "type": "column",
+          "settings": {
+            "title": "Catalog Title",
+            "button_label": "View",
+            "button_link": "",
+            "download_link": ""
+          }
+        },
+        "column_bCq8N4": {
+          "type": "column",
+          "settings": {
+            "title": "Catalog Title",
+            "button_label": "View",
+            "button_link": "",
+            "download_link": ""
+          }
+        },
+        "column_Qqbqg7": {
+          "type": "column",
+          "settings": {
+            "title": "Catalog Title",
+            "button_label": "View",
+            "button_link": "",
+            "download_link": ""
+          }
+        },
+        "column_h4XhMF": {
+          "type": "column",
+          "settings": {
+            "title": "Catalog Title",
+            "button_label": "View",
+            "button_link": "",
+            "download_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_3ngDwQ",
+        "column_bCq8N4",
+        "column_Qqbqg7",
+        "column_h4XhMF"
+      ],
+      "name": "Catalog Download Grid",
+      "settings": {
+        "heading": "Our Catalogues",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_DYpAFd",
+    "main",
+    "catalogues_8q9cmn"
+  ]
+}

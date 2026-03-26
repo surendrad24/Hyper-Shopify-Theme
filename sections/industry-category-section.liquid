@@ -1,0 +1,700 @@
+{% schema %}
+{
+  "name": "Industry Categories",
+  "tag": "section",
+  "class": "industry-categories-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container width",
+      "default": "fixed",
+      "options": [
+        {
+          "value": "full",
+          "label": "Full width"
+        },
+        {
+          "value": "fixed",
+          "label": "Fixed width"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Industry"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_card",
+      "name": "Category Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card Image",
+          "info": "Recommended size: 600x600px"
+        },
+        {
+          "type": "text",
+          "id": "card_title",
+          "label": "Card Title",
+          "default": "Category Name"
+        },
+        {
+          "type": "collection",
+          "id": "card_link",
+          "label": "Card Link (collection picker)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Industry Categories",
+      "blocks": [
+        { "type": "category_card", "settings": { "card_title": "Cafe" } },
+        { "type": "category_card", "settings": { "card_title": "Education" } },
+        { "type": "category_card", "settings": { "card_title": "Furniture" } },
+        { "type": "category_card", "settings": { "card_title": "Pizza" } },
+        { "type": "category_card", "settings": { "card_title": "Uniforms" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  #shopify-section-{{ section.id }} .industry-section {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  #shopify-section-{{ section.id }} .page-width--full {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #shopify-section-{{ section.id }} .page-width--full .industry-title,
+  #shopify-section-{{ section.id }} .page-width--full .industry-cards-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .industry-title {
+    font-family: 'instrument sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 40px 0;
+  }
+
+  .industry-cards-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+
+  .industry-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 295px;
+    text-decoration: none;
+    display: block;
+    outline: none;
+    background: #f7f7f7;
+  }
+
+  .industry-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+  
+  .industry-card:hover .industry-card-image {
+    transform: scale(1.08);
+  }
+
+  .industry-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 35px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.45) 60%,
+      rgba(0, 0, 0, 0.85) 100%
+    );
+    pointer-events: none; 
+  }
+
+  .industry-card-title {
+    font-family: 'instrument sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .industry-card-title .title-arrow {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff;
+    margin-left: 4px;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    position: relative;
+    top: -4px; 
+  }
+
+  .industry-card:hover .industry-card-title .title-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media (max-width: 1200px) {
+    .industry-cards-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    #shopify-section-{{ section.id }} .page-width:not(.page-width--full) {
+       padding-left: 12px;
+       padding-right: 12px;
+    }
+    
+    #shopify-section-{{ section.id }} .page-width--full .industry-title,
+    #shopify-section-{{ section.id }} .page-width--full .industry-cards-container {
+       padding-left: 12px;
+       padding-right: 12px;
+    }
+
+    .industry-title {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .industry-cards-container {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .industry-card {
+      height: 280px;
+      width: 100%;
+    }
+
+    .industry-card-title {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .industry-title {
+      font-size: 26px;
+    }
+
+    .industry-card {
+      height: 250px;
+    }
+  }
+</style>
+
+<section class="industry-section">
+  <div class="page-width page-width--{{ section.settings.container }}">
+    {% if section.settings.section_title != blank %}
+      <h2 class="industry-title">{{ section.settings.section_title }}</h2>
+    {% endif %}
+
+    <div class="industry-cards-container">
+      {% for block in section.blocks %}
+        {%- assign collection_handle = block.settings.card_link -%}
+        {%- if collection_handle != blank and collections[collection_handle] != nil -%}
+          {%- assign card_href = collections[collection_handle].url -%}
+        {%- else -%}
+          {%- assign card_href = '#' -%}
+        {%- endif -%}
+
+        <a href="{{ card_href }}" class="industry-card" {{ block.shopify_attributes }}>
+          {% if block.settings.card_image != blank %}
+            <img
+              src="{{ block.settings.card_image | image_url: width: 800 }}"
+              alt="{{ block.settings.card_title | escape }}"
+              class="industry-card-image"
+              loading="lazy"
+            />
+          {% else %}
+            <div class="industry-card-image" style="background: #ddd;"></div>
+          {% endif %}
+
+          <div class="industry-card-overlay">
+            {% if block.settings.card_title != blank %}
+              <h3 class="industry-card-title">
+                {{ block.settings.card_title }}
+                <span aria-hidden="true" class="title-arrow">›</span>
+              </h3>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+{% comment %} {% schema %}
+{
+  "name": "Industry Categories",
+  "tag": "section",
+  "class": "industry-categories-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container width",
+      "default": "fixed",
+      "options": [
+        {
+          "value": "full",
+          "label": "Full width"
+        },
+        {
+          "value": "fixed",
+          "label": "Fixed width"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Industry"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_card",
+      "name": "Category Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card Image",
+          "info": "Recommended size: 600x600px"
+        },
+        {
+          "type": "text",
+          "id": "card_title",
+          "label": "Card Title",
+          "default": "Category Name"
+        },
+        {
+          "type": "textarea",
+          "id": "card_description",
+          "label": "Card Description (First Card Only)",
+          "default": "Add your category description here.",
+          "info": "Description will only show on the first card"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text (First Card Only)",
+          "default": "Learn More",
+          "info": "Link text will only show on the first card"
+        },
+        {
+          "type": "collection",
+          "id": "card_link",
+          "label": "Card Link (collection picker)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Industry Categories",
+      "blocks": [
+        {
+          "type": "category_card",
+          "settings": {
+            "card_title": "Cafe",
+            "card_description": "Explore our range of Mugs, Cups, Coffee Pots & Tea pots; perfect for your Café.",
+            "link_text": "Learn More"
+          }
+        },
+        { "type": "category_card", "settings": { "card_title": "Education" } },
+        { "type": "category_card", "settings": { "card_title": "Furniture" } },
+        { "type": "category_card", "settings": { "card_title": "Pizza" } },
+        { "type": "category_card", "settings": { "card_title": "Uniforms" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+
+
+  #shopify-section-{{ section.id }} .industry-section {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  /* --- Uniform Layout Logic --- */
+  
+  #shopify-section-{{ section.id }} .page-width--full {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #shopify-section-{{ section.id }} .page-width--full .industry-title,
+  #shopify-section-{{ section.id }} .page-width--full .industry-cards-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .industry-title {
+    font-family: 'instrument sans';
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 40px 0;
+  }
+
+  .industry-cards-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+
+  .industry-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 295px;
+    text-decoration: none;
+    display: block;
+    outline: none;
+    background: #f7f7f7;
+    width:237px;
+  }
+
+  .industry-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease; /* Image zoom only */
+  }
+  
+  /* Zoom image inside the card on hover */
+  .industry-card:hover .industry-card-image {
+    transform: scale(1.08);
+  }
+
+  .industry-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 35px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.45) 60%,
+      rgba(0, 0, 0, 0.85) 100%
+    );
+    pointer-events: none; 
+  }
+
+  /* First Card (Dark Box) */
+  .industry-card.first-card .industry-card-overlay {
+    background: rgba(50, 50, 50, 0.95);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .industry-card.first-card .industry-card-title {
+    font-family: 'instrument sans';
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 15px 0;
+  }
+
+  /* Other Cards Title */
+  .industry-card:not(.first-card) .industry-card-title {
+    font-family: 'instrument sans';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1; /* Changed to 1 to tighten vertical space */
+    letter-spacing: 0;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .industry-card-description {
+    color: #fff;
+    font-size: 15px;
+    line-height: 24px;
+    margin: 15px 0 20px 0;
+    max-width: 280px;
+    letter-spacing:0%;
+  }
+
+  /* Learn More link (first card) */
+  .industry-card-link {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.25s ease;
+      pointer-events: auto;
+  }
+
+  .industry-card-link-arrow {
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 0.9;
+      display: inline-flex;
+      align-items: center;
+      transition: transform 0.25s ease;
+      position: relative;
+      top: -2px;
+  }
+
+  /* Arrow Slide for "Learn More" */
+  .industry-card-link:hover {
+      transform: translateX(4px);
+  }
+  .industry-card-link:hover .industry-card-link-arrow {
+      transform: translateX(3px);
+  }
+
+  /* Title arrow for non-first cards */
+  .industry-card-title .title-arrow {
+      display: inline-block; /* Changed to inline-block for better vertical control */
+      font-size: 30px; /* Increased size slightly */
+      font-weight: 700;
+      line-height: 1;
+      color: #ffffff;
+      margin-left: 4px;
+      opacity: 0;
+      transform: translateX(-6px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      position: relative;
+      /* FIXED: Moved up significantly to match text center */
+      top: -4px; 
+  }
+
+  /* Show Title Arrow on Card Hover */
+  .industry-card:hover .industry-card-title .title-arrow {
+      opacity: 1;
+      transform: translateX(0);
+  }
+
+  /* Responsive Layout */
+  @media (max-width: 1200px) {
+    .industry-cards-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* --- Mobile Uniformity Fix --- */
+    #shopify-section-{{ section.id }} .page-width:not(.page-width--full) {
+       padding-left: 12px;
+       padding-right: 12px;
+    }
+    
+    #shopify-section-{{ section.id }} .page-width--full .industry-title,
+    #shopify-section-{{ section.id }} .page-width--full .industry-cards-container {
+       padding-left: 12px;
+       padding-right: 12px;
+    }
+
+    .industry-title {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .industry-cards-container {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .industry-card {
+      height: 280px;
+    }
+
+    .industry-card.first-card .industry-card-title {
+      font-size: 28px;
+    }
+
+    .industry-card:not(.first-card) .industry-card-title {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .industry-title {
+      font-size: 26px;
+    }
+
+    .industry-card {
+      height: 250px;
+    }
+  }
+</style>
+
+<section class="industry-section">
+  <div class="page-width page-width--{{ section.settings.container }}">
+    {% if section.settings.section_title != blank %}
+      <h2 class="industry-title">{{ section.settings.section_title }}</h2>
+    {% endif %}
+
+    <div class="industry-cards-container">
+      {% for block in section.blocks %}
+        {%- assign collection_handle = block.settings.card_link -%}
+        {%- if collection_handle != blank and collections[collection_handle] != nil -%}
+          {%- assign card_href = collections[collection_handle].url -%}
+        {%- else -%}
+          {%- assign card_href = '#' -%}
+        {%- endif -%}
+
+        <a href="{{ card_href }}" class="industry-card {% if forloop.first %}first-card{% endif %}" {{ block.shopify_attributes }}>
+          {% if block.settings.card_image != blank %}
+            <img
+              src="{{ block.settings.card_image | image_url: width: 800 }}"
+              alt="{{ block.settings.card_title }}"
+              class="industry-card-image"
+              loading="lazy"
+            />
+          {% else %}
+            <div class="industry-card-image" style="background: #ddd;"></div>
+          {% endif %}
+
+          <div class="industry-card-overlay">
+            {% if block.settings.card_title != blank %}
+              {%- if forloop.first -%}
+                <h3 class="industry-card-title">{{ block.settings.card_title }}</h3>
+              {%- else -%}
+                <h3 class="industry-card-title">
+                  {{ block.settings.card_title }}
+                  <span aria-hidden="true" class="title-arrow">›</span>
+                </h3>
+              {%- endif -%}
+            {% endif %}
+
+            {% if forloop.first %}
+              {% if block.settings.card_description != blank %}
+                <p class="industry-card-description">{{ block.settings.card_description }}</p>
+              {% endif %}
+              {% if block.settings.link_text != blank %}
+                <span class="industry-card-link" role="link" tabindex="0">
+                  {{ block.settings.link_text }}
+                  <span class="industry-card-link-arrow">›</span>
+                </span>
+              {% endif %}
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section> {% endcomment %}

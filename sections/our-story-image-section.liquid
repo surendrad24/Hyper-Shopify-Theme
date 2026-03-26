@@ -1,0 +1,426 @@
+{% comment %} <section class="image-grid-section" data-section-id="{{ section.id }}">
+  <div class="image-grid-wrapper">
+    {% for block in section.blocks %}
+      <div class="grid-item" {{ block.shopify_attributes }}>
+        {% if block.settings.image %}
+          <img
+            src="{{ block.settings.image | image_url: width: 800 }}"
+            alt="{{ block.settings.alt_text }}"
+            class="grid-image"
+            loading="lazy"
+          >
+        {% else %}
+          <div class="grid-placeholder">
+            <svg width="100%" height="100%" viewBox="0 0 400 300">
+              <rect width="400" height="300" fill="#e8e8e8"/>
+              <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#999" font-size="16">
+                Image
+              </text>
+            </svg>
+          </div>
+        {% endif %}
+
+        {% if section.settings.show_overlay %}
+          <div class="grid-overlay">
+            {% if block.settings.title != blank %}
+              <h3>{{ block.settings.title }}</h3>
+            {% endif %}
+            {% if block.settings.description != blank %}
+              <p>{{ block.settings.description }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+<style>
+.image-grid-section {
+  padding: 80px 0; /* space top & bottom */
+  background-color: {{ section.settings.bg_color }};
+}
+
+.image-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px; /* space between images */
+  width: 100%;
+  max-width: 1200px; /* keeps it centered & clean */
+  margin: 0 auto; /* center align */
+  padding: 0 20px; /* small side spacing */
+}
+
+@media (max-width: 1024px) {
+  .image-grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .image-grid-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: {{ section.settings.aspect_ratio }};
+  background-color: #f5f5f5;
+  border-radius: 8px; /* optional soft corners */
+}
+
+.grid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: {{ section.settings.object_fit }};
+  display: block;
+}
+
+.grid-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f0f0, #e8e8e8);
+}
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, {{ section.settings.overlay_opacity }});
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover .grid-overlay {
+  transform: translateY(0);
+}
+
+.grid-overlay h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.grid-overlay p {
+  margin: 0;
+  font-size: 14px;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Full Bleed Image Grid",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Image Aspect Ratio",
+      "options": [
+        { "value": "1", "label": "Square (1:1)" },
+        { "value": "4/3", "label": "Landscape (4:3)" },
+        { "value": "16/9", "label": "Wide (16:9)" },
+        { "value": "3/4", "label": "Portrait (3:4)" },
+        { "value": "auto", "label": "Auto" }
+      ],
+      "default": "4/3"
+    },
+    {
+      "type": "select",
+      "id": "object_fit",
+      "label": "Image Fill",
+      "options": [
+        { "value": "cover", "label": "Cover" },
+        { "value": "contain", "label": "Contain" },
+        { "value": "fill", "label": "Fill" }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_overlay",
+      "label": "Show Overlay on Hover",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "label": "Overlay Opacity",
+      "default": 0.8
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "alt_text", "label": "Alt Text" },
+        { "type": "text", "id": "title", "label": "Overlay Title" },
+        { "type": "textarea", "id": "description", "label": "Overlay Description" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Full Bleed Image Grid",
+      "blocks": [
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" }
+      ]
+    }
+  ]
+}
+{% endschema %} {% endcomment %}
+
+<section class="image-grid-section" data-section-id="{{ section.id }}">
+
+  {% if section.settings.heading != blank %}
+    <h2 class="portfolio-heading">
+      {{ section.settings.heading }}
+    </h2>
+  {% endif %}
+
+  <div class="image-grid-wrapper">
+    {% for block in section.blocks %}
+      <div class="grid-item" {{ block.shopify_attributes }}>
+        {% if block.settings.image %}
+          <img
+            src="{{ block.settings.image | image_url: width: 800 }}"
+            alt="{{ block.settings.alt_text | escape }}"
+            class="grid-image"
+            loading="lazy"
+          >
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if section.settings.bottom_text != blank %}
+    <div class="portfolio-bottom">
+      <div class="portfolio-text">
+        {{ section.settings.bottom_text }}
+      </div>
+
+     <div class="portfolio-social">
+
+<div class="portfolio-social">
+
+  {% if settings.social_facebook_link != blank %}
+    <a href="{{ settings.social_facebook_link }}" target="_blank" rel="noopener">
+      {% render 'icon-facebook' %}
+    </a>
+  {% endif %}
+
+  {% if settings.social_instagram_link != blank %}
+    <a href="{{ settings.social_instagram_link }}" target="_blank" rel="noopener">
+      {% render 'icon-instagram' %}
+    </a>
+  {% endif %}
+
+</div>
+  {% endif %}
+
+</section>
+
+<style>
+.image-grid-section {
+  padding: 80px 0;
+  background-color: {{ section.settings.bg_color }};
+}
+
+.portfolio-heading {
+  text-align: center;
+  color: #ffffff;
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+}
+
+.image-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+  .image-grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .image-grid-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: {{ section.settings.aspect_ratio }};
+  background-color: #f5f5f5;
+}
+
+.grid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: {{ section.settings.object_fit }};
+  display: block;
+}
+
+.portfolio-bottom {
+  text-align: center;
+  color: #ffffff;
+  margin-top: 80px;
+  padding: 0 20px;
+}
+
+.portfolio-text {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.portfolio-divider {
+  width: 60%;
+  height: 1px;
+  background: rgba(255,255,255,0.3);
+  margin: 30px auto;
+}
+
+.portfolio-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.portfolio-social a {
+  width: 45px;
+  height: 45px;
+  background: #ffffff;
+  color: #000000; /* controls icon color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.portfolio-social a:hover {
+  background: #000000;
+  color: #ffffff; /* icon changes automatically */
+}
+
+.portfolio-social svg {
+  width: 18px;
+  height: 18px;
+}
+.social-icon-wrapper {
+  width: 45px;
+  height: 45px;
+  background: #ffffff;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Full Bleed Image Grid",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#2e3f4f"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Portfolio"
+    },
+    {
+      "type": "richtext",
+      "id": "bottom_text",
+      "label": "Bottom Description",
+      "default": "<p>Connect with Robert Gordon. In hospitality, every detail matters. Our dedication to quality ensures your experience is exceptional.</p>"
+    },
+    {
+      "type": "url",
+      "id": "facebook_link",
+      "label": "Facebook Link"
+    },
+    {
+      "type": "url",
+      "id": "instagram_link",
+      "label": "Instagram Link"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Image Aspect Ratio",
+      "options": [
+        { "value": "1", "label": "Square (1:1)" },
+        { "value": "4/3", "label": "Landscape (4:3)" },
+        { "value": "16/9", "label": "Wide (16:9)" },
+        { "value": "3/4", "label": "Portrait (3:4)" }
+      ],
+      "default": "4/3"
+    },
+   
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "alt_text", "label": "Alt Text" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Portfolio Grid",
+      "blocks": [
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" }
+      ]
+    }
+  ]
+}
+{% endschema %}

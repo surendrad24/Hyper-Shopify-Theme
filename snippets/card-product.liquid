@@ -1,0 +1,671 @@
+{%- liquid
+  assign variant = product.selected_or_first_available_variant
+
+  assign show_color_swatches = settings.pcard_enable_color_swatches
+
+  if show_vendor == null
+    assign show_vendor = settings.pcard_show_vendor
+  endif
+
+  if show_type == null
+    assign show_type = settings.pcard_show_type
+  endif
+
+  if show_price == null
+    assign show_price = settings.pcard_show_price
+  endif
+
+  if show_product_option == null
+    assign show_product_option = settings.pcard_show_color_swatch
+  endif
+
+  assign first_media_type = product.featured_media.media_type
+  assign featured_media = product.featured_media
+
+  if first_media_type == 'model' or first_media_type == 'video'
+    assign featured_media = product.featured_media.preview_image
+  endif
+
+  if image_ratio == blank
+    assign image_ratio = settings.pcard_image_ratio | default: '1'
+  endif
+  if image_ratio == 'adapt'
+    if featured_media != blank
+      assign image_ratio = featured_media.aspect_ratio
+    else
+      assign image_ratio = '1'
+    endif
+  endif
+
+  assign second_image = ''
+  if settings.pcard_show_second_img and product.images.size > 1 and product.images[1] != blank
+    assign second_image = product.images[1]
+  endif
+
+  if enable_quick_add == null
+    assign enable_quick_add = settings.pcard_show_cart_button
+  endif
+
+  if enable_quick_view == null
+    assign enable_quick_view = settings.pcard_show_quickview_button
+  endif
+
+  if enable_compare_checkbox == null
+    assign enable_compare_checkbox = false
+  endif
+
+  assign mobile_hide_quick_add = settings.pcard_mobile_hide_quick_add
+
+  assign atc_button_tag = 'a'
+  unless settings.pcard_choose_options_actions == 'product_page'
+    assign atc_button_tag = 'button'
+  endunless
+
+  if use_short_text_for_atc_button == null
+    assign use_short_text_for_atc_button = false
+  endif
+
+  assign product_url = product.url
+
+  if remove_params
+    assign product_url = product_url | split: '?' | first
+  endif
+
+  assign card_wrapper_class = ''
+  if custom_class != blank
+    assign card_wrapper_class = card_wrapper_class | append: ' ' | append: custom_class
+  endif
+  if mobile_hide_quick_add
+    assign card_wrapper_class = card_wrapper_class | append: ' mobile-hide-quick-add'
+  endif
+
+  assign quick_view_suffix = quick_view_suffix | default: ''
+  assign quick_view_modal_id = 'QuickView-' | append: product.id | append: '-' | append: section.id | append: quick_view_suffix
+
+  assign loading = 'lazy'
+  assign fetchpriority = 'low'
+  if section_index < 3 and index == 1
+    assign loading = 'eager'
+    assign fetchpriority = 'high'
+  endif
+
+  if pcard_style == null
+    assign pcard_style = settings.pcard_style
+  endif
+
+  assign image_sizes = image_sizes | default: '450px'
+  assign image_widths = '70, 140, 165, 355, 450, 535, 710, 900, 1070, 1420'
+
+  assign color_scheme_first = settings.color_schemes | first
+  assign parent_color_scheme = parent_color_scheme | default: color_scheme_first
+
+  if color_inherit == nil
+    assign parent_background = parent_color_scheme.settings.background | downcase
+    assign card_background = settings.pcard_color_scheme.settings.background | downcase
+    assign color_inherit = false
+    if parent_background == card_background
+      assign color_inherit = true
+    endif
+  endif
+-%}
+
+<style>
+.product-card__image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card__hover-icons {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  {% comment %} z-index: 10; {% endcomment %}
+  pointer-events: none;
+}
+
+.product-card__image-wrapper:hover .product-card__hover-icons {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hover-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #000000;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  {% comment %} z-index: 1; {% endcomment %}
+}
+
+.hover-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  transition: left 0.4s ease;
+  {% comment %} z-index: -1; {% endcomment %}
+}
+
+.hover-icon:hover::before {
+  left: 0;
+}
+
+.hover-icon:hover {
+  transform: scale(1.1);
+}
+
+.hover-icon svg,
+.hover-icon img {
+  width: 22px;
+  height: 22px;
+  display: block;
+  position: relative;
+  {% comment %} z-index: 2; {% endcomment %}
+  transition: all 0.3s ease;
+}
+
+.hover-icon.wishlist-icon svg {
+  fill: #ffffff;
+  stroke: none;
+}
+
+.hover-icon.quickview-icon svg,
+.hover-icon.cart-icon svg {
+  stroke: #ffffff;
+  fill: none;
+}
+
+.hover-icon.cart-icon svg path:last-child {
+  fill: #ffffff;
+}
+
+.hover-icon:hover.wishlist-icon svg {
+  fill: #000000;
+  stroke: none;
+}
+
+.hover-icon:hover.quickview-icon svg,
+.hover-icon:hover.cart-icon svg {
+  stroke: #000000;
+  fill: none;
+}
+
+.hover-icon:hover.cart-icon svg path:last-child {
+  fill: #000000;
+}
+
+.hover-icon img {
+  filter: brightness(0) invert(1);
+}
+
+.hover-icon:hover img {
+  filter: brightness(1) invert(0);
+}
+
+.product-card__quickview,
+.product-card__compare {
+  display: none !important;
+}
+
+.product-card__image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card__hover-icons {
+  position: absolute;
+  top: 90%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 12px;
+  {% comment %} z-index: 10; {% endcomment %}
+  transition: opacity 0.2s ease;
+}
+
+@media (min-width: 769px) {
+  .product-card__hover-icons {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .product-card__image-wrapper:hover .product-card__hover-icons {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* Mobile behavior: Always visible and resized */
+@media (max-width: 768px) {
+  .product-card__image-wrapper {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .product-card__hover-icons {
+    position: absolute !important;
+    top: auto !important; 
+    bottom: 15px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    opacity: 1 !important;
+    display: flex !important;
+    pointer-events: auto !important;
+    gap: 8px;
+    {% comment %} z-index: 10; {% endcomment %}
+  }
+
+  .hover-icon {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .hover-icon svg, .hover-icon img {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .pcard-pill-btn {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    font-size: 12px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.hover-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #000000;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+</style>
+
+<div
+  class="product-card product-card-style-{{ pcard_style }}{% if pcard_style == 'card' %} color-{{ settings.pcard_color_scheme }}{% endif %}{{ card_wrapper_class }}{% if list_on_mobile %} product-card-list-on-mobile{% endif %}{% if color_inherit %} color-inherit{% endif %}"
+>
+  <div class="product-card__wrapper h-full">
+    <div class="product-card__image-wrapper{% if second_image == blank %} product-card__image-wrapper--main-only{% endif %} {% if list_on_mobile %}desktop-{% endif %}color-{{ settings.pcard_overlay_color_scheme }} bg-none">
+      <a href="{{ product.url }}" aria-label="{{ product.title | escape }}" tabindex="-1">
+        <motion-element data-motion="zoom-out-sm" class="block">
+          {%- if featured_media -%}
+            {%- unless first_media_type == 'video' or first_media_type == 'external_video' -%}
+              <div
+                class="media-wrapper product-card__image product-card__image--main"
+                style="--aspect-ratio: {{ image_ratio }}"
+              >
+                {%- assign first_image_widths = image_widths | append: ', ' | append: featured_media.width -%}
+                {{
+                  featured_media
+                  | image_url: width: featured_media.width
+                  | image_tag:
+                    loading: loading,
+                    fetchpriority: fetchpriority,
+                    class: 'motion-reduce',
+                    widths: first_image_widths,
+                    sizes: image_sizes,
+                    is: 'image-lazy'
+                }}
+              </div>
+              {%- unless second_image == blank -%}
+                <div
+                  class="media-wrapper product-card__image product-card__image--second inset-full hidden md:block"
+                  style="--aspect-ratio: {{ image_ratio }}"
+                >
+                  {%- assign second_image_widths = image_widths | append: ', ' | append: second_image.width -%}
+                  {{
+                    second_image
+                    | image_url: width: second_image.width
+                    | image_tag:
+                      loading: 'lazy',
+                      class: 'motion-reduce',
+                      widths: second_image_widths,
+                      sizes: image_sizes,
+                      is: 'image-lazy'
+                  }}
+                </div>
+              {%- endunless -%}
+            {%- else -%}
+              <div class="media media--adapt" style="--media-ratio: {{ image_ratio }};">
+                {% render 'video',
+                  video: product.featured_media,
+                  muted: true,
+                  autoplay: true,
+                  loop: true,
+                  cover_image: featured_media,
+                  show_play_button: false
+                %}
+              </div>
+            {%- endunless -%}
+          {%- else -%}
+            <div class="product-card__image product-card__image--main" style="--aspect-ratio: {{ image_ratio }};">
+              {{- 'product-1' | placeholder_svg_tag: 'placeholder-svg' -}}
+            </div>
+          {%- endif -%}
+        </motion-element>
+      </a>
+      
+      {%- render 'pcard-badges', product: product -%}
+      {%- render 'pcard-flash-sale', product: product -%}
+      
+      {%- if enable_compare_checkbox -%}
+        <compare-checkbox class="product-card__compare hidden">
+          <label
+            data-tooltip="left"
+            class="flex items-center justify-center cursor-pointer"
+            for="CompareCheckbox-{{ section.id }}-{{ block.id }}-{{ product.id }}"
+          >
+            <input
+              id="CompareCheckbox-{{ section.id }}-{{ block.id }}-{{ product.id }}"
+              class="js-compare-checkbox"
+              type="checkbox"
+              name="product-compare"
+              data-product-id="{{ product.id }}"
+              data-product-url="{{ product.url }}"
+            >
+            <span class="tooltip pointer-events-none">{{- 'products.product.compare' | t -}}</span>
+          </label>
+        </compare-checkbox>
+      {%- endif -%}
+
+      <!-- Hover Icons Container - Centered Middle -->
+      <div class="product-card__hover-icons">
+        <!-- Wishlist Icon - FIXED to work with wishlist.js -->
+        <button 
+          class="hover-icon wishlist-icon wt-button"
+          data-product-handle="{{ product.handle }}"
+          aria-label="Add to wishlist"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#1f1f1f">
+            <path d="m480-96.67-57.33-52.66Q312.82-251.08 242.24-322.87q-70.57-71.8-111.57-127.46-41-55.67-56.5-101.5-15.5-45.84-15.5-93.5 0-98.45 67.47-165.56T292-878q52 0 101 23.5t87 67.83q41.33-45.66 89.33-68.5Q617.33-878 668-878q98.39 0 165.86 67.11 67.47 67.11 67.47 165.56 0 47.66-15.5 93.5-15.5 45.83-56.5 101.5-41 55.66-111.57 127.46-70.58 71.79-180.43 173.54L480-96.67Zm0-112.66q100.82-92.33 166.08-157.83 65.25-65.51 103.25-114.67 38-49.17 53-87.43 15-38.25 15-76.15 0-64.26-41.83-106.42Q733.67-794 668.15-794q-48.68 0-91.92 30.33Q533-733.33 516.67-688h-74q-15.67-44.67-59.24-75.33Q339.87-794 291.85-794q-65.52 0-107.35 41.98-41.83 41.97-41.83 106.9 0 37.79 15 76.29 15 38.5 53.33 87.66Q249.33-432 314.33-366.5T480-209.33ZM480-502Z"/>
+          </svg>
+        </button>
+
+        <!-- Quick View Icon -->
+        <button 
+          class="hover-icon quickview-icon no-js-hidden"
+          aria-label="{{ 'products.product.quick_view' | t }}"
+          aria-controls="{{ quick_view_modal_id }}"
+          aria-haspopup="dialog"
+        >
+        {% comment %} <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.4434 16.4453L20.9997 21.0016" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>  {% endcomment %}
+         
+                  <img  src="{{ 'eye-svgrepo-com.svg' | asset_url }}" alt="">
+        </button>
+
+        {%- if product.variants.size > 1 -%}
+          <{{ atc_button_tag }}
+            {% if settings.pcard_choose_options_actions == 'product_page' %}
+              href="{{- product_url -}}"
+            {% else %}
+              aria-controls="{{ quick_view_modal_id }}"
+              aria-haspopup="dialog"
+            {% endif %}
+            class="hover-icon cart-icon"
+            aria-label="{{ 'products.product.choose_options' | t }}"
+          >
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M223.5-103.5Q200-127 200-160t23.5-56.5Q247-240 280-240t56.5 23.5Q360-193 360-160t-23.5 56.5Q313-80 280-80t-56.5-23.5Zm400 0Q600-127 600-160t23.5-56.5Q647-240 680-240t56.5 23.5Q760-193 760-160t-23.5 56.5Q713-80 680-80t-56.5-23.5ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 80h280-280Z"/></svg>
+          </{{ atc_button_tag }}>
+        {%- else -%}
+          {%- form 'product',
+            product,
+            id: 'hover-add-to-cart-form',
+            class: 'product-form',
+            novalidate: 'novalidate',
+            data-type: 'add-to-cart-form',
+            is: 'product-form'
+          -%}
+            <input
+              type="hidden"
+              name="id"
+              value="{{- variant.id -}}"
+              class="product-variant-id"
+              {% if variant.available == false %}disabled{% endif %}
+            >
+            <button
+              type="submit"
+              name="add"
+              {% if variant.available == false %}disabled{% endif %}
+              aria-label="{{ 'products.product.add_to_cart' | t }}"
+              class="hover-icon cart-icon"
+            >
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M223.5-103.5Q200-127 200-160t23.5-56.5Q247-240 280-240t56.5 23.5Q360-193 360-160t-23.5 56.5Q313-80 280-80t-56.5-23.5Zm400 0Q600-127 600-160t23.5-56.5Q647-240 680-240t56.5 23.5Q760-193 760-160t-23.5 56.5Q713-80 680-80t-56.5-23.5ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 80h280-280Z"/></svg>
+              {% render 'loading-spinner' %}
+            </button>
+          {%- endform -%}
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="product-card__info text-{{ settings.pcard_content_alignment }}">
+      {%- if show_vendor and product.vendor != blank -%}
+        <p class="product-card__vendor text-sm-extra m-0">
+          <a
+            href="{{ product.vendor | url_for_vendor }}"
+            class="reversed-link"
+            aria-label="{{ 'accessibility.vendor' | t }}{{ product.vendor }}"
+          >
+            {{- product.vendor -}}
+          </a>
+        </p>
+      {%- endif -%}
+      {%- if show_type and product.type != blank -%}
+        <p class="product-card__type text-sm-extra m-0">
+          <a
+            href="{{ product.type | url_for_type }}"
+            class="reversed-link"
+            aria-label="{{ 'accessibility.product_type' | t }}{{ product.type }}"
+          >
+            {{- product.type -}}
+          </a>
+        </p>
+      {%- endif -%}
+      <h3 class="product-card__title text-pcard-title">
+        <a
+          class="reversed-link block {% if settings.pcard_title_line_limit != 'none' %} text-limit-{{ settings.pcard_title_line_limit }}{% endif %}"
+          href="{{ product.url }}"
+        >
+          <span class="reversed-link__text">{{- product.title -}}</span>
+        </a>
+      </h3>
+      {%- if show_price -%}
+        {% render 'price', product: product, alignment: settings.pcard_content_alignment %}
+      {%- endif -%}
+      {%- if show_color_swatches -%}
+        {%- render 'pcard-color-swatch',
+          product: product,
+          image_sizes: image_sizes,
+          image_widths: image_widths,
+          enable_quick_view: enable_quick_view,
+          quick_view_modal_id: quick_view_modal_id
+        -%}
+      {%- endif -%}
+      
+      {%- if enable_quick_add -%}
+        <div class="product-card__atc-container mt-4">
+          {%- liquid
+            assign product_form_id = 'quick-add-' | append: section.id | append: product.id
+            assign qty_rules = false
+            if variant.quantity_rule.min > 1 or variant.quantity_rule.max != null or variant.quantity_rule.increment > 1
+              assign qty_rules = true
+            endif
+          -%}
+          {%- if product.variants.size > 1 or qty_rules -%}
+            <{{ atc_button_tag }}
+              {% if settings.pcard_choose_options_actions == 'product_page' %}
+                href="{{- product_url -}}"
+              {% else %}
+                aria-controls="{{ quick_view_modal_id }}"
+                aria-haspopup="dialog"
+              {% endif %}
+              class="btn btn--primary w-full pcard-pill-btn"
+            >
+              <span class="btn__text">
+                {%- if use_short_text_for_atc_button -%}
+                  {{- 'products.product.choose_options_short' | t -}}
+                {%- else -%}
+                  {{- 'products.product.choose_options' | t -}}
+                {%- endif -%}
+              </span>
+            </{{ atc_button_tag }}>
+          {%- else -%}
+            {%- form 'product',
+              product,
+              id: product_form_id,
+              class: 'product-form',
+              novalidate: 'novalidate',
+              data-type: 'add-to-cart-form',
+              is: 'product-form'
+            -%}
+              <input
+                type="hidden"
+                name="id"
+                value="{{- variant.id -}}"
+                class="product-variant-id"
+                {% if variant.available == false %}disabled{% endif %}
+              >
+              <button
+                id="{{ product_form_id }}-submit"
+                type="submit"
+                name="add"
+                {% if variant.available == false %}disabled{% endif %}
+                aria-label="{{ 'products.product.add_to_cart' | t }}"
+                class="btn btn--primary w-full pcard-pill-btn"
+              >
+                <span class="btn__text">
+                  {%- if variant.available -%}
+                    {%- if use_short_text_for_atc_button -%}
+                      {{- 'products.product.add_to_cart_short' | t -}}
+                    {%- else -%}
+                      {{- 'products.product.add_to_cart' | t -}}
+                    {%- endif -%}
+                  {%- else -%}
+                    {{- 'products.product.sold_out' | t -}}
+                  {%- endif -%}
+                </span>
+                {% render 'loading-spinner' %}
+              </button>
+            {%- endform -%}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="product-card__list-actions hidden gap-3 flex-col">
+      {%- if enable_quick_add -%}
+        {%- liquid
+          assign product_form_id = 'list-view-quick-add-' | append: section.id | append: product.id
+          assign qty_rules = false
+          if variant.quantity_rule.min > 1 or variant.quantity_rule.max != null or variant.quantity_rule.increment > 1
+            assign qty_rules = true
+          endif
+        -%}
+        {%- if product.variants.size > 1 or qty_rules -%}
+          <div class="product-card__list-actions-main">
+            <{{ atc_button_tag }}
+              {% if settings.pcard_choose_options_actions == 'product_page' %}
+                href="{{- product_url -}}"
+              {% else %}
+                aria-controls="{{ quick_view_modal_id }}"
+                aria-haspopup="dialog"
+              {% endif %}
+              class="product-card__list-atc btn btn--primary"
+            >
+              <span class="btn__text flex gap-1 items-center">
+                {%- if use_short_text_for_atc_button -%}
+                  {{- 'products.product.choose_options_short' | t -}}
+                {%- else -%}
+                  {{- 'products.product.choose_options' | t -}}
+                {%- endif -%}
+              </span>
+            </{{ atc_button_tag }}>
+          </div>
+        {%- else -%}
+          {%- form 'product',
+            product,
+            id: product_form_id,
+            class: 'product-card__list-actions-main',
+            novalidate: 'novalidate',
+            data-type: 'add-to-cart-form',
+            is: 'product-form'
+          -%}
+            <input
+              type="hidden"
+              name="id"
+              value="{{- variant.id -}}"
+              class="product-variant-id"
+              {% if variant.available == false %}
+                disabled
+              {% endif %}
+            >
+            <button
+              id="{{ product_form_id }}-submit"
+              type="submit"
+              name="add"
+              {% if variant.available == false %}
+                disabled
+              {% endif %}
+              aria-label="{{ 'products.product.add_to_cart' | t }}"
+              class="product-card__list-atc btn btn--primary w-full"
+            >
+              <span class="btn__text flex gap-1 items-center">
+                {%- if variant.available -%}
+                  {%- if use_short_text_for_atc_button -%}
+                    {{- 'products.product.add_to_cart_short' | t -}}
+                  {%- else -%}
+                    {{- 'products.product.add_to_cart' | t -}}
+                  {%- endif -%}
+                {%- else -%}
+                  {{- 'products.product.sold_out' | t -}}
+                {%- endif -%}
+              </span>
+              {% render 'loading-spinner' %}
+            </button>
+          {%- endform -%}
+        {%- endif -%}
+      {%- endif -%}
+      <a href="{{- product_url -}}" class="btn btn--secondary">
+        <span class="btn__text flex gap-1 items-center">{{- 'products.product.view_details' | t -}}</span>
+      </a>
+    </div>
+  </div>
+
+  {%- if settings.pcard_choose_options_actions == 'open_popup' or enable_quick_view -%}
+    {% render 'quick-view-modal', modal_id: quick_view_modal_id, product: product %}
+  {%- endif -%}
+</div>

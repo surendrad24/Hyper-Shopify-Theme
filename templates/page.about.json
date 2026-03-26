@@ -1,0 +1,1727 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_DgnWDV": {
+      "type": "breadcrumbs",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_overlay_3FrkpM": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_MEEHjQ": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": ""
+          }
+        },
+        "heading_W8mPfG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Trusted Hospitality Industry Partner – Delivering Quality & Expertise for 30+ Years",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_MEEHjQ",
+        "heading_W8mPfG"
+      ],
+      "custom_css": [
+        ".rich-text {max-width: 52rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "image": "shopify://shop_images/image_51_fd9bb6ab-4d7b-4396-87ef-77d11f144bfd.png",
+        "desktop_height": "medium",
+        "overlay_opacity": 25,
+        "enable_parallax": false,
+        "parallax_direction": "vertical",
+        "color_scheme": "",
+        "content_position": "middle-left",
+        "content_alignment": "center",
+        "mobile_height": "adapt",
+        "content_position_mobile": "middle-center-mobile",
+        "content_alignment_mobile": "left",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "enable_preload_image": true
+      }
+    },
+    "rich_text_kyFd96": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Y9MMVQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "WE HELP BUSINESSES OF EVERY SIZE, TRUSTED BY TOP CHEFS AND BUSINESSES.",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h3"
+          }
+        },
+        "text_7h6LaE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Today, Cedar is home to over 18,000 products from 650 brands and counting. Our extensive catalogue includes top-of-the-range food service equipment, machines, glassware, crockery, barware and kitchenware to keep your back-of-house running smoothly and your front-of-house looking on point. The hospitality industry is ever-evolving and to ensure you stay ahead of the curve, we are always on the hunt for the latest styles and solutions. Among our partnered brands are both global leaders and local up-and-comers. Much of our merchandise is even exclusive to Cedar, helping you to curate an original venue that is unique to your brand. Our friendly team is always on hand to help you narrow your choices down.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Y9MMVQ",
+        "text_7h6LaE"
+      ],
+      "custom_css": [
+        ".rich-text {max-width: 78rem; margin: 0 auto;}",
+        "@media (max-width: 1023px) {.rich-text__heading {max-width: 50rem; margin: 0 auto; }}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_eUKGwj": {
+      "type": "image-with-text",
+      "blocks": {
+        "badge_AdmYNg": {
+          "type": "badge",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "text": "",
+            "image": "shopify://shop_images/Cedar-logo-ill.png",
+            "position_mobile": "right"
+          }
+        },
+        "heading_yrtiRH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Directors",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "subheading_t37PND": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": ""
+          }
+        },
+        "text_DycqGr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Founded nearly 30 years ago in Brunswick by Gabriel Katebian and Sam Abou-Khater, Cedar Hospitality began its journey as Cedar Catering & Refrigeration. Originally operating out of a corner shop, they found their feet selling tableware and other light catering equipment. Cousins Peter Campese and Danny Katebian took over the business from their father and uncle in 1995, taking to the road as they built their network all over Melbourne. From its humble beginnings on the corner of Michael Street and Sydney Road Brunswick, Cedar Hospitality now resides in one of Australia’s largest showrooms that spans 18,000 square metres.</p>",
+            "subtext_color": true
+          }
+        }
+      },
+      "block_order": [
+        "badge_AdmYNg",
+        "heading_yrtiRH",
+        "subheading_t37PND",
+        "text_DycqGr"
+      ],
+      "custom_css": [
+        ".image-with-text__content {max-width: 52rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "image": "shopify://shop_images/Cedar_OCT2022-190-2048x1366_2x_2669c993-3bb8-4c01-a392-94c3936ceb84.png",
+        "image_position": "left",
+        "image_width": 60,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_PNJcqX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nqWNcN": {
+          "type": "heading",
+          "settings": {
+            "heading": "DEMONSTRATION KITCHEN",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2"
+          }
+        },
+        "text_eJazar": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to our massive 95 square metre demonstration kitchen, thoughtfully designed to educate and guide you in making the right decisions when purchasing commercial equipment for your venue. We host live cooking<br/>demonstrations daily on coffee machines, fryers, combi ovens, speed ovens, benchtop equipment, dishwashers, refrigeration, ice machines, and much more. Our carefully crafted space allows large groups to engage, ask questions, and experience how a fully functioning kitchen operates—not just in front of house, but behind the scenes as well<br/><br/></p>",
+            "subtext_color": true
+          }
+        },
+        "button_fCWa8V": {
+          "type": "button",
+          "settings": {
+            "button_label": "View Location",
+            "button_link": "shopify://pages/find-a-store",
+            "button_style": "btn--primary",
+            "button_icon": "arrow-right"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nqWNcN",
+        "text_eJazar",
+        "button_fCWa8V"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "image": "shopify://shop_images/7c88279c-f37d-490b-a065-a1f174e7bcbf_d5dec2dd-2696-4860-a887-70f709de0965.png",
+        "image_position": "right",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "buttons_with_icon_AgEzEN": {
+      "type": "buttons-with-icon",
+      "blocks": {
+        "button_item_NPDpma": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Wholistic",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_mrBjfX": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Inspired",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_dgkFBa": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Trusted",
+            "button_link": "",
+            "icon": "check"
+          }
+        },
+        "button_item_7wMiwV": {
+          "type": "button_item",
+          "settings": {
+            "button_label": "Responsive",
+            "button_link": "",
+            "icon": "check"
+          }
+        }
+      },
+      "block_order": [
+        "button_item_NPDpma",
+        "button_item_mrBjfX",
+        "button_item_dgkFBa",
+        "button_item_7wMiwV"
+      ],
+      "custom_css": [
+        ".section__header {--header-padding-bottom: 2.4rem;}",
+        ".section__heading {max-width: 45rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-9",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "The creative minds behind\u000bVictoria's Best",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "item_alignment": "center",
+        "item_button_style": "btn--primary",
+        "item_button_font": "button",
+        "enable_slider": true,
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_36XTkC": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_pa39WP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Instagram-Post-_-37_7c6c5f04-964c-4034-9804-db93037405ed.png",
+            "image_link": "",
+            "subheading": "column",
+            "title": "Trade Customer Benefits",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h5",
+            "text": "<p>High energy Japanese-inspired eating house. A celebration of food cooked over fire—meticulously conceived, inventively executed, riotously enjoyed. Set on the first floor of the landmark 80 Collins Street in the heart of Melbourne's fashion quarter, look up for the neon sign marking the entrance.</p>",
+            "text_size": "text-sm",
+            "button_label": "Read More",
+            "button_link": "#",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_WRPAwc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Instagram-Post-_-11_95b63afb-435a-46f4-87f1-d123d0846c96.png",
+            "image_link": "",
+            "subheading": "column",
+            "title": "SET UP EXPERIENCE",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h5",
+            "text": "<p>The 150-seat venue will host a main dining space, bar, and the eight-seat speakeasy La Rue which will also serve the main dining menu. The food offering has been curated by Executive chef Jacqui Challinor and Head Chef Brendan Katich and is inspired by classic French dishes.</p>",
+            "text_size": "text-sm",
+            "button_label": "Read More",
+            "button_link": "#",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_ikYHeg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Instagram-Post-_-39_7fcc6c62-06be-4bf9-a011-88aff33eb24e.png",
+            "image_link": "",
+            "subheading": "column",
+            "title": "CUSTOM MADE PROCESS",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h5",
+            "text": "<p>Our uncompromising approach to Quality, Design, Innovation, Customer Service and an unparalleled knowledge of the Commercial Food Service industry.</p>",
+            "text_size": "text-sm",
+            "button_label": "Read More",
+            "button_link": "#",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_bTbVtm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Cedar_OCT2022-135_2x_a0f28fc6-54a1-4bce-8e83-fa4458e38df8.png",
+            "image_link": "",
+            "subheading": "column",
+            "title": "Visit our showroom.",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h5",
+            "text": "<p>Led by Culinary Consultant Mark Ebbels, the menu draws on Helen and Joey’s Chinese Australian heritage, pairing refined Asian influenced flavours with premium local produce and estate grown wines. \u000b A focus on seasonal ingredients and wood fired cooking creates dishes that are expressive, balanced and deeply connected to place.</p>",
+            "text_size": "text-sm",
+            "button_label": "Read More",
+            "button_link": "#",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "column_pa39WP",
+        "column_WRPAwc",
+        "column_ikYHeg",
+        "column_bTbVtm"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-1",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "content_alignment": "left",
+        "show_col_count": false,
+        "show_image": true,
+        "columns_desktop": 4,
+        "column_gap": "medium",
+        "row_gap": "inherit",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
+    },
+    "testimonials_M9PCcH": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_QWU6zQ": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "none",
+            "heading": "Testimonials",
+            "text": "<p>“We are different. We believe in transparency and recognised external certification.”</p>",
+            "author": "Jenny Wilson",
+            "bio": "CEO Garace",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_QWU6zQ"
+      ],
+      "custom_css": [
+        ".testimonial__content {max-width: 64rem; margin-left: auto; margin-right: auto;}"
+      ],
+      "settings": {
+        "container": "full",
+        "color_scheme": "scheme-3",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "layout": "focused",
+        "card_color_scheme": "scheme-3",
+        "card_content_color_scheme": "",
+        "card_image_ratio": "adapt",
+        "card_heading_size": "h4",
+        "card_text_size": "h1",
+        "author_info_layout": "vertical",
+        "card_trigger_behavior": "click",
+        "show_image": false,
+        "show_author_image": false,
+        "columns_desktop": 2,
+        "column_gap": "extra-large",
+        "row_gap": "medium",
+        "enable_slider": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_progress_bar": true,
+        "padding_top": 100,
+        "padding_bottom": 80,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_LDRtFa": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_6gcaQW": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CAFE & SPECIALITY COFFEE"
+          }
+        },
+        "heading_i6h3eC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Difference in the details",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_fmYngV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Barista-approved equipment, stylish serveware and everyday back-of-house solutions designed for speed, consistency and standout presentation.</p>",
+            "subtext_color": true
+          }
+        },
+        "button_9Y9VNb": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP",
+            "button_link": "https://cedar-hospitality-commercial.myshopify.com/",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_6gcaQW",
+        "heading_i6h3eC",
+        "text_fmYngV",
+        "button_9Y9VNb"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/625001208_18041653301717698_4747887497466656857_n_2x_8ec043f4-d6e1-4fcd-a7ed-12ccd5ecf868.png",
+        "image_position": "right",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "scrolling_promotion_6aUqmj": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "text_BEjzF8": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Kitchenware",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_aFTNRT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020516_597b9bf3-fb5c-45d1-b465-cecad7a5510c.png",
+            "image_height": 72,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 60
+          }
+        },
+        "text_NUrAVJ": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Bend Chairs",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_38k8UF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020521.png",
+            "image_height": 72,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 60
+          }
+        },
+        "text_d4QyEY": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Packaging",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_BBBXtC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020514.png",
+            "image_height": 72,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 60
+          }
+        },
+        "text_DC4UxK": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Cleaning",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_qgNCgf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020513.png",
+            "image_height": 72,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 60
+          }
+        },
+        "text_wtwkVR": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "indusrial",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_tqkrA8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020512.png",
+            "image_height": 72,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 60
+          }
+        },
+        "text_EWeYdP": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Drinkware",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_WzBbmD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020511.png",
+            "image_height": 72,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 60
+          }
+        },
+        "text_baGGeL": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Glassware",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_Ta48hW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020498_804b7d4f-ff0b-42bb-ac50-80db726519f2.png",
+            "image_height": 72,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 60
+          }
+        },
+        "text_y3QPgp": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Barware",
+            "text_size": "h2",
+            "text_opacity": 100,
+            "use_custom_color": true,
+            "custom_color": "#1d349a"
+          }
+        },
+        "image_TFNFGJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020510.png",
+            "image_height": 72,
+            "image_rounded": false,
+            "image_link": "",
+            "image_height_mobile": 60
+          }
+        }
+      },
+      "block_order": [
+        "text_BEjzF8",
+        "image_aFTNRT",
+        "text_NUrAVJ",
+        "image_38k8UF",
+        "text_d4QyEY",
+        "image_BBBXtC",
+        "text_DC4UxK",
+        "image_qgNCgf",
+        "text_wtwkVR",
+        "image_tqkrA8",
+        "text_EWeYdP",
+        "image_WzBbmD",
+        "text_baGGeL",
+        "image_Ta48hW",
+        "text_y3QPgp",
+        "image_TFNFGJ"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "direction": "left",
+        "pause_on_hover": false,
+        "speed": 0.1,
+        "h_spacing": 16,
+        "show_section_divider": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_DCXDtE": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_UMGpf8": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "OPEN A WORLD OF OPPORTUNITY"
+          }
+        },
+        "heading_BjfQbV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cedar Business Profile",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_6eMjft": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Let us take you on a journey. See the benefits of being with Cedar. Join the top Hospitality venues in Australia, large and small as Cedar's Clients. View and Download our booklet below.</p>",
+            "subtext_color": true
+          }
+        },
+        "button_N7rQr3": {
+          "type": "button",
+          "settings": {
+            "button_label": "View ALL",
+            "button_link": "shopify://collections",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_UMGpf8",
+        "heading_BjfQbV",
+        "text_6eMjft",
+        "button_N7rQr3"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".image-with-text__content {max-width: 52rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/cedar-Coporate-Profile-2025-1-of-14.png",
+        "image_position": "right",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": true,
+        "divider_width": "full",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_akra6e": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_8Yp387": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "MELBOURNE'S TRUSTED"
+          }
+        },
+        "heading_zTJXh8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Commercial Kitchen Specialist",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_g834nz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tools that Professional Chefs Trust for speed, consistency and standout presentation.</p>",
+            "subtext_color": true
+          }
+        },
+        "button_hbMGjR": {
+          "type": "button",
+          "settings": {
+            "button_label": "Your Hosipitality Solution",
+            "button_link": "#",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_8Yp387",
+        "heading_zTJXh8",
+        "text_g834nz",
+        "button_hbMGjR"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/Intersection_12_2x_6350ad10-e9c1-400b-8be2-685898ddd23f.png",
+        "image_position": "left",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 32,
+        "padding_bottom": 30
+      }
+    },
+    "grid_banner_XF4Ney": {
+      "type": "grid-banner",
+      "blocks": {
+        "banner_card_bk43xR": {
+          "type": "banner-card",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/LCient-Profile-_-23_2x_1461c528-686e-4e7b-ba93-b177f5b2b90e.png",
+            "image_overlay_opacity": 0,
+            "column_span": 4,
+            "row_span": 2,
+            "content_spacing": "medium",
+            "content_gap": "standard",
+            "content_position": "middle-left",
+            "content_alignment": "left",
+            "content_position_mobile": "middle-center",
+            "content_alignment_mobile": "center",
+            "card_link": "",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "text": "",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "button_size": "btn--medium",
+            "block_custom_class": "",
+            "enable_preload_image": false
+          }
+        },
+        "banner_card_MkCwQt": {
+          "type": "banner-card",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/LCient-Profile-_-22_c61d9f46-1b6a-4de6-bef8-e663dfbdc28f.png",
+            "image_overlay_opacity": 0,
+            "column_span": 2,
+            "row_span": 1,
+            "content_spacing": "medium",
+            "content_gap": "standard",
+            "content_position": "bottom-center",
+            "content_alignment": "center",
+            "content_position_mobile": "middle-center",
+            "content_alignment_mobile": "center",
+            "card_link": "",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "text": "",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "button_size": "btn--medium",
+            "block_custom_class": "",
+            "enable_preload_image": false
+          }
+        },
+        "banner_card_prNJdW": {
+          "type": "banner-card",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/Cedar_OCT2022-322_bad87bf2-8bb5-44d1-b77e-882a01809e2c.png",
+            "image_overlay_opacity": 0,
+            "column_span": 2,
+            "row_span": 1,
+            "content_spacing": "medium",
+            "content_gap": "standard",
+            "content_position": "bottom-center",
+            "content_alignment": "center",
+            "content_position_mobile": "middle-center",
+            "content_alignment_mobile": "center",
+            "card_link": "",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "text": "",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "button_size": "btn--medium",
+            "block_custom_class": "",
+            "enable_preload_image": false
+          }
+        }
+      },
+      "block_order": [
+        "banner_card_bk43xR",
+        "banner_card_MkCwQt",
+        "banner_card_prNJdW"
+      ],
+      "name": "t:sections.grid-banner.presets__2.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "WAREHOUSE & DISTRUBUTION CENTRE",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "<p>Our \"Superstore\" and Distribution Centre houses over 22,000 in-stock items, offering the best from global and local suppliers to suit any budget. Our dedicated warehouse team carefully picks, packs, and arranges delivery Australla-wide, five days a week. Handling hundreds of orders daily, our specialist teams ensure every call and order receives the attention you deserve. With multiple trucks on the road, we provide daily deliveries to metro areas with personalised assistance and support.</p>",
+        "description_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "columns": 6,
+        "banner_height": "medium",
+        "gap": "2xs",
+        "enable_swiper_mobile": false,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 80,
+        "padding_bottom": 30
+      }
+    },
+    "rich_text_G3dJUB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fT8nhi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Clients",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_piTVpX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cedar - where relationships stand the test of time. See a selection of our wide impact on the hospitlaity market.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "button_dMWWPU": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fT8nhi",
+        "text_piTVpX",
+        "button_dMWWPU"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "our_clients_jceWCp": {
+      "type": "our-clients",
+      "blocks": {
+        "gallery_VFmt6a": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/LCient-Profile-_-3.png",
+            "image_link": "",
+            "heading": ""
+          }
+        },
+        "gallery_z4ayDj": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/LCient-Profile-_-11.png",
+            "image_link": "",
+            "heading": ""
+          }
+        },
+        "gallery_Hpayej": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/LCient-Profile-_-12.png",
+            "image_link": "",
+            "heading": ""
+          }
+        },
+        "gallery_T787YX": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify://shop_images/LCient-Profile-_-10.png",
+            "image_link": "",
+            "heading": ""
+          }
+        },
+        "gallery_rGWczw": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/LCient-Profile-_-9.png",
+            "image_link": "",
+            "heading": ""
+          }
+        },
+        "gallery_wE7AhA": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/LCient-Profile-_-2.png",
+            "image_link": "",
+            "heading": ""
+          }
+        },
+        "gallery_YHehzJ": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/LCient-Profile-_-8.png",
+            "image_link": "",
+            "heading": ""
+          }
+        },
+        "gallery_FCwKgz": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/LCient-Profile-_-5.png",
+            "image_link": "",
+            "heading": ""
+          }
+        },
+        "gallery_agUfgt": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/LCient-Profile.png",
+            "image_link": "",
+            "heading": ""
+          }
+        },
+        "gallery_gFBw6Q": {
+          "type": "gallery",
+          "settings": {
+            "color_scheme": "scheme-1",
+            "image": "shopify://shop_images/LCient-Profile-_-4.png",
+            "image_link": "",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "gallery_VFmt6a",
+        "gallery_z4ayDj",
+        "gallery_Hpayej",
+        "gallery_T787YX",
+        "gallery_rGWczw",
+        "gallery_wE7AhA",
+        "gallery_YHehzJ",
+        "gallery_FCwKgz",
+        "gallery_agUfgt",
+        "gallery_gFBw6Q"
+      ],
+      "disabled": true,
+      "name": "clients carousel",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "hd2",
+        "description": "",
+        "text_size": "text-base",
+        "show_button_on_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "direction": "left",
+        "speed": 0.4,
+        "pause_on_hover": true,
+        "column_gap": "medium",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "our_clients_carousel_jM7e7F": {
+      "type": "our-clients-carousel",
+      "blocks": {
+        "gallery_rDeYUn": {
+          "type": "gallery",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020575_28185a39-e0ea-4d00-9421-353fb2b325f3.png",
+            "image_link": ""
+          }
+        },
+        "gallery_LTJLtD": {
+          "type": "gallery",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020577-2.png",
+            "image_link": ""
+          }
+        },
+        "gallery_Bq8PgJ": {
+          "type": "gallery",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020578-2.png",
+            "image_link": ""
+          }
+        },
+        "gallery_BjeaE9": {
+          "type": "gallery",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020580-2.png",
+            "image_link": ""
+          }
+        },
+        "gallery_LUkC48": {
+          "type": "gallery",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020576-2.png",
+            "image_link": ""
+          }
+        },
+        "gallery_CzDiXF": {
+          "type": "gallery",
+          "settings": {
+            "image": "shopify://shop_images/Group_1000020581-2.png",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "gallery_rDeYUn",
+        "gallery_LTJLtD",
+        "gallery_Bq8PgJ",
+        "gallery_BjeaE9",
+        "gallery_LUkC48",
+        "gallery_CzDiXF"
+      ],
+      "name": "Image Only Marquee",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "image_height": 60,
+        "speed": 0.8,
+        "pause_on_hover": true,
+        "column_gap": 40,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_NVWxEe": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_gnmDqV": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "subheading": "column",
+            "title": "Nicootitto",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Founder/CEO</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_Lkgb3Y": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "subheading": "column",
+            "title": "Jake Nakos",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Designer</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_BDXeji": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "subheading": "column",
+            "title": "Diana Simun",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Designer</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_yqztdq": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "subheading": "column",
+            "title": "Quaid Lagan",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Marketer</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "column_gnmDqV",
+        "column_Lkgb3Y",
+        "column_BDXeji",
+        "column_yqztdq"
+      ],
+      "custom_css": [
+        ".rich-text--tight {--text-margin-top: 0.8rem;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Meet Our Team",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "content_alignment": "left",
+        "show_col_count": false,
+        "show_image": true,
+        "columns_desktop": 4,
+        "column_gap": "medium",
+        "row_gap": "large",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "collapsible_tabs_MyaBhj": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "image_card_7YixwV": {
+          "type": "image_card",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "desktop_image_position": "left",
+            "image_width": 40,
+            "alignment": "center",
+            "image": "shopify://shop_images/VAT-17_2x_76fcf9e1-2ed7-48b9-a80d-802f5976d385.png",
+            "image_ratio": "adapt",
+            "image_overlay_opacity": 30,
+            "content_position": "top-center",
+            "content_alignment": "center",
+            "content_spacing": "medium",
+            "content_gap": "fitted",
+            "card_link": "shopify://pages/contact",
+            "subheading": "",
+            "subheading_style": "",
+            "heading": "Still need help?",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h2",
+            "heading_size_mobile": "inherit",
+            "heading_size_custom": 18,
+            "description": "<p>Shoot our team an email & we’ll get back to you ASAP</p>",
+            "button_label": "Contact Us",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "order_first": true
+          }
+        },
+        "heading_3T3pMy": {
+          "type": "heading",
+          "settings": {
+            "sub_heading": "",
+            "heading": "Discover more in our FAQ",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "collapsible_item_TfGjUU": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "How long does it take to process an order?",
+            "content": "<p>Our 24/7 Lace Contour Plunge Bra combines gorgeous floral lace with sheer overlay straps that hold you in and eliminates gaping. Removable pads let you customize you</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_iMe3Nf": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Do you ship internationally?",
+            "content": "<p>Yes, we offer international shipping to select countries. Please check our shipping policy for details on destinations, rates, and delivery times.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_JHb4U8": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "What is your return policy?",
+            "content": "<p>We accept returns within 30 days of delivery, provided the items are unused and in their original condition. For detailed instructions, please refer to our return policy or contact our support team.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_W83D69": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "What are your sizing options?",
+            "content": "<p>Our products are available in a range of sizes to ensure the perfect fit. Detailed sizing information is provided on each product page, and our size guide can help you choose the best option.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        }
+      },
+      "block_order": [
+        "image_card_7YixwV",
+        "heading_3T3pMy",
+        "collapsible_item_TfGjUU",
+        "collapsible_item_iMe3Nf",
+        "collapsible_item_JHb4U8",
+        "collapsible_item_W83D69"
+      ],
+      "custom_css": [
+        ".section__content {max-width: 108rem; margin: 0 auto;}"
+      ],
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-2",
+        "header_layout": "vertical",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "extra-large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "item_icon_size": "extra-large",
+        "padding_top": 80,
+        "padding_bottom": 60,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "scrolling_promotion_Fy9Yhn": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "text_gijz7Q": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Fast Delivery",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_3TVCPg": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "30 Days Free Returns",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_iD6689": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Secure Payment",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_CtJBtL": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "24/7 Customer Support",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        },
+        "text_dGmg9m": {
+          "type": "text",
+          "settings": {
+            "text_link": "",
+            "text": "Sustainable Materials",
+            "text_size": "h4",
+            "text_opacity": 100,
+            "use_custom_color": false,
+            "custom_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "text_gijz7Q",
+        "text_3TVCPg",
+        "text_iD6689",
+        "text_CtJBtL",
+        "text_dGmg9m"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-3",
+        "direction": "left",
+        "pause_on_hover": true,
+        "speed": 0.2,
+        "h_spacing": 80,
+        "show_section_divider": false,
+        "padding_top": 22,
+        "padding_bottom": 22
+      }
+    },
+    "multicolumn_XU7bbT": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_333KpK": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "subheading": "Visit us",
+            "title": "Find a store",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Find your nearest Kitchen Warehouse store located across Australia; our team would love to see you in store. </p>",
+            "text_size": "text-base",
+            "button_label": "Store Locator",
+            "button_link": "shopify://pages/find-a-store",
+            "button_style": "btn--plain",
+            "button_icon": "arrow-right"
+          }
+        },
+        "column_kU6Dx4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Cedar_OCT2022-98.webp",
+            "image_link": "",
+            "subheading": "Careers",
+            "title": "Join our team",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>If you would like to join our team and kickstart your retail career, find out everything you need to join the Kitchen Warehouse team.</p>",
+            "text_size": "text-base",
+            "button_label": "View current job openings",
+            "button_link": "shopify://pages/careers",
+            "button_style": "btn--plain",
+            "button_icon": "arrow-right"
+          }
+        },
+        "column_J7aqPB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Intersection_12_2x_fb67d75d-2be4-4250-9477-30a5b7cbd52d.png",
+            "image_link": "",
+            "subheading": "Join the club",
+            "title": "Our family table",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>We're building a community of cooks and home entertainers passionate about preparing, sharing, and enjoying food. Join us and be part of it.</p>",
+            "text_size": "text-base",
+            "button_label": "Find out more",
+            "button_link": "#",
+            "button_style": "btn--plain",
+            "button_icon": "arrow-right"
+          }
+        }
+      },
+      "block_order": [
+        "column_333KpK",
+        "column_kU6Dx4",
+        "column_J7aqPB"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Get in touch with us",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "<p>Our friendly customer service representatives are here to help. If you have a question or a query you can email us using the contact form or you can call us on 1800332 934 from Monday to Friday between the hours of 9am and 7pm (Australian Daylight Standard Time).</p><p>Customers in New Zealand can call us toll free on (+64) 0800 177 88.</p>",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "content_alignment": "left",
+        "show_col_count": false,
+        "show_image": true,
+        "columns_desktop": 3,
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_DgnWDV",
+    "main",
+    "image_with_text_overlay_3FrkpM",
+    "rich_text_kyFd96",
+    "image_with_text_eUKGwj",
+    "image_with_text_PNJcqX",
+    "buttons_with_icon_AgEzEN",
+    "multicolumn_36XTkC",
+    "testimonials_M9PCcH",
+    "image_with_text_LDRtFa",
+    "scrolling_promotion_6aUqmj",
+    "image_with_text_DCXDtE",
+    "image_with_text_akra6e",
+    "grid_banner_XF4Ney",
+    "rich_text_G3dJUB",
+    "our_clients_jceWCp",
+    "our_clients_carousel_jM7e7F",
+    "multicolumn_NVWxEe",
+    "collapsible_tabs_MyaBhj",
+    "scrolling_promotion_Fy9Yhn",
+    "multicolumn_XU7bbT"
+  ]
+}

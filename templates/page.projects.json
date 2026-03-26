@@ -1,0 +1,120 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_Ecmqrg": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "projects_tabs_PWdjaC": {
+      "type": "projects-tabs",
+      "blocks": {
+        "project_fR88LY": {
+          "type": "project",
+          "settings": {
+            "image": "shopify://shop_images/3852174e79a7219e7c6925bdd9f0ee98.png",
+            "title": "A WORD FROM GROSSI",
+            "sub_text": "Testimony",
+            "group": "Featured, Restaurant,cafe",
+            "link": "shopify://pages/a-word-from-grossi"
+          }
+        },
+        "project_e8iVqn": {
+          "type": "project",
+          "settings": {
+            "image": "shopify://shop_images/worldchefs-story_1586-x-652_story-tile.png",
+            "title": "WILLIAM ANGLISS - SUPPORTING THE FUTURE",
+            "sub_text": "Testimony",
+            "group": "Featured,cafe",
+            "link": "shopify://pages/william-angliss-supporting-the-future"
+          }
+        },
+        "project_zj33ny": {
+          "type": "project",
+          "settings": {
+            "image": "shopify://shop_images/Instagram-Story-_-33.png",
+            "title": "Marmont’s Grand Entrance",
+            "sub_text": "Testimony",
+            "group": "Featured, Restaurant,Bar",
+            "link": "shopify://pages/marmont-s-grand-entrance"
+          }
+        },
+        "project_3aKUgF": {
+          "type": "project",
+          "settings": {
+            "image": "shopify://shop_images/GraceInteriorDesignsLittle-Brother_-3-1024x686-1.jpg",
+            "title": "Little brother Cafe Richmond",
+            "sub_text": "Testimony",
+            "group": "Featured,cafe",
+            "link": "shopify://pages/little-brother-cafe-richmond"
+          }
+        },
+        "project_Whhtzr": {
+          "type": "project",
+          "settings": {
+            "image": "shopify://shop_images/Rumbe_2190_Vispenn1.jpg",
+            "title": "Rombe's Rooftop Revolution",
+            "sub_text": "Testimony",
+            "group": "Featured,restaurant",
+            "link": "shopify://pages/rombes-rooftop-revolution"
+          }
+        }
+      },
+      "block_order": [
+        "project_fR88LY",
+        "project_e8iVqn",
+        "project_zj33ny",
+        "project_3aKUgF",
+        "project_Whhtzr"
+      ],
+      "name": "Projects Grid Tabs",
+      "settings": {
+        "bg_color": "#ffffff",
+        "columns_desktop": 3,
+        "image_ratio": "1.4 / 1",
+        "tab_order": "Featured, Restaurant, Bar",
+        "heading": "OUR PROJECTS & TESTIMONY'S",
+        "main_title_color": "#000000",
+        "main_title_size": 22,
+        "subheading": "Some of our work",
+        "sub_title_size": 23,
+        "content_align": "left",
+        "card_title_size": 18,
+        "card_sub_size": 14,
+        "grid_gap": 30,
+        "pt": 50,
+        "pb": 50,
+        "view_all_text": "",
+        "view_all_link": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_Ecmqrg",
+    "main",
+    "projects_tabs_PWdjaC"
+  ]
+}

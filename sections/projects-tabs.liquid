@@ -1,0 +1,616 @@
+{% comment %} <div class="projects-section section-{{ section.id }}-padding" id="section-{{ section.id }}" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    
+    {%- comment -%} Centered Main Header {%- endcomment -%}
+    <div class="projects-header animate--fade-in">
+      <h2 class="projects-main-title" style="font-size: {{ section.settings.main_title_size }}px; color: {{ section.settings.main_title_color }};">
+        {{ section.settings.heading }}
+      </h2>
+      <h3 class="projects-sub-title" style="font-size: {{ section.settings.sub_title_size }}px;">
+        {{ section.settings.subheading }}
+      </h3>
+    </div>
+
+    {%- comment -%} 
+      LOGIC: 1. Get all unique tags from blocks 
+    {%- endcomment -%}
+    {% assign raw_tags_string = '' %}
+    {% for block in section.blocks %}
+      {% if block.settings.group != blank %}
+        {% assign block_tags = block.settings.group | split: ',' %}
+        {% for tag in block_tags %}
+          {% assign clean_tag = tag | strip | upcase %}
+          {% unless clean_tag == blank %}
+            {% assign raw_tags_string = raw_tags_string | append: clean_tag | append: '|||' %}
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    {% assign all_block_tags = raw_tags_string | split: '|||' | uniq %}
+
+    {%- comment -%} 
+      LOGIC: 2. Build the Final Order based on User Settings + Remaining Tags 
+    {%- endcomment -%}
+    {% assign final_order_string = '' %}
+    
+    {%- comment -%} A. Add User Defined Order First {%- endcomment -%}
+    {% if section.settings.tab_order != blank %}
+      {% assign user_order_list = section.settings.tab_order | split: ',' %}
+      {% for user_tag in user_order_list %}
+        {% assign clean_user_tag = user_tag | strip | upcase %}
+        {% if all_block_tags contains clean_user_tag %}
+          {% assign final_order_string = final_order_string | append: clean_user_tag | append: '|||' %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {%- comment -%} B. Add any remaining tags that were not in the user list {%- endcomment -%}
+    {% for tag in all_block_tags %}
+      {% unless final_order_string contains tag %}
+        {% assign final_order_string = final_order_string | append: tag | append: '|||' %}
+      {% endunless %}
+    {% endfor %}
+
+    {% assign unique_groups = final_order_string | split: '|||' %}
+    {% assign first_group_handle = unique_groups[0] | handleize %}
+
+
+    {%- comment -%} Pill-Style Tabs {%- endcomment -%}
+    <div class="projects-tab-wrapper">
+      <ul class="projects-tabs">
+        {%- comment -%}Render Tabs in Final Order{%- endcomment -%}
+        {% for group in unique_groups %}
+          {% assign group_handle = group | handleize %}
+          {% unless group == blank %}
+          <li class="projects-tab {% if forloop.first %}active{% endif %}" data-filter="{{ group_handle }}" data-label="{{ group }} ">
+            {{ group }}
+          </li>
+          {% endunless %}
+        {% endfor %}
+
+        {%- comment -%}The "View All" Redirect Link Tab{%- endcomment -%}
+        {% if section.settings.view_all_link != blank %}
+        <li>
+          <a href="{{ section.settings.view_all_link }}" class="projects-tab projects-tab-link">
+            {{ section.settings.view_all_text }}
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+
+    {%- comment -%} DYNAMIC TAB HEADING {%- endcomment -%}
+    <div class="dynamic-tab-header">
+      <h2 id="dynamic-title-{{ section.id }}" class="dynamic-heading">{{ unique_groups[0] }} </h2>
+    </div>
+
+    {%- comment -%} Grid Content {%- endcomment -%}
+    <div class="projects-grid" style="grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr); gap: {{ section.settings.grid_gap }}px;">
+      {% for block in section.blocks %}
+        {%- comment -%}Create a searchable string of handles for JS{%- endcomment -%}
+        {% assign category_handles = '' %}
+        {% assign block_tags_arr = block.settings.group | split: ',' %}
+        {% for tag in block_tags_arr %}
+           {% assign cl_tag = tag | strip | handleize %}
+           {% assign category_handles = category_handles | append: cl_tag | append: ',' %}
+        {% endfor %}
+
+        {%- comment -%} Check if card belongs to the FIRST group (Active Tab) {%- endcomment -%}
+        <div class="project-card filter-item {% unless category_handles contains first_group_handle %}hidden{% endunless %}" 
+             data-categories=",{{ category_handles }}" 
+             {{ block.shopify_attributes }}>
+          
+          {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}" class="project-card-link">{%- endif -%}
+            
+            <div class="project-image-wrapper blocks-radius" style="aspect-ratio: {{ section.settings.image_ratio }};">
+              {% if block.settings.image != blank %}
+                {{ block.settings.image | image_url: width: 1000 | image_tag: 
+                  loading: 'lazy', 
+                  class: 'project-image',
+                  widths: '400, 600, 800, 1000' 
+                }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+            </div>
+            
+            <div class="project-info" style="text-align: {{ section.settings.content_align }};">
+              <h4 class="project-title" style="font-size: {{ section.settings.card_title_size }}px;">{{ block.settings.title }}</h4>
+              <p class="project-type" style="font-size: {{ section.settings.card_sub_size }}px;">{{ block.settings.sub_text }}</p>
+            </div>
+
+          {%- if block.settings.link != blank -%}</a>{%- endif -%}
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.pt }}px;
+    padding-bottom: {{ section.settings.pb }}px;
+  }
+
+  /* Header Styles */
+  .projects-header { text-align: center; margin-bottom: 40px; }
+  .projects-main-title { font-weight: 800; text-transform: uppercase; margin-bottom: 5px; letter-spacing: 1px; line-height: 1.2; }
+  .projects-sub-title { font-weight: 800; color: #000; margin: 0; line-height: 1.1; }
+
+  /* Tab Styles */
+  .projects-tab-wrapper { display: flex; justify-content: center; margin-bottom: 30px; }
+  .projects-tabs { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; margin: 0; justify-content: center; align-items: center; }
+  .projects-tab {
+    padding: 10px 30px;
+    border: 1px solid #999;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #555;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .projects-tab.active { background-color: #000000; color: #fff; border-color: #666; }
+  .projects-tab-link:hover { background-color: #eee; color: #333; border-color: #333; }
+
+  /* Dynamic Label Below Tabs */
+  .dynamic-tab-header { margin-bottom: 30px; text-align: left; }
+  .dynamic-heading { font-size: 24px; font-weight: 700; text-transform: uppercase; color: #333; letter-spacing: 1px; margin: 0; transition: opacity 0.3s ease; }
+
+  /* Card Grid */
+  .projects-grid { display: grid; }
+  .project-card-link { text-decoration: none; color: inherit; display: block; }
+  .project-image-wrapper { overflow: hidden; border-radius: 12px; margin-bottom: 15px; position: relative; }
+  .project-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); display: block; }
+  
+  .project-card:hover .project-image { transform: scale(1.08); }
+
+  /* Card Text */
+  .project-title { font-weight: 700; text-transform: uppercase; margin: 0 0 5px 0; color: #333; line-height: 1.3; }
+  .project-type { color: #000; font-weight:bold; margin: 0; line-height: 1.4; }
+
+  /* Animations and Visibility */
+  .filter-item.hidden { display: none; }
+  .filter-item { animation: fadeInUp 0.5s ease forwards; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media screen and (max-width: 749px) {
+    .projects-grid { grid-template-columns: 1fr !important; gap: 25px !important; }
+    .projects-tab { padding: 8px 20px; font-size: 12px; }
+    .dynamic-heading { font-size: 20px; }
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Dynamic Projects Grid",
+  "settings": [
+    { "type": "header", "content": "Global Layout" },
+    { "type": "color", "id": "bg_color", "label": "Background Color", "default": "#ffffff" },
+    { "type": "range", "id": "columns_desktop", "min": 2, "max": 4, "step": 1, "default": 2, "label": "Columns Desktop" },
+    { "type": "select", "id": "image_ratio", "label": "Image Aspect Ratio", "default": "1.4 / 1", "options": [
+        { "value": "1 / 1", "label": "Square" },
+        { "value": "1.4 / 1", "label": "Landscape" },
+        { "value": "4 / 5", "label": "Portrait" }
+    ]},
+    { "type": "header", "content": "Tab Order Control" },
+    { "type": "textarea", "id": "tab_order", "label": "Custom Tab Order", "default": "Featured, Restaurant, Bar", "info": "Enter tab names separated by commas. Any tabs not listed here will appear at the end." },
+    { "type": "header", "content": "Main Typography" },
+    { "type": "text", "id": "heading", "label": "Main Heading", "default": "OUR PROJECTS & TESTIMONY'S" },
+    { "type": "color", "id": "main_title_color", "label": "Main Title Color", "default": "#0056b3" },
+    { "type": "range", "id": "main_title_size", "min": 12, "max": 60, "default": 22, "unit": "px", "label": "Main Title Size" },
+    { "type": "text", "id": "subheading", "label": "Sub Heading", "default": "Some of our work" },
+    { "type": "range", "id": "sub_title_size", "min": 12, "max": 80, "default": 40, "unit": "px", "label": "Sub Title Size" },
+    { "type": "header", "content": "Card Typography" },
+    { "type": "select", "id": "content_align", "label": "Content Alignment", "default": "left", "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+    ]},
+    { "type": "range", "id": "card_title_size", "min": 12, "max": 30, "default": 18, "unit": "px", "label": "Card Title Size" },
+    { "type": "range", "id": "card_sub_size", "min": 10, "max": 24, "default": 14, "unit": "px", "label": "Card Subtext Size" },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "grid_gap", "min": 10, "max": 60, "default": 30, "unit": "px", "label": "Grid Gap" },
+    { "type": "range", "id": "pt", "label": "Padding Top", "min": 0, "max": 100, "default": 50, "unit": "px" },
+    { "type": "range", "id": "pb", "label": "Padding Bottom", "min": 0, "max": 100, "default": 50, "unit": "px" },
+    { "type": "header", "content": "Final Link Tab" },
+    { "type": "text", "id": "view_all_text", "label": "Link Tab Text", "default": "VIEW ALL", "info": "Appears as the last tab." },
+    { "type": "url", "id": "view_all_link", "label": "Link Tab URL", "info": "Optional: Makes the last tab redirect to a page." }
+  ],
+  "blocks": [
+    {
+      "type": "project",
+      "name": "Project",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Title", "default": "PROJECT NAME" },
+        { "type": "text", "id": "sub_text", "label": "Subtext", "default": "Testimony" },
+        { "type": "text", "id": "group", "label": "Category (Tab Names)", "default": "Featured, Restaurant", "info": "Separate multiple categories with a comma." },
+        { "type": "url", "id": "link", "label": "Project Link" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Dynamic Projects Grid" }]
+}
+{% endschema %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const section = document.querySelector('#section-{{ section.id }}');
+    if (!section) return;
+
+    // Only select tabs that are NOT links
+    const tabs = section.querySelectorAll('.projects-tab:not(.projects-tab-link)');
+    const items = section.querySelectorAll('.filter-item');
+    const dynamicTitle = section.querySelector('#dynamic-title-{{ section.id }}');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Toggle Active Tab
+        tabs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+
+        const filterHandle = this.getAttribute('data-filter');
+        const newLabel = this.getAttribute('data-label');
+
+        // Fade out dynamic title, change text, fade in
+        dynamicTitle.style.opacity = 0;
+        setTimeout(() => {
+          dynamicTitle.textContent = newLabel;
+          dynamicTitle.style.opacity = 1;
+        }, 250);
+
+        // New Filtering Logic for multiple categories
+        items.forEach(item => {
+          // Get the comma-separated list of handles attached to the card
+          const itemCategories = item.getAttribute('data-categories');
+          
+          // Check if the selected filter handle exists in that list
+          if (itemCategories.includes(',' + filterHandle + ',')) {
+             item.classList.remove('hidden');
+             // Small delay to re-trigger the fadeInUp animation
+             item.style.animation = 'none';
+             void item.offsetWidth; 
+             item.style.animation = null;
+          } else {
+             item.classList.add('hidden');
+          }
+        });
+      });
+    });
+  });
+</script>  {% endcomment %}
+
+
+
+
+<div class="projects-section section-{{ section.id }}-padding" id="section-{{ section.id }}" style="background-color: {{ section.settings.bg_color }};">
+  <div class="page-width">
+    
+    {%- comment -%} Centered Main Header {%- endcomment -%}
+    <div class="projects-header animate--fade-in">
+      <h2 class="projects-main-title" style="font-size: {{ section.settings.main_title_size }}px; color: {{ section.settings.main_title_color }};">
+        {{ section.settings.heading }}
+      </h2>
+      <h3 class="projects-sub-title" style="font-size: {{ section.settings.sub_title_size }}px;">
+        {{ section.settings.subheading }}
+      </h3>
+    </div>
+
+    {%- comment -%} 
+      LOGIC: 1. Get all unique tags from blocks 
+    {%- endcomment -%}
+    {% assign raw_tags_string = '' %}
+    {% for block in section.blocks %}
+      {% if block.settings.group != blank %}
+        {% assign block_tags = block.settings.group | split: ',' %}
+        {% for tag in block_tags %}
+          {% assign clean_tag = tag | strip | upcase %}
+          {% unless clean_tag == blank %}
+            {% assign raw_tags_string = raw_tags_string | append: clean_tag | append: '|||' %}
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    {% assign all_block_tags = raw_tags_string | split: '|||' | uniq %}
+
+    {%- comment -%} 
+      LOGIC: 2. Build the Final Order based on User Settings + Remaining Tags 
+    {%- endcomment -%}
+    {% assign final_order_string = '' %}
+    
+    {%- comment -%} A. Add User Defined Order First {%- endcomment -%}
+    {% if section.settings.tab_order != blank %}
+      {% assign user_order_list = section.settings.tab_order | split: ',' %}
+      {% for user_tag in user_order_list %}
+        {% assign clean_user_tag = user_tag | strip | upcase %}
+        {% if all_block_tags contains clean_user_tag %}
+          {% assign final_order_string = final_order_string | append: clean_user_tag | append: '|||' %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {%- comment -%} B. Add any remaining tags that were not in the user list {%- endcomment -%}
+    {% for tag in all_block_tags %}
+      {% unless final_order_string contains tag %}
+        {% assign final_order_string = final_order_string | append: tag | append: '|||' %}
+      {% endunless %}
+    {% endfor %}
+
+    {% assign unique_groups = final_order_string | split: '|||' %}
+    {% assign first_group_handle = unique_groups[0] | handleize %}
+
+
+    {%- comment -%} Pill-Style Tabs {%- endcomment -%}
+    <div class="projects-tab-wrapper">
+      <ul class="projects-tabs">
+        {%- comment -%}Render Tabs in Final Order{%- endcomment -%}
+        {% for group in unique_groups %}
+          {% assign group_handle = group | handleize %}
+          {% unless group == blank %}
+          <li class="projects-tab {% if forloop.first %}active{% endif %}" data-filter="{{ group_handle }}" data-label="{{ group }} ">
+            {{ group }}
+          </li>
+          {% endunless %}
+        {% endfor %}
+
+        {%- comment -%}The "View All" Redirect Link Tab{%- endcomment -%}
+        {% if section.settings.view_all_link != blank %}
+        <li>
+          <a href="{{ section.settings.view_all_link }}" class="projects-tab projects-tab-link">
+            {{ section.settings.view_all_text }}
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+
+    {%- comment -%} DYNAMIC TAB HEADING {%- endcomment -%}
+    <div class="dynamic-tab-header">
+      <h2 id="dynamic-title-{{ section.id }}" class="dynamic-heading">{{ unique_groups[0] }} </h2>
+    </div>
+
+    {%- comment -%} Grid Content {%- endcomment -%}
+    <div class="projects-grid" style="grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr); gap: {{ section.settings.grid_gap }}px;">
+      {% for block in section.blocks %}
+        {%- comment -%}Create a searchable string of handles for JS{%- endcomment -%}
+        {% assign category_handles = '' %}
+        {% assign block_tags_arr = block.settings.group | split: ',' %}
+        {% for tag in block_tags_arr %}
+           {% assign cl_tag = tag | strip | handleize %}
+           {% assign category_handles = category_handles | append: cl_tag | append: ',' %}
+        {% endfor %}
+
+        {%- comment -%} Check if card belongs to the FIRST group (Active Tab) {%- endcomment -%}
+        <div class="project-card filter-item {% unless category_handles contains first_group_handle %}hidden{% endunless %}" 
+             data-categories=",{{ category_handles }}" 
+             {{ block.shopify_attributes }}>
+          
+          {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}" class="project-card-link">{%- endif -%}
+            
+            <div class="project-image-wrapper blocks-radius" style="aspect-ratio: {{ section.settings.image_ratio }};">
+              {% if block.settings.image != blank %}
+                {{ block.settings.image | image_url: width: 1000 | image_tag: 
+                  loading: 'lazy', 
+                  class: 'project-image',
+                  widths: '400, 600, 800, 1000' 
+                }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+            </div>
+            
+            <div class="project-info" style="text-align: {{ section.settings.content_align }};">
+              <h4 class="project-title" style="font-size: {{ section.settings.card_title_size }}px;">{{ block.settings.title }}</h4>
+              <span class="project-type " style="font-size: {{ section.settings.card_sub_size }}px;">{{ block.settings.sub_text }}</span>
+            </div>
+
+          {%- if block.settings.link != blank -%}</a>{%- endif -%}
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.pt }}px;
+    padding-bottom: {{ section.settings.pb }}px;
+  }
+  /* Limit image wrapper size and center it */
+.project-image-wrapper {
+  max-width: 400px;
+}
+
+/* Make the subtext look like a button */
+.project-type.btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  transition: 0.3s;
+  margin-top: 10px;          /* small spacing from title */
+}
+
+.project-type.btn:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+  cursor: default;           /* not clickable – matches card link */
+}
+
+/* Ensure the card link wrapper doesn’t interfere */
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+  /* Header Styles */
+  .projects-header { text-align: center; margin-bottom: 40px; }
+  .projects-main-title { font-weight: 800; text-transform: uppercase; margin-bottom: 5px; letter-spacing: 1px; line-height: 1.2; }
+  .projects-sub-title { font-weight: 800; color: #000; margin: 0; line-height: 1.1; }
+
+  /* Tab Styles */
+  .projects-tab-wrapper { display: flex; justify-content: center; margin-bottom: 30px; }
+  .projects-tabs { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; margin: 0; justify-content: center; align-items: center; }
+  .projects-tab {
+    padding: 10px 30px;
+    border: 1px solid #999;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #555;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .projects-tab.active { background-color: #000000; color: #fff; border-color: #666; }
+  .projects-tab-link:hover { background-color: #eee; color: #333; border-color: #333; }
+
+  /* Dynamic Label Below Tabs */
+  .dynamic-tab-header { margin-bottom: 30px; text-align: left; }
+  .dynamic-heading { font-size: 24px; font-weight: 700; text-transform: uppercase; color: #333; letter-spacing: 1px; margin: 0; transition: opacity 0.3s ease; }
+
+  /* Card Grid */
+  .projects-grid { display: grid; }
+  .project-card-link { text-decoration: none; color: inherit; display: block; }
+  .project-image-wrapper { overflow: hidden; border-radius: 12px; margin-bottom: 15px; position: relative; }
+  .project-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); display: block; }
+  
+  .project-card:hover .project-image { transform: scale(1.08); }
+
+  /* Card Text */
+  .project-title { font-weight: 700; text-transform: uppercase; margin: 0 0 5px 0; color: #333; line-height: 1.3; }
+  .project-type { color: #000; font-weight:bold; margin: 0; line-height: 1.4; }
+
+  /* Animations and Visibility */
+  .filter-item.hidden { display: none; }
+  .filter-item { animation: fadeInUp 0.5s ease forwards; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media screen and (max-width: 749px) {
+    .projects-grid { grid-template-columns: 1fr !important; gap: 25px !important; }
+    .projects-tab { padding: 8px 20px; font-size: 12px; }
+    .dynamic-heading { font-size: 20px; }
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Dynamic Projects Grid",
+  "settings": [
+    { "type": "header", "content": "Global Layout" },
+    { "type": "color", "id": "bg_color", "label": "Background Color", "default": "#ffffff" },
+    { "type": "range", "id": "columns_desktop", "min": 2, "max": 4, "step": 1, "default": 2, "label": "Columns Desktop" },
+    { "type": "select", "id": "image_ratio", "label": "Image Aspect Ratio", "default": "1.4 / 1", "options": [
+        { "value": "1 / 1", "label": "Square" },
+        { "value": "1.4 / 1", "label": "Landscape" },
+        { "value": "4 / 5", "label": "Portrait" }
+    ]},
+    { "type": "header", "content": "Tab Order Control" },
+    { "type": "textarea", "id": "tab_order", "label": "Custom Tab Order","info": "Enter tab names separated by commas. Any tabs not listed here will appear at the end." },
+    { "type": "header", "content": "Main Typography" },
+    { "type": "text", "id": "heading", "label": "Main Heading", },
+    { "type": "color", "id": "main_title_color", "label": "Main Title Color", "default": "#0056b3" },
+    { "type": "range", "id": "main_title_size", "min": 12, "max": 60, "default": 22, "unit": "px", "label": "Main Title Size" },
+    { "type": "text", "id": "subheading", "label": "Sub Heading", "default": "Some of our work" },
+    { "type": "range", "id": "sub_title_size", "min": 12, "max": 80, "default": 40, "unit": "px", "label": "Sub Title Size" },
+    { "type": "header", "content": "Card Typography" },
+    { "type": "select", "id": "content_align", "label": "Content Alignment", "default": "left", "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+    ]},
+    { "type": "range", "id": "card_title_size", "min": 12, "max": 30, "default": 18, "unit": "px", "label": "Card Title Size" },
+    { "type": "range", "id": "card_sub_size", "min": 10, "max": 24, "default": 14, "unit": "px", "label": "Card Subtext Size" },
+    { "type": "header", "content": "Spacing" },
+    { "type": "range", "id": "grid_gap", "min": 10, "max": 60, "default": 30, "unit": "px", "label": "Grid Gap" },
+    { "type": "range", "id": "pt", "label": "Padding Top", "min": 0, "max": 100, "default": 50, "unit": "px" },
+    { "type": "range", "id": "pb", "label": "Padding Bottom", "min": 0, "max": 100, "default": 50, "unit": "px" },
+    { "type": "header", "content": "Final Link Tab" },
+    { "type": "text", "id": "view_all_text", "label": "Link Tab Text", "default": "VIEW ALL", "info": "Appears as the last tab." },
+    { "type": "url", "id": "view_all_link", "label": "Link Tab URL", "info": "Optional: Makes the last tab redirect to a page." }
+  ],
+  "blocks": [
+    {
+      "type": "project",
+      "name": "Project",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Title", "default": "PROJECT NAME" },
+        { "type": "text", "id": "sub_text", "label": "sub_text", "default": "Testimony" },
+        { "type": "text", "id": "group", "label": "Category (Tab Names)", "default": "Featured, Restaurant", "info": "Separate multiple categories with a comma." },
+        { "type": "url", "id": "link", "label": "Project Link" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Dynamic Projects Grid" }]
+}
+{% endschema %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const section = document.querySelector('#section-{{ section.id }}');
+    if (!section) return;
+
+    // Only select tabs that are NOT links
+    const tabs = section.querySelectorAll('.projects-tab:not(.projects-tab-link)');
+    const items = section.querySelectorAll('.filter-item');
+    const dynamicTitle = section.querySelector('#dynamic-title-{{ section.id }}');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Toggle Active Tab
+        tabs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+
+        const filterHandle = this.getAttribute('data-filter');
+        const newLabel = this.getAttribute('data-label');
+
+        // Fade out dynamic title, change text, fade in
+        dynamicTitle.style.opacity = 0;
+        setTimeout(() => {
+          dynamicTitle.textContent = newLabel;
+          dynamicTitle.style.opacity = 1;
+        }, 250);
+
+        // New Filtering Logic for multiple categories
+        items.forEach(item => {
+          // Get the comma-separated list of handles attached to the card
+          const itemCategories = item.getAttribute('data-categories');
+          
+          // Check if the selected filter handle exists in that list
+          if (itemCategories.includes(',' + filterHandle + ',')) {
+             item.classList.remove('hidden');
+             // Small delay to re-trigger the fadeInUp animation
+             item.style.animation = 'none';
+             void item.offsetWidth; 
+             item.style.animation = null;
+          } else {
+             item.classList.add('hidden');
+          }
+        });
+      });
+    });
+  });
+</script> 

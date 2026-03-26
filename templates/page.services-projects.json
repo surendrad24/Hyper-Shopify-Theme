@@ -1,0 +1,541 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_EpYUJK": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_KfkHAz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_z6BFFX": {
+          "type": "heading",
+          "settings": {
+            "heading": "SERVICES & PROJECT",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2"
+          }
+        },
+        "subheading_d4DAWf": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Holistic approach to hospitality. Cafe's, Bars, Restaurants, Establishments & Healthcare"
+          }
+        },
+        "text_bMMUb8": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Holistic approach to hospitality.Cafe's, Bars, Restaurants, Establishments & Healthcare</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_z6BFFX",
+        "subheading_d4DAWf",
+        "text_bMMUb8"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-inverse",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "image_with_text_YYf4Uf": {
+      "type": "image-with-text",
+      "blocks": {
+        "badge_xgNTEY": {
+          "type": "badge",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "",
+            "text": "image with text - spinning text -",
+            "position_mobile": "right"
+          }
+        },
+        "subheading_jVxdmq": {
+          "type": "subheading",
+          "settings": {
+            "subheading": ""
+          }
+        },
+        "heading_piYLBn": {
+          "type": "heading",
+          "settings": {
+            "heading": "SET UP EXPERIENCE",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_UpUDtY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We understand that there is no one-size-fits-all solution when it comes to any venue. To accommodate your unique needs, we will find you an expert whose experience best matches them.<br/><br/>Our specialist, no-nonsense team is here to support you at every step of the way. By marrying your ideas with our know-how, together we can execute your vision.</p>",
+            "subtext_color": true
+          }
+        },
+        "button_aKR6wG": {
+          "type": "button",
+          "settings": {
+            "button_label": "CALL NOW",
+            "button_link": "tel:+61383886800",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "badge_xgNTEY",
+        "subheading_jVxdmq",
+        "heading_piYLBn",
+        "text_UpUDtY",
+        "button_aKR6wG"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/Cedar_OCT2022-79-2.jpg",
+        "image_position": "left",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "image_with_text_8MRJX6": {
+      "type": "image-with-text",
+      "blocks": {
+        "badge_EpMLT7": {
+          "type": "badge",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "",
+            "text": "image with text - spinning text -",
+            "position_mobile": "right"
+          }
+        },
+        "heading_6deN8H": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR PROCESS",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "subheading_rNJLHt": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "We live and breath Hospitality"
+          }
+        },
+        "text_jDhQER": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Australia’s commercial landscape is wonderfully multicultural. This diversity is reflected among our workforce, many of whom speak several languages. No matter your background, we will accommodate you in every way possible - we are in the hospitality business after all!</p>",
+            "subtext_color": true
+          }
+        },
+        "button_7jeLT9": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "badge_EpMLT7",
+        "heading_6deN8H",
+        "subheading_rNJLHt",
+        "text_jDhQER",
+        "button_7jeLT9"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/Cedar_OCT2022-374.png",
+        "image_position": "right",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "multicolumn_EFhMtt": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_eerBN7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Cedar_OCT2022-38-2.png",
+            "image_link": "",
+            "subheading": "",
+            "title": "Let’s talk",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Our specialist team can help customise your order with complementary items, creating a collection that is tailored to you. With over 27,000 products from 137 brands, you are spoiled for choice at Cedar.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_yUiqCb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Cedar_OCT2022-98.webp",
+            "image_link": "",
+            "subheading": "",
+            "title": "Visit our showroom",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>Curating your dream venue is about creating an atmosphere - something which we think is difficult to achieve from behind a screen. Sometimes, you need to see products first-hand and to get inspired in our mega store.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_xVaLix": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Cedar_OCT2022-79-2.jpg",
+            "image_link": "",
+            "subheading": "",
+            "title": "Trade Customer",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>BenefitsWe're committed to your success. Enjoy exclusive access to special global and local stock and substantial discounts tailored to your needs.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "column_rT7PGK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Cedar_OCT2022-225.webp",
+            "image_link": "",
+            "subheading": "",
+            "title": "Free Delivery*",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h4",
+            "text": "<p>We offer Free Delivery for all orders over $150 in Metro Melbourne. Our drivers are a staple of our business and they have optimized delivery roots. We'll assign you day(s) that we are in your neighbourhood.</p>",
+            "text_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "column_eerBN7",
+        "column_yUiqCb",
+        "column_xVaLix",
+        "column_rT7PGK"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "section_header_alignment": "left",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Why join the Cedar family? See the list of benefits we offer our clients.",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h2",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--underline",
+        "button_icon": "none",
+        "content_alignment": "left",
+        "show_col_count": false,
+        "show_image": true,
+        "columns_desktop": 3,
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "projects_tabs_NUUdHF": {
+      "type": "projects-tabs",
+      "blocks": {
+        "project_NqrzWr": {
+          "type": "project",
+          "settings": {
+            "image": "shopify://shop_images/Cedar_OCT2022-38-2.png",
+            "title": "Let’s talk",
+            "sub_text": "Our specialist team can help customise your order with complementary items, creating a collection that is tailored to you. With over 27,000 products from 137 brands, you are spoiled for choice at Cedar.",
+            "group": "",
+            "link": ""
+          }
+        },
+        "project_BhTwpL": {
+          "type": "project",
+          "settings": {
+            "image": "shopify://shop_images/Cedar_OCT2022-98.webp",
+            "title": "Visit our showroom",
+            "sub_text": "Curating your dream venue is about creating an atmosphere - something which we think is difficult to achieve from behind a screen. Sometimes, you need to see products first-hand and to get inspired in our mega store.",
+            "group": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "project_NqrzWr",
+        "project_BhTwpL"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Dynamic Projects Grid",
+      "settings": {
+        "bg_color": "#ffffff",
+        "columns_desktop": 3,
+        "image_ratio": "1.4 / 1",
+        "tab_order": "",
+        "heading": "",
+        "main_title_color": "#0056b3",
+        "main_title_size": 20,
+        "subheading": "Why join the Cedar family? See the list of benefits we offer our clients.",
+        "sub_title_size": 23,
+        "content_align": "left",
+        "card_title_size": 18,
+        "card_sub_size": 14,
+        "grid_gap": 30,
+        "pt": 50,
+        "pb": 50,
+        "view_all_text": "VIEW ALL",
+        "view_all_link": ""
+      }
+    },
+    "rich_text_7EQ3AN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nMzneF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Got time for a coffee?",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_fziHzX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Meet us for a coffee in our award-winning showroom where we can get to know you face-to-face and find out way Cedar is one of the mot trusted names in the business</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "button_c7hiTd": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "tel:+61383886800",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nMzneF",
+        "text_fziHzX",
+        "button_c7hiTd"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-inverse",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "projects_tabs_fmMT7B": {
+      "type": "projects-tabs",
+      "blocks": {
+        "project_cNtXAy": {
+          "type": "project",
+          "settings": {
+            "image": "shopify://shop_images/3852174e79a7219e7c6925bdd9f0ee98.png",
+            "title": "A WORD FROM GROSSI",
+            "sub_text": "Testimony",
+            "group": "Featured, Restaurant,cafe",
+            "link": "shopify://pages/a-word-from-grossi"
+          }
+        },
+        "project_n9fgnx": {
+          "type": "project",
+          "settings": {
+            "image": "shopify://shop_images/worldchefs-story_1586-x-652_story-tile.png",
+            "title": "WILLIAM ANGLISS - SUPPORTING THE FUTURE",
+            "sub_text": "Testimony",
+            "group": "Featured,cafe",
+            "link": "shopify://pages/william-angliss-supporting-the-future"
+          }
+        },
+        "project_YtxM8b": {
+          "type": "project",
+          "settings": {
+            "image": "shopify://shop_images/Instagram-Story-_-33.png",
+            "title": "Marmont’s Grand Entrance",
+            "sub_text": "Testimony",
+            "group": "Featured, Restaurant,Bar",
+            "link": "shopify://pages/marmont-s-grand-entrance"
+          }
+        },
+        "project_BPPBWC": {
+          "type": "project",
+          "settings": {
+            "image": "shopify://shop_images/GraceInteriorDesignsLittle-Brother_-3-1024x686-1.jpg",
+            "title": "Little brother Cafe Richmond",
+            "sub_text": "Testimony",
+            "group": "Featured,cafe",
+            "link": "shopify://pages/little-brother-cafe-richmond"
+          }
+        },
+        "project_gBNJVW": {
+          "type": "project",
+          "settings": {
+            "image": "shopify://shop_images/Rumbe_2190_Vispenn1.jpg",
+            "title": "Rombe's Rooftop Revolution",
+            "sub_text": "Testimony",
+            "group": "Featured,restaurant",
+            "link": "shopify://pages/rombes-rooftop-revolution"
+          }
+        }
+      },
+      "block_order": [
+        "project_cNtXAy",
+        "project_n9fgnx",
+        "project_YtxM8b",
+        "project_BPPBWC",
+        "project_gBNJVW"
+      ],
+      "name": "Projects Grid Tabs",
+      "settings": {
+        "bg_color": "#ffffff",
+        "columns_desktop": 3,
+        "image_ratio": "1.4 / 1",
+        "tab_order": "Featured, Restaurant, Bar",
+        "heading": "OUR PROJECTS & TESTIMONY'S",
+        "main_title_color": "#000000",
+        "main_title_size": 22,
+        "subheading": "Some of our work",
+        "sub_title_size": 23,
+        "content_align": "left",
+        "card_title_size": 18,
+        "card_sub_size": 14,
+        "grid_gap": 30,
+        "pt": 50,
+        "pb": 50,
+        "view_all_text": "VIEW ALL",
+        "view_all_link": "shopify://pages/projects"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_EpYUJK",
+    "main",
+    "rich_text_KfkHAz",
+    "image_with_text_YYf4Uf",
+    "image_with_text_8MRJX6",
+    "multicolumn_EFhMtt",
+    "projects_tabs_NUUdHF",
+    "rich_text_7EQ3AN",
+    "projects_tabs_fmMT7B"
+  ]
+}

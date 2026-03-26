@@ -1,0 +1,141 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "breadcrumbs_ztykeC": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "scrolling_banner_cGBKLq": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "slide_qgcGcy": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-inverse",
+            "background": "shopify://shop_images/Instagram-Story-_-33.png",
+            "image_overlay_opacity": 25,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "PROJECT PROFILE",
+            "title": "MARMONT AT CROWN TOWERS MELBOURNE",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product_color_scheme": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_qgcGcy"
+      ],
+      "name": "t:sections.scrolling-banner.name",
+      "settings": {
+        "container": "full",
+        "slide_height": "large",
+        "content_position_mobile": "top-center",
+        "text_alignment_mobile": "center",
+        "enable_zoom": true,
+        "enable_parallax": false
+      }
+    },
+    "rich_text_XDyh6f": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FC6Fn9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Marmont’s Grand Entrance",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_4PT4rP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>CATEGORIES: BAR, RESTAURANT</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "subheading_pJmLNH": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "<strong>Setting the Table for Marmont’s Grand Entrance</strong>"
+          }
+        },
+        "text_hH6pWc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Few dining destinations launch with as much buzz as <strong>Marmont</strong>, the latest addition to Crown Melbourne’s vibrant hospitality scene. Helmed by international hospitality maven <strong>Grant Smillie</strong>, this Californian-inspired venue blends sun-soaked West Coast charm with Melbourne’s signature culinary excellence. It’s an all-day affair, where patrons can transition from a casual lunch to sunset cocktails before immersing in a DJ-spun soundtrack that carries the night forward.</p><p>To match Marmont’s effortlessly refined aesthetic, Cedar Hospitality has delivered an exclusive collection of premium tabletop essentials:</p><p><strong>Steelite Blackline Slimline Platters, Plates, and Bowls</strong> – These aren’t just plates; they’re a statement. Hand-selected for their sleek, minimalist silhouette and renowned durability, the <strong>Blackline Slimline collection</strong> was chosen to ensure every dish at Marmont is plated with an understated sophistication. These pieces don’t just endure the rigours of high-end service; they elevate it, giving each dish a backdrop worthy of its artistry.</p><p>At Cedar, we know that branding doesn’t stop at the menu. That’s why we provided bespoke <strong>logo-printed crockery</strong>, reinforcing Marmont’s distinctive identity with every serve. From intricate plating to signature dishes, every touchpoint is an extension of the restaurant’s style and story.</p><p>A cocktail is only as good as the glass it’s poured into, and a steak deserves cutlery that feels just as refined. Cedar Hospitality supplied the polished details that complete Marmont’s immersive dining experience.</p><p>With an unwavering commitment to quality, functionality, and design, <strong>Cedar Hospitality is more than a supplier—we’re a partner in crafting Melbourne’s most talked-about dining spaces</strong>. As the go-to supplier for Crown Melbourne and leading venues nationwide, we’re proud to support Marmont as it redefines riverside dining, one perfectly plated dish at a time.</p><p> </p><p><strong>Marmont</strong><br/>Ground Level, River Walk/8 Whiteman St, Southbank VIC 3006<br/><a href=\"https://www.crownmelbourne.com.au/restaurants/marmont\"><strong>www.crownmelbourne.com.au/restaurants/marmont.AU</strong></a></p><p></p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FC6Fn9",
+        "text_4PT4rP",
+        "subheading_pJmLNH",
+        "text_hH6pWc"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-149a0a42-7e4d-4101-b92f-d213f5045165",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "breadcrumbs_ztykeC",
+    "scrolling_banner_cGBKLq",
+    "rich_text_XDyh6f"
+  ]
+}

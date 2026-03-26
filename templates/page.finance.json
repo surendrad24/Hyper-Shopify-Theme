@@ -1,0 +1,418 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_Vtjiza": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "scrolling_banner_yyJRjA": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "slide_iKKnkH": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "scheme-2",
+            "background": "shopify://shop_images/home_banner-scaled.jpg",
+            "image_overlay_opacity": 0,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "Flexible Finance Options for your convenience",
+            "title": "Cedar Finance Options",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2",
+            "description": "<p>Tell your brand's story through images</p>",
+            "description_size": "text-base",
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product_color_scheme": "scheme-bd786bcd-bccd-4068-b783-17b6baacd2ad",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_iKKnkH"
+      ],
+      "name": "t:sections.scrolling-banner.name",
+      "settings": {
+        "container": "full",
+        "slide_height": "large",
+        "content_position_mobile": "top-center",
+        "text_alignment_mobile": "center",
+        "enable_zoom": false,
+        "enable_parallax": false
+      }
+    },
+    "image_with_text_pT4RA8": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_wLKrFH": {
+          "type": "subheading",
+          "settings": {
+            "subheading": ""
+          }
+        },
+        "heading_hq3tx8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Streamlined Kitchen Equipment Financing",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2"
+          }
+        },
+        "text_JzMbKV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Empower your purchasing journey with Cedar Finance Options – where flexibility meets convenience. Finance your way through our seamless integration with Zip Pay & Zip Money, Afterpay, Skope Finance, and Silver Chef Finance.</p>",
+            "subtext_color": true
+          }
+        },
+        "button_FEecTy": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_wLKrFH",
+        "heading_hq3tx8",
+        "text_JzMbKV",
+        "button_FEecTy"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/aba61c2b-4ad3-4498-aaea-75a6801e5636.png",
+        "image_position": "right",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "rich_text_mF6gpU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_BKKpz9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Finance Process",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2"
+          }
+        },
+        "subheading_gC8E7U": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Kitchen Equipment & Appliances"
+          }
+        },
+        "text_ecWHK8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We understand that every business has unique financial needs, and that's why we offer a range of trusted and convenient financing solutions. Take control of your budget, unlock opportunities, and elevate your business with the financial freedom you deserve. Choose Cedar – where your success is our priority.<br/><br/>Securing the right kitchen equipment for your business has never been easier. Our Cedar Team provides you with a comprehensive quotation or sales order, which we then seamlessly transmit to our esteemed affiliate program or partner. After you finalize the payment and execute the necessary contracts with our affiliate partner, Cedar will deliver the equipment, enabling you to start using and operating your new appliances and machines immediately.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "button_zjMFxQ": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BKKpz9",
+        "subheading_gC8E7U",
+        "text_ecWHK8",
+        "button_zjMFxQ"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "feature_steps_3RNCge": {
+      "type": "feature-steps",
+      "blocks": {
+        "step_q4Y3KC": {
+          "type": "step",
+          "settings": {
+            "icon": "shopify://shop_images/draft_50dp_1F1F1F_FILL0_wght400_GRAD0_opsz48.svg",
+            "title": "Quotation / Sales Order from Cedar Team",
+            "title_color": "#000000",
+            "title_size": 20,
+            "title_weight": "800",
+            "paragraph": "Our Cedar Team will furnish you with a comprehensive quotation or sales order for the requisite kitchen equipment.",
+            "para_color": "#333333",
+            "para_size": 16,
+            "para_weight": "400"
+          }
+        },
+        "step_YW6Pj3": {
+          "type": "step",
+          "settings": {
+            "icon": "shopify://shop_images/lock_50dp_1F1F1F_FILL0_wght400_GRAD0_opsz48.svg",
+            "title": "Submission to Affiliate Program / Partner",
+            "title_color": "#000000",
+            "title_size": 20,
+            "title_weight": "800",
+            "paragraph": "We will seamlessly transmit your order to our esteemed affiliate program or partner to facilitate the procurement process.",
+            "para_color": "#333333",
+            "para_size": 16,
+            "para_weight": "400"
+          }
+        },
+        "step_fgQVaq": {
+          "type": "step",
+          "settings": {
+            "icon": "shopify://shop_images/check_circle_50dp_1F1F1F_FILL0_wght400_GRAD0_opsz48.svg",
+            "title": "Payment and Contract Execution",
+            "title_color": "#000000",
+            "title_size": 20,
+            "title_weight": "800",
+            "paragraph": "You will finalize the payment and execute the necessary contractual agreements directly with our affiliate partner.",
+            "para_color": "#333333",
+            "para_size": 16,
+            "para_weight": "400"
+          }
+        },
+        "step_mDMfri": {
+          "type": "step",
+          "settings": {
+            "icon": "shopify://shop_images/restaurant_50dp_1F1F1F_FILL0_wght400_GRAD0_opsz48.svg",
+            "title": "Own It.",
+            "title_color": "#000000",
+            "title_size": 20,
+            "title_weight": "800",
+            "paragraph": "Upon completion of the transaction, Cedar will deliver the equipment, enabling you to start using and operating your new appliances and machines immediately.",
+            "para_color": "#333333",
+            "para_size": 16,
+            "para_weight": "400"
+          }
+        }
+      },
+      "block_order": [
+        "step_q4Y3KC",
+        "step_YW6Pj3",
+        "step_fgQVaq",
+        "step_mDMfri"
+      ],
+      "name": "Dynamic Feature Steps",
+      "settings": {}
+    },
+    "rich_text_dz4Bnm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_A8fXJd": {
+          "type": "heading",
+          "settings": {
+            "heading": "FINANCE PARTNERS",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_kjACkm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We offer flexible finance options for both store purchases and online orders. Choose Zip Pay to spread the cost over time without interest, or opt for Afterpay to divide your total amount into four manageable, interest-free installments. For a seamless and secure online payment experience, utilize Stripe. Our finance options are designed to provide you with the convenience and flexibility you need.</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "button_RcVx7x": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_A8fXJd",
+        "text_kjACkm",
+        "button_RcVx7x"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    },
+    "fianance_QnqX3K": {
+      "type": "fianance",
+      "blocks": {
+        "card_mkjdXC": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/ZIP-FINACNE-BANNER.png",
+            "overlay_opacity": 40,
+            "heading": "",
+            "h_color": "#ffffff",
+            "h_size": 32,
+            "h_weight": "800",
+            "subheading": "",
+            "p_color": "#ffffff",
+            "p_size": 16,
+            "p_weight": "400",
+            "btn_label": "Learn More",
+            "btn_link": "https://zip.co/au/create-an-account",
+            "button_style": "btn--primary"
+          }
+        },
+        "card_4pHEdi": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/AFTERPAY-FINACNE-BANNER.png",
+            "overlay_opacity": 40,
+            "heading": "",
+            "h_color": "#ffffff",
+            "h_size": 32,
+            "h_weight": "800",
+            "subheading": "",
+            "p_color": "#ffffff",
+            "p_size": 16,
+            "p_weight": "400",
+            "btn_label": "Learn More",
+            "btn_link": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "card_gfRMBL": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/SILVERCHEF-FINACNE-BANNER.png",
+            "overlay_opacity": 40,
+            "heading": "",
+            "h_color": "#ffffff",
+            "h_size": 32,
+            "h_weight": "800",
+            "subheading": "",
+            "p_color": "#ffffff",
+            "p_size": 16,
+            "p_weight": "400",
+            "btn_label": "Learn More",
+            "btn_link": "",
+            "button_style": "btn--primary"
+          }
+        },
+        "card_EMVwpQ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/SKOPE-FINACNE-BANNER.png",
+            "overlay_opacity": 0,
+            "heading": "",
+            "h_color": "#ffffff",
+            "h_size": 32,
+            "h_weight": "800",
+            "subheading": "",
+            "p_color": "#ffffff",
+            "p_size": 16,
+            "p_weight": "400",
+            "btn_label": "Learn More",
+            "btn_link": "",
+            "button_style": "btn--primary"
+          }
+        }
+      },
+      "block_order": [
+        "card_mkjdXC",
+        "card_4pHEdi",
+        "card_gfRMBL",
+        "card_EMVwpQ"
+      ],
+      "name": "Custom Hover Cards",
+      "settings": {
+        "columns_desktop": 4,
+        "columns_mobile": "1",
+        "card_height": 550,
+        "column_gap": 20,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_Vtjiza",
+    "main",
+    "scrolling_banner_yyJRjA",
+    "image_with_text_pT4RA8",
+    "rich_text_mF6gpU",
+    "feature_steps_3RNCge",
+    "rich_text_dz4Bnm",
+    "fianance_QnqX3K"
+  ]
+}

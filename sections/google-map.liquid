@@ -1,0 +1,233 @@
+{% comment %} <section class="google-map-section section-{{ section.id }}">
+  {% if section.settings.heading != blank %}
+    <div class="page-width">
+      <h2 class="map-heading">
+        {{ section.settings.heading }}
+      </h2>
+    </div>
+  {% endif %}
+
+  <div class="map-wrapper {% if section.settings.full_width %}full-width{% endif %}">
+    <div class="map-grid">
+      
+      {% if section.settings.map_embed_url_1 != blank %}
+      <div class="map-item">
+        <iframe
+          src="{{ section.settings.map_embed_url_1 }}"
+          height="{{ section.settings.map_height }}"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      {% endif %}
+
+      {% if section.settings.map_embed_url_2 != blank %}
+      <div class="map-item">
+        <iframe
+          src="{{ section.settings.map_embed_url_2 }}"
+          height="{{ section.settings.map_height }}"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .google-map-section {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .map-heading {
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+
+  .map-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .map-wrapper.full-width {
+    max-width: 85%;
+  }
+
+
+  .map-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .map-item iframe {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+  }
+
+ @media (max-width: 768px) {
+  .map-wrapper {
+    padding : 0 0 24px;
+  }
+
+  .map-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+}
+</style> {% endcomment %}
+<section class="google-map-section section-{{ section.id }}">
+  <div class="map-wrapper {% if section.settings.full_width %}full-width{% endif %}">
+    
+    {% if section.settings.heading != blank %}
+      <h2 class="map-heading">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+
+    <div class="map-grid">
+      
+      {% if section.settings.map_embed_url_1 != blank %}
+      <div class="map-item">
+        <iframe
+          src="{{ section.settings.map_embed_url_1 }}"
+          height="{{ section.settings.map_height }}"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      {% endif %}
+
+      {% if section.settings.map_embed_url_2 != blank %}
+      <div class="map-item">
+        <iframe
+          src="{{ section.settings.map_embed_url_2 }}"
+          height="{{ section.settings.map_height }}"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .google-map-section {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .map-heading {
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+
+  .map-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .map-wrapper.full-width {
+    max-width: 85%;
+  }
+
+  .map-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .map-item iframe {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+  }
+
+ @media (max-width: 768px) {
+  .map-wrapper {
+    padding : 0 0 24px;
+  }
+
+  .map-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Google Maps",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Find Us Here"
+    },
+    {
+      "type": "textarea",
+      "id": "map_embed_url_1",
+      "label": "Google Maps Embed URL – Location 1"
+    },
+    {
+      "type": "textarea",
+      "id": "map_embed_url_2",
+      "label": "Google Maps Embed URL – Location 2"
+    },
+    {
+      "type": "range",
+      "id": "map_height",
+      "label": "Map Height (px)",
+      "min": 300,
+      "max": 700,
+      "step": 50,
+      "default": 450
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width maps",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 30
+    }
+  ],
+  "presets": [
+    {
+      "name": "Google Maps "
+    }
+  ]
+}
+{% endschema %}  

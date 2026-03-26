@@ -1,0 +1,237 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_mPYY9K": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_zj88FP": {
+      "type": "image-with-text",
+      "blocks": {
+        "badge_deEFW9": {
+          "type": "badge",
+          "disabled": true,
+          "settings": {
+            "color_scheme": "",
+            "text": "image with text - spinning text -",
+            "position_mobile": "right"
+          }
+        },
+        "subheading_LFXxnR": {
+          "type": "subheading",
+          "settings": {
+            "subheading": ""
+          }
+        },
+        "heading_4zf6f3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Delivery F&Q's",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2"
+          }
+        },
+        "text_7ptKLm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cedar Hospitality endeavors to ensure that all of our customers are satisfied with their purchases. To help us deliver on our customer satisfaction goals and set realistic expectations, we have provided the below-detailed information with regards to our delivery processes and procedures. These terms and conditions apply to all purchases made from Cedar Mornington.</p>",
+            "subtext_color": true
+          }
+        },
+        "button_rzDYMA": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read T&C",
+            "button_link": "shopify://pages/terms-conditions",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "badge_deEFW9",
+        "subheading_LFXxnR",
+        "heading_4zf6f3",
+        "text_7ptKLm",
+        "button_rzDYMA"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "image": "shopify://shop_images/Cedar_OCT2022-225.webp",
+        "image_position": "left",
+        "image_width": 50,
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "inherit",
+        "show_section_divider": false,
+        "divider_width": "fixed",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "collapsible_tabs_7hXKjU": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "collapsible_item_jXXmpg": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Delivery",
+            "content": "<p>Confirmed orders placed online before 3pm AEST on Monday to Friday will be picked, packed and dispatched from our Mornington Location within 1 - 5 days.<br/><br/>By placing an order online, you are making an offer to us to purchase the products you have selected for the price (including delivery and other charges) based on these Terms and Conditions.Cedar reserves the right to accept or reject any offer for any reason, including without limitation, an error in the price of the product description posted on this website, the unavailability of a product, or error in your order.<br/><br/>At placement of the order, we will issue you with an order number for reference. We will confirm acceptance of your order when we send you an email confirming shipment of the products you have ordered. If we cannot process or accept your order after payment is made, we will contact you by phone or email.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_ynFmLc": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Shipping & Freight",
+            "content": "<p>Day(s) of delivery are specific depending on the suburb we are delivering to.</p><p><strong>Shipment:</strong><br/>We will ship your order to the address provided by you at checkout. For large, bulk or heavy orders/items an additional delivery cost will be incurred during the checkout stage. You (the customer) will be notified about all additional delivery costs.</p><p><strong>Free Delivery Information:</strong><br/>We are dedicated to ensuring that we provide you with the best possible service at all times. That's why all orders above $150 ex gst qualify for free delivery within Mornington Peninsula specified suburbs. An extra delivery charge may apply depending on the location for some large, heavy, or bulky items.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_p7Et9E": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Free Delivery Information",
+            "content": "<p>We are dedicated to ensuring that we provide you with the best possible service at all times.<br/><br/>That's why all orders above $150 ex gst qualify for free delivery within Mornington Peninsula specified suburbs.* An extra delivery charge may apply depending on the location for some large, heavy, or bulky items.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_BCpmAk": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "In-store Pick Up",
+            "content": "<p>We offer standard Click & Collect for all online orders. At checkout, simply select the <strong>“Pick-Up”</strong> option.</p><p>Please note: This service is <strong>only available at our Mornington location</strong> and <strong>cannot be transferred to other stores</strong>.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_AiHwyj": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Curbside Drop Off",
+            "content": "<p>Please note that we only offer kerbside delivery. This does not include in-premise positioning or installation.<br/><br/>Drivers are not trained or licensed to take equipment inside customer buildings or install products. Please talk to our customer service team for options for installations and placement.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_bRGfWF": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Installation and Training",
+            "content": "<p>For any Installation requirements please call our Customer Service team or your Account manager to arrange and services prior to purchase and delivery.<br/><br/>Please note additional costs may be incurred and charged for additional services and installation costs are not included in the original and advertised price/cost of equipment.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        },
+        "collapsible_item_RzNi6F": {
+          "type": "collapsible_item",
+          "settings": {
+            "icon": "none",
+            "heading": "Returns",
+            "content": "<p>If you believe that there are any issues, problems or feel like your received product is not of quality such as being; broken, inaccurate, or damaged - please contact us at<a href=\"mailto:info@chsupplies.com.au\" title=\"mailto:info@chsupplies.com.au\">info@chsupplies.com.au</a>or call us on<a href=\"tel:(03) 5977 2020\" title=\"tel:(03) 5977 2020\">(03) 5977 2020</a>and we will attend to your query as soon as possible.</p>",
+            "custom_liquid": "",
+            "page": "",
+            "open": false,
+            "use_subtext_color": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_item_jXXmpg",
+        "collapsible_item_ynFmLc",
+        "collapsible_item_p7Et9E",
+        "collapsible_item_BCpmAk",
+        "collapsible_item_AiHwyj",
+        "collapsible_item_bRGfWF",
+        "collapsible_item_RzNi6F"
+      ],
+      "name": "t:sections.collapsible-tabs.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "header_layout": "vertical",
+        "section_header_alignment": "center",
+        "section_header_alignment_mobile": "inherit",
+        "subheading": "",
+        "heading": "Policies - please click the heading for more details.",
+        "highlight_style": "none",
+        "highlight_font_style": "italic",
+        "highlight_style_color": "",
+        "highlight_text_color": "",
+        "heading_size": "h1",
+        "description": "",
+        "text_size": "text-base",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "btn--primary",
+        "button_icon": "none",
+        "column_gap": "large",
+        "row_gap": "inherit",
+        "item_style": "standard",
+        "item_color_scheme": "",
+        "item_heading_font": "heading",
+        "item_heading_size": "h4",
+        "item_icon_size": "extra-large",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_mPYY9K",
+    "main",
+    "image_with_text_zj88FP",
+    "collapsible_tabs_7hXKjU"
+  ]
+}

@@ -1,0 +1,124 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_kDQf6j": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "shop_by_category_N3pRGh": {
+      "type": "shop-by-category",
+      "blocks": {
+        "collection_U6qBxW": {
+          "type": "collection",
+          "settings": {
+            "collection": "3monkeez"
+          }
+        },
+        "collection_3mWC46": {
+          "type": "collection",
+          "settings": {
+            "collection": "aberdeen"
+          }
+        },
+        "collection_ECFeeh": {
+          "type": "collection",
+          "settings": {
+            "collection": "accidental-health-safety"
+          }
+        },
+        "collection_rYVfH9": {
+          "type": "collection",
+          "settings": {
+            "collection": "acorn"
+          }
+        },
+        "collection_YwRFcx": {
+          "type": "collection",
+          "settings": {
+            "collection": "amalfi-glassware"
+          }
+        },
+        "collection_mdqCkQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "anchor-hocking"
+          }
+        },
+        "collection_m9TPCi": {
+          "type": "collection",
+          "settings": {
+            "collection": "bamix"
+          }
+        },
+        "collection_m9HGjC": {
+          "type": "collection",
+          "settings": {
+            "collection": "barista-mats"
+          }
+        },
+        "collection_Y4iyhn": {
+          "type": "collection",
+          "settings": {
+            "collection": "bargeek"
+          }
+        },
+        "collection_jrNDVV": {
+          "type": "collection",
+          "settings": {
+            "collection": "bonna"
+          }
+        }
+      },
+      "block_order": [
+        "collection_U6qBxW",
+        "collection_3mWC46",
+        "collection_ECFeeh",
+        "collection_rYVfH9",
+        "collection_YwRFcx",
+        "collection_mdqCkQ",
+        "collection_m9TPCi",
+        "collection_m9HGjC",
+        "collection_Y4iyhn",
+        "collection_jrNDVV"
+      ],
+      "name": "Category collection grid",
+      "settings": {
+        "color_scheme": "",
+        "text_color": "#ffffff",
+        "use_custom_overlay": false,
+        "overlay_color": "#000000",
+        "overlay_opacity": 50,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_kDQf6j",
+    "main",
+    "shop_by_category_N3pRGh"
+  ]
+}

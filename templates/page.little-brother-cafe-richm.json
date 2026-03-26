@@ -1,0 +1,130 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "breadcrumbs_Ykmh8t": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "scrolling_banner_TQQpGm": {
+      "type": "scrolling-banner",
+      "blocks": {
+        "slide_MT7an8": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "background": "shopify://shop_images/GraceInteriorDesignsLittle-Brother_-3-1024x686-1.jpg",
+            "image_overlay_opacity": 0,
+            "content_position": "middle-center",
+            "text_alignment": "center",
+            "subheading": "",
+            "title": "",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1",
+            "description": "",
+            "description_size": "text-base",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none",
+            "product_color_scheme": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_MT7an8"
+      ],
+      "name": "t:sections.scrolling-banner.name",
+      "settings": {
+        "container": "full",
+        "slide_height": "large",
+        "content_position_mobile": "top-center",
+        "text_alignment_mobile": "center",
+        "enable_zoom": true,
+        "enable_parallax": false
+      }
+    },
+    "rich_text_bP8b6L": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nhdUmg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Little brother Cafe Richmond",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd2"
+          }
+        },
+        "subheading_LwdDk6": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "CATEGORIES: CAFE"
+          }
+        },
+        "text_iLDfTD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Cedar hospitality , we're thrilled to unveil our latest project: a meticulously crafted Vietnamese roll shop designed to bring the flavors of Vietnam to your doorstep! From sourcing the freshest ingredients to installing state-of-the-art equipment and revamping the space with a touch of Vietnamese charm, we've spared no effort in creating an immersive culinary experience for our customers.</p><p>Our team has handled everything from equipment supply and installation. so you can focus on what truly matters – crafting delicious rolls and delighting your customers.</p><p>Join us at Cedar hospitality supply as we redefine Vietnamese dining one roll at a time. Stay tuned for updates, special offers, and behind-the-scenes glimpses into our flavorful world. We can't wait to roll with you!</p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nhdUmg",
+        "subheading_LwdDk6",
+        "text_iLDfTD"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "scheme-149a0a42-7e4d-4101-b92f-d213f5045165",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 30,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "breadcrumbs_Ykmh8t",
+    "scrolling_banner_TQQpGm",
+    "rich_text_bP8b6L"
+  ]
+}

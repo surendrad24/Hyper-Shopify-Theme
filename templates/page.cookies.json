@@ -1,0 +1,99 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs_HgT3qY": {
+      "type": "breadcrumbs",
+      "name": "t:sections.breadcrumbs.name",
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "start",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "container": "fixed",
+        "text_alignment": "center",
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_JrBqJm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CcGEPY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cookies",
+            "highlight_style": "none",
+            "highlight_font_style": "italic",
+            "highlight_style_color": "",
+            "highlight_text_color": "",
+            "heading_size": "hd1"
+          }
+        },
+        "subheading_4hfrcW": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "In terms of cookies, you can configure your browser to inform you when websites access or use cookies - you can also reject all or some browser cookies. Please be aware that some portions of our website may become inaccessible or malfunction if you disable or reject cookies."
+          }
+        },
+        "text_ppCinh": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>In terms of cookies, you can configure your browser to inform you when websites access or use cookies - you can also reject all or some browser cookies. Please be aware that some portions of our website may become inaccessible or malfunction if you disable or reject cookies.</strong></p>",
+            "text_size": "text-base",
+            "text_line_limit": "none",
+            "button_style": "btn--underline",
+            "button_icon": "none"
+          }
+        },
+        "button_dJtTfG": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "btn--primary",
+            "button_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CcGEPY",
+        "subheading_4hfrcW",
+        "text_ppCinh",
+        "button_dJtTfG"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "container": "fixed",
+        "color_scheme": "",
+        "use_color_scheme_in_container": false,
+        "content_spacing": "standard",
+        "content_alignment": "center",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "show_section_divider": false,
+        "divider_width": "fixed"
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs_HgT3qY",
+    "main",
+    "rich_text_JrBqJm"
+  ]
+}
